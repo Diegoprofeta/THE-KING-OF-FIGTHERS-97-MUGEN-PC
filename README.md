@@ -5,14 +5,19 @@
 ![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/blob/main/Imagenes/kof97-2.png)
 
 ```
-THE KING OF FIGTHERS 97 Edition Mugen para PC este juego. Que fue hecho para la plataforma 
-Mugen con muchos personajes, movimientos y poderes asombrosos. Es un juego muy divertido 
-el cual es ideal para descargar y jugar con tus amigos, cuenta con todos los personajes 
+THE KING OF FIGTHERS 97 Edition Mugen para PC este juego. Que fue hecho para la plataforma
+Mugen con muchos personajes, movimientos y poderes asombrosos. Es un juego muy divertido
+el cual es ideal para descargar y jugar con tus amigos, cuenta con todos los personajes
 mejorados con su motor gráfico de mugen.
 
-En el menu del juego tienes opciones para jugar a varios modos como VS que puedes jugarlo 
-con tus amigo en una batalla de uno contra uno como también tienes el modo TEAM para que 
+En el menu del juego tienes opciones para jugar a varios modos como VS que puedes jugarlo
+con tus amigo en una batalla de uno contra uno como también tienes el modo TEAM para que
 juegos con equipos ya sea contra la computadora o contra tus amigos.
+
+Emos recopilados starges, sound y chars de diferentes foros con las caracteriscas mas
+similares al orgiginal para que pudes difrutarlo al maximo.
+
+Cada archivo contiene sus respectivos creditos de sus respectivos autores.
 ```
 ![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/blob/main/Imagenes/kof97-3.png)
 
