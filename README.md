@@ -33,9 +33,9 @@ Personalización:
 
 Este screenpack es una version custom, para disfrutarlo al 100% debes hacer las siguientes modificaciones:
 
--Cambiar el sprite del select (22px x 27px) 9000,0
--Agregar sprite luchador (46px x 29px) 9000,699 (silueta en shape.bmp)
--Agregar sprite turnos (14px x 14px) 9000,700
+- Cambiar el sprite del select (22px x 27px) 9000,0
+- Agregar sprite luchador (46px x 29px) 9000,699 (silueta en shape.bmp)
+- Agregar sprite turnos (14px x 14px) 9000,700
 
 -------------------------------------------------------------------------------
 
