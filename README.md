@@ -44,12 +44,12 @@ Este screenpack es una version custom, para disfrutarlo al 100% debes hacer las 
 
 **VERSION: 1.2**
 
-https://codeload.github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/zip/refs/heads/main
+https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/main/Version
 
 ## :octocat: Credits
 
 1. [MadkaT - Screenpack Kof97](madkat@r2e.cjb.net) 
-2. [Casita Dev Team - Update Screenpack Kof97](madkat@r2e.cjb.net)
+2. [Illuminati Dev Team - Update Screenpack Kof97](madkat@r2e.cjb.net)
 
 ```
 ☆ https://t.me/AAAAAEXQOSyIpN2JZ0ehUQ [  ⃘⃤꙰✰ ] ☆
