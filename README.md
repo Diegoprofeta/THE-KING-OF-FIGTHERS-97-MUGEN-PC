@@ -14,8 +14,8 @@ En el menu del juego tienes opciones para jugar a varios modos como VS que puede
 con tus amigo en una batalla de uno contra uno como también tienes el modo TEAM para que
 juegos con equipos ya sea contra la computadora o contra tus amigos.
 
-Emos recopilados starges, sound y chars de diferentes foros con las caracteriscas mas
-similares al orgiginal para que pudes difrutarlo al maximo.
+Illuminati Dev Team a recopilado starges, sound y chars de diferentes foros con las 
+caracteriscas mas similares al orgiginal para que pudes difrutarlo al maximo.
 
 Cada archivo contiene sus respectivos creditos de sus respectivos autores.
 ```
@@ -32,7 +32,7 @@ Cada archivo contiene sus respectivos creditos de sus respectivos autores.
 * DirectX:	        Defauld
 * Almacenamiento:	400 MB
 
-## :book: Download and Installation
+## :book: Download and Installation (Beta Version 1.2 Leyenda)
 
 https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/archive/refs/heads/main.zip
 
