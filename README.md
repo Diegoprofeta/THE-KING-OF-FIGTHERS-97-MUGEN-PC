@@ -1,4 +1,4 @@
-# THE-KING-OF-FIGTHERS-97-MUGEN-PC
+﻿# THE-KING-OF-FIGTHERS-97-MUGEN-PC
 ```
 * UPDATE 23/11/2021
 ```
@@ -7,11 +7,11 @@
 ```
 THE KING OF FIGTHERS 97 Edition Mugen para PC este juego. Que fue hecho para la plataforma Mugen con muchos personajes, 
 movimientos y poderes asombrosos. Es un juego muy divertido el cual es ideal para descargar y jugar con tus amigos, 
-cuenta con todos los personajes mejorados con su motor gr�fico de mugen.
+cuenta con todos los personajes mejorados con su motor gráfico de mugen.
 
 En el menu del juego tienes opciones para jugar a varios modos como VS que puedes jugarlo con tus amigo en 
-una batalla de uno contra uno como tambi�n tienes el modo TEAM para que juegos con equipos ya sea contra la 
-computadora o contra tus amigos. Aprovecha de descargar The King Of Fighters 97 Edition Mugen gratis aqu�.
+una batalla de uno contra uno como también tienes el modo TEAM para que juegos con equipos ya sea contra la 
+computadora o contra tus amigos. Aprovecha de descargar The King Of Fighters 97 Edition Mugen gratis aquí.
 ```
 
 **Mugen Game**
@@ -21,7 +21,7 @@ computadora o contra tus amigos. Aprovecha de descargar The King Of Fighters 97 
 * Sistema Operativo:	Defauld
 * Procesador:	        Defauld
 * Memoria:	        250 MB de RAM
-* Tarjeta gr�fica:	Defauld
+* Tarjeta gráfica:	Defauld
 * DirectX:	        Defauld
 * Almacenamiento:	400 MB
 
@@ -29,7 +29,7 @@ computadora o contra tus amigos. Aprovecha de descargar The King Of Fighters 97 
 
 https://codeload.github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/zip/refs/heads/main
 
-Personalizaci�n:
+Personalización:
 
 Este screenpack es una version custom, para disfrutarlo al 100% debes hacer las siguientes modificaciones:
 
@@ -51,5 +51,5 @@ https://codeload.github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN
 2. [Casita Dev Team - Update Screenpack Kof97](madkat@r2e.cjb.net)
 
 ```
-? https://t.me/AAAAAEXQOSyIpN2JZ0ehUQ [  ???? ] ?
+☆ https://t.me/AAAAAEXQOSyIpN2JZ0ehUQ [  ⃘⃤꙰✰ ] ☆
 ```
