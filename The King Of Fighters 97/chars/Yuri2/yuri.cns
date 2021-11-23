@@ -1,0 +1,72 @@
+ 
+;---------------------------------------------------------------------------------------------;
+;                                        Game Play Options                                    ;
+;---------------------------------------------------------------------------------------------;
+; Activation code           Play Mode                        Pallete        Button to press   ;
+;---------------------------------------------------------------------------------------------;
+;      0               Dream Match 2                        rose/purple            b          ;
+;      1               Mugen Tournament                    lilac/black             a          ;
+;      2               Dream Match 1                        red/blue               y          ;         
+;      3               Nest Saga [Gals Fighters]            gold/black             c          ;
+;      4               Nest Saga [Kyokugen Karate Do]       red/green              z          ;
+;      5               Capcom vs SNK Pro                    blue/pink              x          ;
+;   UNKNOWN            Godess of Dark Karate                 red/red            UNKNOWN       ;
+;   UNKNOWN            Bu-bui Karate Princess              white/silver         UNKNOWN       ;
+;---------------------------------------------------------------------------------------------;
+;---------------------------------------------------------------------------------------------;
+
+[Data]
+
+life = 1000
+attack = 100
+defence = 100
+power = 5000
+fall.defence_up = 50
+liedown.time = 60
+airjuggle = 15
+sparkno = 2
+guard.sparkno = 40
+KO.echo = 0
+volume = 0
+IntPersistIndex = 60
+FloatPersistIndex = 40
+
+[Size]
+
+xscale = 1           
+yscale = 1           
+ground.back = 15     
+ground.front = 16   
+air.back = 12       
+air.front = 12       
+height = 102      
+attack.dist = 160    
+proj.attack.dist = 90 
+proj.doscale = 0     
+head.pos = 5, -94   
+mid.pos = 9, -70    
+shadowoffset = -1   
+draw.offset = 0,-1   
+
+[Velocity]
+
+walk.fwd  = 3     
+walk.back = -3     
+run.fwd  = 6, 0    
+run.back = -5,-3.8
+jump.neu = 0,-8.2   
+jump.back = -3,-9    
+jump.fwd = 3,-9      
+runjump.back = -1.2,-6 
+runjump.fwd = 7,-9     
+airjump.neu = 0,-8.1    
+airjump.back = -2.55      
+airjump.fwd = 2.5        
+
+[Movement]
+
+airjump.num = 0      
+airjump.height = 35 
+yaccel = .42        
+stand.friction = .82  
+crouch.friction = .82

@@ -1,0 +1,1577 @@
+;--------------------------------------------------------------------------
+;AI-Fantasyft
+;--------------------------------------------------------------------------
+[statedef 96600]
+anim = 9998
+ctrl = 0
+
+[state 825]
+type = assertspecial
+trigger1 = 1
+flag = invisible
+
+[state 96600]
+type = selfstate
+trigger1 = !ishelper
+value = 0
+
+[state 96600]
+type=varset
+trigger1 = command="up" && root,command="up"
+trigger2 = command="down" && root,command="down"
+trigger3 = command="back" && root,command="back"
+trigger4 = command="fwd" && root,command="fwd"
+trigger5 = command="a" && root,command="a"
+trigger6 = command="b" && root,command="b"
+trigger7 = command="c" && root,command="c"
+trigger8 = command="x" && root,command="x"
+trigger9 = command="y" && root,command="y"
+trigger10 = command="z" && root,command="z"
+trigger11 = command="start" && root,command="start"
+var(30) = -1
+
+[state 96600]
+type = destroyself
+triggerall = ishelper
+trigger1 = root,var(30) || var(30)=-1
+trigger2 = command="up" && root,command="up"
+trigger3 = command="down" && root,command="down"
+trigger4 = command="back" && root,command="back"
+trigger5 = command="fwd" && root,command="fwd"
+trigger6 = command="a" && root,command="a"
+trigger7 = command="b" && root,command="b"
+trigger8 = command="c" && root,command="c"
+trigger9 = command="x" && root,command="x"
+trigger10 = command="y" && root,command="y"
+trigger11 = command="z" && root,command="z"
+trigger12 = command="start" && root,command="start"
+
+[state 96600]
+type=varset
+triggerall = var(30)!=-1
+trigger1 = root,command="up"
+trigger2 = root,command="down"
+trigger3 = root,command="back"
+trigger4 = root,command="fwd"
+trigger5 = root,command="a"
+trigger6 = root,command="b"
+trigger7 = root,command="c"
+trigger8 = root,command="x"
+trigger9 = root,command="y"
+trigger10 = root,command="z"
+trigger11 = root,command="start"
+var(30) = 1
+
+;---------------------------------------------------------------------------
+; Walk
+[Statedef 20]
+type    = S
+physics = S
+sprpriority = 0
+
+[State 20, 1]
+type = VelSet
+trigger1 = !var(30)
+trigger1 = command = "holdfwd"
+trigger2 = var(30)
+trigger2 = p2bodydist x>=10
+x = const(velocity.walk.fwd.x)
+
+[State 20, 2]
+type = VelSet
+trigger1 = !var(30)
+trigger1 = command = "holdback"
+trigger2 = var(30)
+trigger2 = p2bodydist x<10 || p2bodydist x<=50 && p2statetype=A && p2movetype=A && p2stateno>=1000
+trigger3 = var(30)
+trigger3 = p2bodydist x>=10 && var(37)<=180
+x = const(velocity.walk.back.x)
+
+[State 20, 3]
+type = ChangeAnim
+triggerall = vel x > 0
+trigger1 = Anim != 20 && Anim != 5
+trigger2 = Anim = 5 && AnimTime = 0
+value = 20
+
+[State 20, 4]
+type = ChangeAnim
+triggerall = vel x < 0
+trigger1 = Anim != 21 && Anim != 5
+trigger2 = Anim = 5 && AnimTime = 0
+value = 21
+
+;---------------------------------------------------------------------------
+; Jump Start
+[Statedef 40]
+type    = S
+physics = S
+anim = 40
+ctrl = 0
+sprpriority = 1
+
+[State 40, 1]
+type = changestate
+triggerall = var(30) && var(36)
+triggerall = !time
+trigger1 = 1
+value = 0
+ctrl = 1
+
+[State 40, 1]
+type = changestate
+triggerall = var(30) && var(34)
+triggerall = !time
+triggerall = enemynear(var(31)),backedgebodydist<=20
+triggerall = power<2000 && var(33)>333 || power>=2000
+trigger1 = 1
+value = 0
+ctrl = 1
+
+[State 40, 1]
+type = changestate
+triggerall = var(30)
+triggerall = !time
+triggerall = p2bodydist x<=40
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+trigger1 = p2statetype!=A && !(p2statetype=C && p2movetype=A) || p2statetype=A && enemynear(var(31)),vel y>0 && enemynear(var(31)),vel x>=0 && p2stateno<3000
+value = 0
+ctrl = 1
+
+[State 40, 1]
+type = VarSet
+trigger1 = Time = 0
+sysvar(1) = 0
+
+[State 40, 2]
+type = VarSet
+triggerall = var(30)
+triggerall = !time
+trigger1 = 1
+sysvar(1) = 1
+
+[State 40, 2]
+type = VarSet
+triggerall = var(30) && !var(34)
+triggerall = !time
+trigger1 = p2bodydist x=[40,100]
+trigger1 = p2statetype=A && p2movetype!=H
+trigger2 = p2bodydist x<=100 && enemynear(var(31)),vel x>3 && p2movetype=A && p2stateno>=3000
+sysvar(1) = -1
+
+[State 40, 2]
+type = VarSet
+trigger1 = !var(30)
+trigger1 = command = "holdfwd"
+sysvar(1) = 1
+
+[State 40, 3]
+type = VarSet
+trigger1 = !var(30)
+trigger1 = command = "holdback"
+sysvar(1) = -1
+
+[State 40, 4]
+type = VelSet
+trigger1 = AnimTime = 0
+x = ifelse(sysvar(1)=0, const(velocity.jump.neu.x), ifelse(sysvar(1)=1, const(velocity.jump.fwd.x), const(velocity.jump.back.x)))
+y = const(velocity.jump.y)
+
+[State 40, 5]
+type = VelSet
+trigger1 = !var(30)
+trigger1 = AnimTime = 0
+trigger1 = prevstateno = 100 ;RUN_FWD
+trigger1 = sysvar(1) = 1
+x = const(velocity.runjump.fwd.x)
+
+[State 40]
+type = VelSet
+triggerall = var(30)
+triggerall = AnimTime = 0
+triggerall = p2bodydist x>=120 || var(34)
+trigger1 = p2movetype=A
+trigger2 = enemynear(var(31)),numproj
+trigger3 = var(34) || var(38)
+x = const(velocity.runjump.fwd.x)
+
+[State 40, 6]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 50
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; GUARD (start)
+[Statedef 120]
+type = U    ;Leave state type unchanged
+physics = U ;Leave physics unchanged
+
+[State 120, 1]
+type = ChangeAnim
+trigger1 = Time = 0
+value = 120 + (statetype = C) + (statetype = A)*2
+
+[State 120, 2]
+type = StateTypeSet
+trigger1 = Time = 0 && statetype = S
+physics = S
+
+[State 120, 3]
+type = StateTypeSet
+trigger1 = Time = 0 && statetype = C
+physics = C
+
+[State 120, 4]
+type = StateTypeSet
+trigger1 = Time = 0 && statetype = A
+physics = A
+
+[State 120, Hi to Lo]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = S && command = "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype!=A || enemynear(var(31)),hitdefattr=SC) && p2movetype=A
+statetype = C
+physics = C
+
+[State 120, Lo to Hi]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = C && command != "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype=A || enemynear(var(31)),hitdefattr=A) && p2movetype=A
+statetype = S
+physics = S
+
+[State 120, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 130 + (statetype = C) + (statetype = A)*2
+
+[State 120, Stop Guarding]
+type = ChangeState
+trigger1 = !var(30)
+trigger1 = command != "holdback"
+trigger2 = !var(30)
+trigger2 = !inguarddist
+trigger3 = statetype!=A
+trigger3 = var(30)
+trigger3 = p2movetype!=A
+trigger4 = !var(30)
+trigger4 = !inguarddist
+trigger4 = statetype!=A
+value = 140
+
+;---------------------------------------------------------------------------
+; STAND GUARD (guarding)
+[Statedef 130]
+type    = S
+physics = S
+
+[State 130, 1]
+type = ChangeAnim
+trigger1 = Anim != 130
+value = 130
+
+[State 130, Hi to Lo]
+type = ChangeState
+trigger1 = !var(30)
+trigger1 = command = "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype!=A || enemynear(var(31)),hitdefattr=SC) && p2movetype=A
+value = 131
+
+[State 130, Stop Guarding]
+type = ChangeState
+trigger1 = !var(30)
+trigger1 = command != "holdback"
+trigger2 = !var(30)
+trigger2 = !inguarddist
+trigger3 = statetype!=A
+trigger3 = var(30)
+trigger3 = p2movetype!=A
+trigger4 = !var(30)
+trigger4 = !inguarddist
+trigger4 = statetype!=A
+value = 140
+
+;---------------------------------------------------------------------------
+; CROUCH GUARD (guarding)
+[Statedef 131]
+type    = C
+physics = C
+
+[State 131, 1]
+type = ChangeAnim
+trigger1 = Anim != 131
+value = 131
+
+[State 131, Lo to Hi]
+type = ChangeState
+trigger1 = !var(30)
+trigger1 = command != "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype=A || enemynear(var(31)),hitdefattr=A) && p2movetype=A
+value = 130
+
+[State 131, Stop Guarding]
+type = ChangeState
+trigger1 = !var(30)
+trigger1 = command != "holdback"
+trigger2 = !var(30)
+trigger2 = !inguarddist
+trigger3 = statetype!=A
+trigger3 = var(30)
+trigger3 = p2movetype!=A
+trigger4 = !var(30)
+trigger4 = !inguarddist
+trigger4 = statetype!=A
+value = 140
+
+;---------------------------------------------------------------------------
+; AIR GUARD (guarding)
+[Statedef 132]
+type    = A
+physics = N
+
+[State 132, 1]
+type = ChangeAnim
+trigger1 = Anim != 132
+value = 132
+
+[State 132, 2]
+type = VelAdd
+trigger1 = 1
+y = Const(movement.yaccel)
+
+[State 132, 3]
+type = VarSet
+trigger1 = 1
+sysvar(0) = (pos y >= 0) && (vel y > 0)
+
+[State 132, 4]
+type = VelSet
+trigger1 = sysvar(0)
+y = 0
+
+[State 132, 5]
+type = PosSet
+trigger1 = sysvar(0)
+y = 0
+
+[State 132, 6]
+type = ChangeState
+trigger1 = !var(30)
+trigger1 = sysvar(0)
+trigger1 = command = "holdback"
+trigger1 = inguarddist
+trigger2 = var(30)
+trigger2 = sysvar(0)
+trigger2 = p2movetype=A
+trigger2 = inguarddist
+value = 130
+
+[State 132, 7]
+type = ChangeState
+trigger1 = sysvar(0)
+value = 52
+
+[State 132, Stop Guarding]
+type = ChangeState
+trigger1 = !var(30)
+trigger1 = command != "holdback"
+trigger2 = !var(30)
+trigger2 = !inguarddist
+trigger3 = statetype=A
+trigger3 = var(30)
+trigger3 = p2movetype!=A
+trigger4 = var(30)
+trigger4 = !inguarddist
+trigger4 = statetype=A
+value = 140
+
+;---------------------------------------------------------------------------
+; GUARD (end)
+[Statedef 140]
+type = U    ;Leave state type unchanged
+physics = U ;Leave physics unchanged
+ctrl = 1
+
+[State 140, 1]
+type = ChangeAnim
+trigger1 = Time = 0
+value = 140 + (statetype = C) + (statetype = A)*2
+
+[State 140, 2]
+type = StateTypeSet
+trigger1 = Time = 0 && statetype = S
+physics = S
+
+[State 140, 3]
+type = StateTypeSet
+trigger1 = Time = 0 && statetype = C
+physics = C
+
+[State 140, 4]
+type = StateTypeSet
+trigger1 = Time = 0 && statetype = A
+physics = A
+
+[State 140, Hi to Lo]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = S && command = "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype!=A || enemynear(var(31)),hitdefattr=SC) && p2movetype=A
+statetype = C
+physics = C
+
+[State 140, Lo to Hi]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = C && command != "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype=A || enemynear(var(31)),hitdefattr=A) && p2movetype=A
+statetype = S
+physics = S
+
+;[State 140, 5] ;Implemented within engine
+;type = ChangeState
+;trigger1 = AnimTime = 0
+;value = (statetype = C)*11 + (statetype = A)*51
+
+;---------------------------------------------------------------------------
+; SGUARDHIT (shaking)
+[Statedef 150]
+type    = S
+movetype= H
+physics = N
+velset = 0,0
+
+[State 150, 1]
+type = ChangeAnim
+trigger1 = 1
+value = 150
+
+[State 150, 2]
+type = ChangeState
+trigger1 = HitShakeOver
+value = 151 + 2*(command = "holddown")
+
+[State 150, Hi to Lo]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = S && command = "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype!=A || enemynear(var(31)),hitdefattr=SC) && p2movetype=A
+statetype = C
+physics = C
+
+[State 150, Lo to Hi]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = C && command != "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype=A || enemynear(var(31)),hitdefattr=A) && p2movetype=A
+statetype = S
+physics = S
+
+[State 150, 3]
+type = ForceFeedback
+trigger1 = time = 0
+waveform = square
+time = 3
+
+;---------------------------------------------------------------------------
+; SGUARDHIT2 (knocked back)
+[Statedef 151]
+type    = S
+movetype= H
+physics = S
+anim = 150
+
+[State 151, 1]
+type = HitVelSet
+trigger1 = Time = 0
+x = 1
+
+[State 151, 2]
+type = VelSet
+trigger1 = Time = GetHitVar(slidetime)
+trigger2 = HitOver
+x = 0
+
+[State 151, 3]
+type = CtrlSet
+trigger1 = Time = GetHitVar(ctrltime)
+value = 1
+
+[State 151, Hi to Lo]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = S && command = "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype!=A || enemynear(var(31)),hitdefattr=SC) && p2movetype=A
+statetype = C
+physics = C
+
+[State 151, Lo to Hi]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = C && command != "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype=A || enemynear(var(31)),hitdefattr=A) && p2movetype=A
+statetype = S
+physics = S
+
+[State 151, 4]
+type = ChangeState
+trigger1 = HitOver
+value = 130
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; CGUARDHIT (shaking)
+[Statedef 152]
+type    = C
+movetype= H
+physics = N
+velset = 0,0
+
+[State 152, 1]
+type = ChangeAnim
+trigger1 = 1
+value = 151
+
+[State 152, 3]
+type = ChangeState
+trigger1 = HitShakeOver
+value = 151 + 2*(command = "holddown")
+
+[State 152, Hi to Lo]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = S && command = "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype!=A || enemynear(var(31)),hitdefattr=SC) && p2movetype=A
+statetype = C
+physics = C
+
+[State 152, Lo to Hi]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = C && command != "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype=A || enemynear(var(31)),hitdefattr=A) && p2movetype=A
+statetype = S
+physics = S
+
+[State 152, 4]
+type = ForceFeedback
+trigger1 = time = 0
+waveform = square
+time = 4
+
+;---------------------------------------------------------------------------
+; CGUARDHIT2 (knocked back)
+[Statedef 153]
+type    = C
+movetype= H
+physics = C
+anim = 151
+
+[State 153, 1]
+type = HitVelSet
+trigger1 = Time = 0
+x = 1
+
+[State 153, 2]
+type = VelSet
+trigger1 = Time = GetHitVar(slidetime)
+trigger2 = HitOver
+x = 0
+
+[State 153, 3]
+type = CtrlSet
+trigger1 = Time = GetHitVar(ctrltime)
+value = 1
+
+[State 153, Hi to Lo]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = S && command = "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype!=A || enemynear(var(31)),hitdefattr=SC) && p2movetype=A
+statetype = C
+physics = C
+
+[State 153, Lo to Hi]
+type = StateTypeSet
+trigger1 = !var(30)
+trigger1 = statetype = C && command != "holddown"
+trigger2 = var(30)
+trigger2 = statetype!=A
+trigger2 = (p2statetype=A || enemynear(var(31)),hitdefattr=A) && p2movetype=A
+statetype = S
+physics = S
+
+[State 153, 4]
+type = ChangeState
+trigger1 = HitOver
+value = 131
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; AGUARDHIT (shaking)
+[Statedef 154]
+type    = A
+movetype= H
+physics = N
+velset = 0,0
+
+[State 154, 1]
+type = ChangeAnim
+trigger1 = 1
+value = 152
+
+[State 154, 2]
+type = ChangeState
+trigger1 = HitShakeOver
+value = 155 ;AGUARDHIT2
+
+[State 154, 3]
+type = ForceFeedback
+trigger1 = time = 0
+waveform = square
+time = 4
+
+;---------------------------------------------------------------------------
+; AGUARDHIT2 (knocked away)
+[Statedef 155]
+type    = A
+movetype= H
+physics = N
+anim = 152
+
+[State 155, 1]
+type = HitVelSet
+trigger1 = Time = 0
+x = 1
+y = 1
+
+[State 155, 2]
+type = VelAdd
+trigger1 = 1
+y = Const(movement.yaccel)
+
+[State 155, 3]
+type = CtrlSet
+trigger1 = Time = GetHitVar(ctrltime)
+value = 1
+
+[State 155, 4]
+type = VarSet
+trigger1 = 1
+sysvar(0) = (pos y >= 0) && (vel y > 0)
+
+[State 155, 5]
+type = VelSet
+trigger1 = sysvar(0)
+y = 0
+
+[State 155, 6]
+type = PosSet
+trigger1 = sysvar(0)
+y = 0
+
+[State 155, 6]
+type = ChangeState
+trigger1 = !var(30)
+trigger1 = sysvar(0)
+trigger1 = command = "holdback"
+trigger1 = inguarddist
+trigger2 = var(30)
+trigger2 = sysvar(0)
+trigger2 = p2movetype=A
+trigger2 = inguarddist
+value = 130
+
+[State 155, 7]
+type = ChangeState
+trigger1 = sysvar(0)
+value = 52
+
+;--------------------------------------------------------------------------
+;   AI action
+;--------------------------------------------------------------------------
+[statedef -3]
+;------------------------------------
+[state -3]
+type = movehitreset
+trigger1 = stateno=215 && animelem=6,1
+trigger2 = stateno=245 && animelem=5,0
+ignorehitpause = 1
+;------------------------------------
+[state -3]
+type = varset
+trigger1 = !(gametime%60)
+var(37) = random	
+ignorehitpause = 1
+;------------------------------------
+[state -3]
+type = varset
+trigger1 = 1
+var(31) = 0	
+ignorehitpause = 1
+
+[state -3]
+type = varset
+triggerall = var(30)
+triggerall = numenemy=2
+trigger1 = !enemynear,alive
+var(31) = 1	
+ignorehitpause = 1 
+;------------------------------------
+[state -3]
+type = varset
+triggerall = var(30)
+trigger1 = stateno=5120
+var(32) = 12	
+ignorehitpause = 1 
+
+[state -3]
+type = varadd
+trigger1 = var(32)
+var(32) = -1
+ignorehitpause = 1
+
+[state -3]
+type = varset
+trigger1 = var(32)<0
+var(32) = 0
+ignorehitpause = 1 
+;------------------------------------
+[state -3]
+type = varset
+triggerall = movetype=A
+trigger1 = time=1
+var(33) = random	
+ignorehitpause = 1 
+;------------------------------------
+[state -3]
+type = varset
+trigger1 = numhelper(1116)
+trigger1 = helper(1116),movehit
+trigger2 = numhelper(1315)
+trigger2 = helper(1315),movehit
+trigger3 = numhelper(1325)
+trigger3 = helper(1325),movehit
+var(34) = 1	
+ignorehitpause = 1 
+
+[state -3]
+type = varset
+triggerall = var(34)
+trigger1 = p2statetype!=A
+trigger2 = p2movetype!=H
+trigger3 = movetype=A && stateno!=1110
+trigger3 = stateno!=410 && stateno!=1000 && stateno!=2000 && stateno!=2050
+trigger3 = stateno!=[600,640]
+var(34) = 0	
+ignorehitpause = 1 
+
+;------------------------------------
+[state -3]
+type = varset
+triggerall = p2dist x>0
+triggerall = var(35)>=0
+trigger1 = var(34) && time=1
+trigger1 = stateno=2000 || stateno=2050
+var(35) = 1	
+ignorehitpause = 1 
+
+[state -3]
+type = varset
+triggerall = var(35)>0
+trigger1 = stateno=2010 || stateno=2060
+var(35) = 0	
+ignorehitpause = 1 
+
+[state -3]
+type = varset
+triggerall = var(35)>0
+trigger1 = stateno=2055 || stateno=2005
+var(35) = -1	
+ignorehitpause = 1 
+;------------------------------------
+[state -3]
+type = varset
+triggerall = var(36)
+trigger1 = p2statetype=A||p2statetype=L
+trigger2 = p2movetype!=H
+var(36) = 0	
+ignorehitpause = 1 
+
+;------------------------------------
+[state -3]
+type = varset
+trigger1 = numhelper(1410)
+trigger1 = helper(1410),movehit
+var(38) = 1	
+ignorehitpause = 1 
+
+[state -3]
+type = varset
+triggerall = var(38)
+trigger1 = p2statetype!=A
+trigger2 = p2movetype!=H
+trigger3 = movetype=A && stateno!=1110
+trigger3 = stateno!=410 && stateno!=1000 && stateno!=2000 && stateno!=2050
+trigger3 = stateno!=[600,640]
+var(38) = 0	
+ignorehitpause = 1 
+;==============================================================
+;[state -3]
+;type = displaytoclipboard
+;trigger1 = 1
+;text="the value of var(35) is %d"
+;params = var(35)
+;ignorehitpause = 1
+
+;==============================================================
+[state -3]     
+type = helper
+trigger1 = !numhelper(96600)          
+trigger1 = roundstate=2
+trigger1 = alive
+trigger1 = !var(30)
+trigger1 = (prevstateno=[191,194])||prevstateno=5900            
+trigger1 = ctrl&&stateno=0
+helpertype = normal
+name = "AI"
+stateno = 96600
+ID = 96600
+pos = 9999,9999            
+keyctrl = 1                
+pausemovetime = 2147483647          
+supermovetime = 2147483647           
+persistent = 0               
+
+
+[state -3]
+type=changestate                  
+trigger1 = ishelper(96600)        
+trigger1 = stateno!=96600
+value = 96600
+
+[state -3]  
+type = varset
+triggerall = !var(30)
+triggerall = roundstate = [1,2]      
+trigger1  = command = "AI0"  || command = "AI1"  || command = "AI2"
+trigger2  = command = "AI3"  || command = "AI4"  || command = "AI5"
+trigger3  = command = "AI6"  || command = "AI7"  || command = "AI8"
+trigger4  = command = "AI9"  || command = "AI10" || command = "AI11"
+trigger5  = command = "AI12" || command = "AI13" || command = "AI14"
+trigger6  = command = "AI15" || command = "AI16" || command = "AI17"
+trigger7  = command = "AI18" || command = "AI19" || command = "AI20"
+trigger8  = command = "AI21" || command = "AI22" || command = "AI23"
+trigger9  = command = "AI24" || command = "AI25" || command = "AI26"
+trigger10 = command = "AI27" || command = "AI28" || command = "AI29"
+trigger11 = command = "AI30" || command = "AI31" || command = "AI32"
+trigger12 = command = "AI33" || command = "AI34" || command = "AI35"
+trigger13 = command = "AI36" || command = "AI37" || command = "AI38"
+trigger14 = numhelper(96600)               
+trigger14 = helper(96600),var(30)          
+var(30) = 1             
+ignorehitpause = 1
+
+[state -3]
+type = changestate
+value = 0
+triggerall = var(30) && statetype!=A && ctrl
+trigger1 = win = 1
+
+[state -3]
+type = changestate
+value = 100
+triggerall = var(30)
+triggerall = var(36)
+triggerall = statetype!=A
+triggerall = ctrl
+triggerall = stateno!=40
+triggerall = stateno!=100 && stateno!=20
+triggerall = p2stateno!=5120
+triggerall = !enemynear(var(31)),numproj
+trigger1 = p2bodydist x >=10
+
+[state -3]
+type = changestate
+value = 2050
+triggerall = var(30)
+triggerall = var(20) && power>=2000
+triggerall = statetype=A
+triggerall = p2statetype=A
+trigger1 = stateno=1120 && movehit && p2dist y>=0
+
+
+
+;==========================================
+[state -3]
+type = changestate
+value = 1250+((power>=1000||var(20))&&random<=444)*750
+triggerall = var(30)
+triggerall = statetype=A
+triggerall = movehit
+triggerall = stateno=610 || stateno=640
+triggerall = anim=610&&time=10 || anim=615&&time=10 || anim=640&&time=10 || anim=645&&time=12
+trigger1 = p2statetype!=A && p2bodydist x>=40 && random<=333
+trigger2 = p2statetype=A && p2bodydist x>=0 && p2dist y>=0
+
+[state -3]
+type = changestate
+value = 40
+triggerall = var(30)
+triggerall = var(34)&&var(35)>=0
+triggerall = ctrl
+triggerall = statetype!=A
+triggerall = power>=1000
+triggerall = enemynear(var(31)),backedgebodydist>20 || enemynear(var(31)),backedgebodydist<=20 && power<2000 && var(33)<=333
+trigger1 = 1
+
+[state -3]
+type = changestate
+value = 40
+triggerall = var(30)
+triggerall = var(38)
+triggerall = ctrl
+triggerall = statetype!=A
+triggerall = power>=1000
+trigger1 = 1
+
+[state -3]
+type = changestate
+value = 100
+triggerall = var(30)
+triggerall = numhelper(1410)
+triggerall = statetype!=A
+triggerall = ctrl
+triggerall = stateno!=40
+triggerall = stateno!=100 && stateno!=20
+triggerall = p2stateno!=5120
+triggerall = !enemynear(var(31)),numproj
+trigger1 = p2bodydist x >=10
+
+[state -3]
+type = changestate
+value = ifelse(power>=1000,2000,610)
+triggerall = var(30)
+triggerall = statetype=A
+triggerall = p2statetype=A
+triggerall = ctrl
+triggerall = p2bodydist x<=120 
+triggerall = p2dist y>=-40 && enemynear(var(31)),vel y>0 || p2dist y>=20 && enemynear(var(31)),vel y<0
+trigger1 = pos y<=-10 && var(34)
+trigger2 = pos y<=-40 && var(38) && enemynear(var(31)),pos y<=-30
+
+[state -3]
+type = changestate
+value = 410
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype=A
+triggerall = var(34) || var(38)
+triggerall = enemynear(var(31)),vel y>0
+triggerall = enemynear(var(31)),pos y=[-60,-40]
+triggerall = ctrl
+triggerall = p2bodydist x<=30
+trigger1 = 1
+
+[state -3]
+type = changestate
+value = 3030+(var(20)&&power>=2000)*50
+triggerall = var(30)
+triggerall = var(34)
+triggerall = power>=2000 || var(20) && power>=1000
+triggerall = statetype!=A
+triggerall = p2statetype=A
+triggerall = p2bodydist x<=50
+triggerall = enemynear(var(31)),vel y>0
+triggerall = enemynear(var(31)),pos y=[-90,-60]
+trigger1 = stateno=1000 && movehit
+;==============================
+[state -3]
+type = changestate
+value = 400
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2bodydist x<=20
+trigger1 = stateno=430 && movecontact && animelem=4,>=0
+
+[state -3]
+type = changestate
+value = 2000+(var(20)&&power>=1000)*50
+triggerall = var(30)
+triggerall = statetype=A
+triggerall = random<=500
+triggerall = power>=1000 || var(20)
+trigger1 = stateno=255 && movehit
+
+[state -3]
+type = changestate
+value = 1250
+triggerall = var(30)
+triggerall = statetype=A
+trigger1 = stateno=255 && movecontact
+
+[state -3]
+type = changestate
+value = 1100
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2bodydist x<=70-15-enemynear(var(31)),const(size.ground.front)-5
+triggerall = enemynear(var(31)),backedgebodydist>50 && power>=1000 && var(33)<=666 && var(35)>=0|| enemynear(var(31)),backedgebodydist<=50 && (var(35)>=0 || var(33)<=333 && var(35)<0)
+trigger1 = stateno=215 && movehit && animelem=7,<0
+trigger2 = stateno=410 && animelem=2,>=0 && movehit
+trigger3 = stateno=245 && movehit && animelem=5,<0
+
+[state -3]
+type = changestate
+value = 255
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = enemynear(var(31)),backedgebodydist>50 && power>=1000 && var(33)<=700 && var(35)>=0|| enemynear(var(31)),backedgebodydist<=50 && (var(33)<=888 && var(35)>=0 || var(33)<=666 && var(35)<0)
+trigger1 = stateno=215 && movehit && animelem=7,<0
+trigger2 = stateno=410 && animelem=2,>=0 && movehit
+trigger3 = stateno=245 && movehit && animelem=5,<0
+
+[state -3]
+type = changestate
+value = 2100+(var(20)&&power>=1000)*50
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = power>=1000 || var(20)
+triggerall = random<=666
+trigger1 = stateno=215 && movehit && animelem=7,>=0
+trigger2 = stateno=410 && animelem=2,>=0 && movehit
+trigger3 = stateno=245 && movehit && animelem=6,>=0
+
+[state -3]
+type = changestate
+value = 1000
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2bodydist x<=30
+trigger1 = stateno=215 && movehit && animelem=7,>=0
+trigger2 = stateno=410 && animelem=2,>=0 && movehit
+trigger3 = stateno=245 && movehit && animelem=6,>=0
+
+[state -3]
+type = changestate
+value = 1300
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+trigger1 = stateno=215 && movecontact && animelem=7,>=0
+trigger2 = stateno=410 && animelem=2,>=0 && movecontact
+trigger3 = stateno=245 && movecontact && animelem=6,>=0
+
+[state -3]
+type = changestate
+value = 3030
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2bodydist x<=25
+triggerall = power>=1000
+triggerall = random<=222
+trigger1 = stateno=400 && movehit
+
+[state -3]
+type = changestate
+value = 1000
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2bodydist x<=35
+trigger1 = stateno=400 && movehit
+
+[state -3]
+type = changestate
+value = 400
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2bodydist x<=50
+trigger1 = stateno=400 && movecontact && animelem=5,>=0
+
+[state -3]
+type = changestate
+value = 430
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2bodydist x<=70
+trigger1 = stateno=430 && movecontact && animelem=4,>=0
+
+[state -3]
+type = changestate
+value = 1000
+triggerall = var(30)
+triggerall = statetype!=A
+triggerall = p2statetype=A
+trigger1 = stateno=215 && movecontact
+trigger2 = stateno=410 && animelem=2,>=0 && movecontact
+trigger3 = stateno=400 && movecontact
+trigger4 = stateno=245 && movecontact
+;==============================
+
+[state -3]
+type = changestate
+value = 430
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = p2statetype=S
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=50
+trigger1 = p2stateno=[120,159]
+
+[state -3]
+type = changestate
+value = 3030
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x=[0,40]
+triggerall = p2movetype!=H
+triggerall = power>=1000 || var(20)
+trigger1 = enemynear(var(31)),animtime>9 && p2statetype!=A && p2stateno<700 && random<=200
+trigger2 = enemynear(var(31)),animtime>9 && p2statetype!=A && p2stateno>=1000 && random<=200 && enemynear(var(31)),time>5
+trigger3 = p2statetype=A && enemynear(var(31)),vel y>0 && enemynear(var(31)),vel x>=0 && enemynear(var(31)),pos y=[-90,-60]
+trigger4 = p2statetype=A && enemynear(var(31)),vel y<0 && enemynear(var(31)),vel x>=0 && enemynear(var(31)),pos y>=-20 && random<=200
+
+[state -3]
+type = changestate
+value = 1400
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = !numhelper(1410)
+triggerall = statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201
+triggerall = ctrl
+triggerall = p2bodydist x>=120
+trigger1 = p2statetype=L && random<=200
+
+[state -3]
+type = changestate
+value = 1301
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = !numhelper(1325)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2statetype=L && enemynear(var(31)),time<=3
+triggerall = ctrl
+triggerall = p2bodydist x=[50,80]
+trigger1 = random<=200
+
+[state -3]
+type = changestate
+value = 1200
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x>=80
+trigger1 = p2movetype=A && enemynear(var(31)),numproj && random<=80
+trigger2 = p2movetype=A && p2statetype=C && p2stateno<700 && enemynear(var(31)),animtime>10 && random<=80
+
+[state -3]
+type = changestate
+value = 1000
+triggerall = var(30)
+triggerall = !var(36)
+triggerall = statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = (p2statetype!=A || p2statetype=A && enemynear(var(31)),vel x=0) && (p2bodydist x=[0,40]) || enemynear(var(31)),vel x>0 && p2bodydist x<=50 && p2dist x>=0
+triggerall = p2movetype!=H || var(34) || var(38) 
+triggerall = power>=1000 || var(20)
+trigger1 = enemynear(var(31)),animtime>9 && p2statetype!=A && p2stateno<700 && random<=200
+trigger2 = enemynear(var(31)),animtime>9 && p2statetype!=A && p2stateno>=1000 && random<=200 && enemynear(var(31)),time>5
+trigger3 = p2statetype=A && enemynear(var(31)),vel y>0 && enemynear(var(31)),vel x>=0 && enemynear(var(31)),pos y=[-120,-60]
+trigger4 = p2statetype=A && enemynear(var(31)),vel y<0 && enemynear(var(31)),vel x>=0 && enemynear(var(31)),pos y>=-20 && random<=200
+
+[state -3]
+type = changestate
+value = 430
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x>=70
+triggerall = !enemynear(var(31)),numproj
+trigger1 = p2movetype=I && p2stateno<200 && random<=60
+
+[state -3]
+type = changestate
+value = 210
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = p2statetype=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x>=25
+triggerall = enemynear(var(31)),vel x=0 && (p2bodydist x=[40,70]) || enemynear(var(31)),vel x>0 && p2bodydist x=[60,90]
+trigger1 = (enemynear(var(31)),vel y=[-6,0)) && enemynear(var(31)),pos y>=-20
+trigger2 = enemynear(var(31)),vel y>0 && enemynear(var(31)),pos y=[-100,-80]
+
+[state -3]
+type = changestate
+value = 410
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = p2statetype=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x>=25
+triggerall = enemynear(var(31)),vel x=0 && (p2bodydist x=[0,30]) || enemynear(var(31)),vel x>0 && p2bodydist x=[10,50]
+trigger1 = enemynear(var(31)),vel y<0 && enemynear(var(31)),pos y>=-20
+trigger2 = enemynear(var(31)),vel y>0 && enemynear(var(31)),pos y=[-100,-40]
+
+[state -3]
+type = changestate
+value = 245
+triggerall = var(30)
+triggerall = !var(34)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=20
+trigger1 = p2stateno=100 && random<=200
+trigger2 = p2movetype=H && random<=500
+trigger3 = p2movetype=I && p2stateno>=200 && random<=500
+trigger4 = p2movetype=A && p2stateno<1000 && random<=200
+trigger5 = p2movetype=I && p2stateno<200 && random<=200
+trigger6 = p2movetype=A && p2stateno>=1000 && random<=222 && enemynear(var(31)),time>5
+
+[state -3]
+type = changestate
+value = 215
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=25
+trigger1 = p2stateno=100 && random<=300
+trigger2 = p2movetype=H && random<=500
+trigger3 = p2movetype=I && p2stateno>=200 && random<=800
+trigger4 = p2movetype=A && p2stateno<1000 && random<=300
+trigger5 = p2movetype=I && p2stateno<200 && random<=200
+trigger6 = p2movetype=A && p2stateno>=1000 && random<=222 && enemynear(var(31)),time>5
+
+[state -3]
+type = changestate
+value = 400
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=60
+trigger1 = p2stateno=100 || p2stateno=52 && random<=333
+trigger2 = p2movetype=H
+trigger3 = p2movetype=I && p2stateno>=200
+trigger4 = p2movetype=A && p2stateno<1000 && random<=300
+trigger5 = p2movetype=I && p2stateno<200 && random<=300
+trigger6 = p2movetype=A && p2stateno>=1000 && random<=333 && enemynear(var(31)),time>5
+
+[state -3]
+type = changestate
+value = 430
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = p2statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=80
+trigger1 = random<=200
+trigger1 = p2stateno=100 || p2stateno=52
+trigger2 = p2movetype=H && random<=200 && p2stateno!=[120,159]
+trigger3 = p2movetype=I && p2stateno>=200
+trigger4 = p2movetype=A && p2stateno<1000 && random<=200
+trigger5 = p2movetype=I && p2stateno<200 && random<=100
+trigger6 = p2movetype=A && p2stateno>=1000 && random<=333 && enemynear(var(31)),time>5
+
+[state -3]
+type = changestate
+value = 610
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = vel x
+triggerall = statetype=A
+triggerall = p2statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=60
+trigger1 = vel y>0 && pos y=[-70,-20]
+trigger2 = var(16) && abs(vel y)<=1
+
+[state -3]
+type = changestate
+value = 640
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = vel x
+triggerall = statetype=A
+triggerall = p2statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x=[30,80]
+trigger1 = vel y>0 && pos y=[-70,-30]
+trigger2 = var(16) && abs(vel y)<=1
+
+[state -3]
+type = changestate
+value = 640
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = !vel x
+triggerall = statetype=A
+triggerall = p2statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=50
+trigger1 = vel y>0 && pos y=[-70,-30]
+trigger2 = var(16) && abs(vel y)<=1
+
+[state -3]
+type = changestate
+value = 610
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = !vel x
+triggerall = statetype=A
+triggerall = p2statetype!=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=60
+trigger1 = vel y>0 && pos y=[-70,-30]
+trigger2 = var(16) && abs(vel y)<=1
+
+[state -3]
+type = changestate
+value = 640
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = vel x
+triggerall = statetype=A
+triggerall = p2statetype=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=100
+trigger1 = vel y<0 && p2dist y=[-60,0]
+trigger2 = vel y>0 && p2dist y=[0,70]
+
+[state -3]
+type = changestate
+value = 640
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = !vel x
+triggerall = statetype=A
+triggerall = p2statetype=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=70
+trigger1 = vel y>0 && p2dist y=[0,90]
+
+[state -3]
+type = changestate
+value = 610
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = vel x
+triggerall = statetype=A
+triggerall = p2statetype=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=80
+trigger1 = vel y>0 && p2dist y=[0,80]
+
+[state -3]
+type = changestate
+value = 610
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = !vel x
+triggerall = statetype=A
+triggerall = p2statetype=A
+triggerall = p2stateno!=5120 && p2stateno!=5200 && p2stateno!=5201 && p2statetype!=L
+triggerall = ctrl
+triggerall = p2bodydist x<=80
+trigger1 = vel y<0 && p2dist y=[-20,0]
+trigger2 = vel y>0 && p2dist y=[0,100]
+;===============================================
+
+
+[state -3]
+type = changestate
+value = 120
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = ctrl
+triggerall = statetype!=A
+trigger1 = enemynear(var(31)),numproj && var(32)
+
+[state -3]
+type = changestate
+value = 100
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = ctrl
+triggerall = stateno!=40
+triggerall = stateno!=100 && stateno!=20
+triggerall = p2stateno!=5120
+triggerall = !enemynear(var(31)),numproj
+trigger1 = p2bodydist x >=30 && p2movetype=H && random<=100 && p2stateno!=[120,159]
+trigger2 = p2bodydist x >=30 && p2movetype!=A && p2stateno>=200 && random<=130 && p2statetype!=A
+trigger3 = p2bodydist x >=20 && p2movetype=I && p2stateno>=1000 && random<=333
+
+[state -3]
+type = changestate
+value = 40
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = ctrl
+triggerall = statetype!=A
+trigger1 = (p2bodydist x=[80,150]) && random<=80 && p2movetype!=A && p2statetype!=A && p2statetype!=L
+trigger2 = (p2bodydist x=[0,80]) && (p2stateno=[0,699])&& p2movetype=A && random<=100 && p2statetype=C
+trigger3 = backedgedist<=50 && p2stateno=5120 && (p2bodydist x=[0,30])
+trigger4 = p2movetype=A && enemynear(var(31)),vel x>3 && random<=80 && p2stateno>=3000 && p2bodydist x<=100
+trigger5 = p2statetype=A && enemynear(var(31)),vel y<0 && random<=80 && p2bodydist x<=100
+trigger6 = p2bodydist x>=120 && p2movetype=A && random<=100 && p2stateno>1000
+
+[state -3]
+type = changestate
+value = 120
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = ctrl
+triggerall = statetype!=A
+trigger1 = p2bodydist x<=100 && p2dist y>=-100
+trigger1 = p2statetype=A && enemynear(var(31)),vel y>=0 && p2movetype=A
+trigger2 = enemynear(var(31)),numproj>0
+trigger2 = inguarddist
+trigger3 = (p2bodydist x=[0,100]) && p2movetype=A && random<=500
+trigger3 = inguarddist
+
+[state -3]
+type = changestate
+value = 700
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = p2statetype!=L && p2statetype!=A
+triggerall = statetype!=A
+triggerall = p2stateno!=[5030,5999]
+triggerall = stateno!=[150,151]
+trigger1 = (p2stateno=[0,699]) && (p2bodydist x=[30,70])
+trigger1 = ctrl && random<=150 && p2movetype=A && enemynear(var(31)),animtime>33 && p2statetype!=A
+trigger2 = ctrl && enemynear(var(31)),numproj && p2movetype=A && p2dist x<=100 && enemynear(var(31)),animtime>33 && random<=160
+trigger3 = ctrl && enemynear(var(31)),numproj && p2movetype=A && p2dist x>100 && enemynear(var(31)),animtime<33 && random<=80
+trigger4 = ctrl && p2movetype=A && p2stateno<1000 && random<=60 && p2bodydist x=[100,150]
+
+[state -3]
+type = changestate
+value = 20
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A
+triggerall = ctrl
+triggerall = stateno!=100 && stateno!=20
+triggerall = prevstateno!=100
+triggerall = p2stateno!=5120 && p2statetype!=L
+triggerall = enemynear(var(31)),numproj<=1
+trigger1 = p2bodydist x >=40 && p2movetype!=A && (p2stateno=[0,4999])
+trigger2 = p2movetype!=A && p2bodydist x >=20
+
+[state -3]
+type = changestate
+value = 105
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = statetype!=A 
+triggerall = ctrl
+trigger1 = p2stateno=5120 || p2statetype=L || p2stateno=5201 || p2stateno=5200
+trigger1 = p2bodydist x=[-40,40]
+trigger2 = numenemy=2 && ((enemynear(0),p2bodydist x)=[-50,50])
+trigger2 = enemynear(1),stateno=5120 || enemynear(0),stateno=5120
+trigger2 = backedgedist>60
+
+[state -3]
+type = changestate
+value = 702
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = alive
+trigger1 = stateno=5050
+trigger1 = pos y>=-40
+trigger1 = vel y>0
+
+[state -3]
+type = changestate
+value = 291
+triggerall = p2bodydist x=[0,40]
+triggerall = var(30)
+triggerall = !var(36) && !var(34) && !var(38)
+triggerall = power>=500
+triggerall = statetype!=A
+trigger1 = stateno=150 || stateno=152
+trigger1 = random<=40
+trigger1 = p2stateno=[0,699]
+trigger1 = backedgedist<=80 || frontedgedist<=100
+
+
+
+
+
+
+
+
+

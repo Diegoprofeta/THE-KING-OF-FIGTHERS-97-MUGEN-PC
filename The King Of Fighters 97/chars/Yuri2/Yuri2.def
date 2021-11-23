@@ -1,0 +1,69 @@
+; Yuri Sakazaki for Mugen
+; ver 3BD Special
+; Made by Jorge H Campos 
+;
+; Site: http://dominioranma.dreamers.com/yuri/yuri.htm
+;
+; Mail:     jorgehcampos@mixmail.com
+; Alt Mail: jorgehcampos@hotmail.com
+;
+; Files made with Mugen Edit Ensemble (MEEv0.384) by Ragnarok. Sound
+; compiled with Sounds Good by The Rancid.   Frames  extracted  with 
+; N Mame X II, Neo Rage X II, ePSXe and  Adobe  Photoshop.  Sound  
+; extracted  with vx2wave, Cool Edit and Gold Wave.
+;
+; Yuri Sakazaki frames and sound extracted  from  "The King of Fighters"
+; (version '97, '01)  by  Playmore  INC,  so  like from "Capcom vs SNK",
+; copyrighted by Capcom. All rights by Playmore INC.  1994-1002.
+; Yuri Sakazaki voice by Kaori Horie
+
+[Info]
+
+name="Yuri Sakazaki" 
+displayname="Yuri"
+versiondate="04,15,2001"  
+mugenversion="04,14,2001"
+author="Jorge H Campos" 
+pal.defaults=1,2,3,4,5,6  
+
+[Files]
+
+;Constants
+cns=yuri.cns 
+
+;Command set & AI       
+cmd=yuri.cmd       
+       
+
+;Common states              
+stcommon=st/0.st
+
+;States                ; States  file  for  Yuri is splitted as follow:
+st =st/1.st            ; First file contains  statedef  -2, -3, intros,
+st1=st/2.st            ; winning   poses   and  other  related   stuff; 
+st2=st/3.st            ; second  file contains all  basics attacks  and
+st3=st/4.st            ; extended  attacks; the third  one contains all
+st4=st/5.st            ; throws and  special  gethit   states;  at  the
+st5=st/6.st            ; fourth and fifth file are the special attacks,
+                       ; and finally, hyper attacks are  at  the  sixth
+                       ; state  file.  Note  that  you  can decide wich 
+                       ; modes  will use  Yuri  by  changing the Varset 
+                       ; var(1) at 1.st file.                                                       
+
+;Sprite
+sprite=media/yuri.sff  
+
+;Animation
+anim=media/yuri.air 
+
+;Sound  
+sound=media/yuri.snd   
+
+;Color Palletes         
+pal1=media/06.act       
+pal2=media/01.act       
+pal3=media/03.act       
+pal4=media/07.act      
+pal5=media/05.act      
+pal6=media/02.act      
+                     

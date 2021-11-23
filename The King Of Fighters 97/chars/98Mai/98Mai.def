@@ -1,0 +1,25 @@
+[Info]
+name    = "Mai Shiranui"
+displayname = "MAI"
+author = "Ehnyd"
+pal.defaults = 4,1
+;localcoord = 384,224
+
+[Files]
+cmd	 = 98Mai.cmd
+cns      = 01_Main.cns		;Principal
+st       = 01_Main.cns		;Principal
+stcommon = common1.cns
+st1	 = 02_Attacks.cns	;ataques basicos
+st2	 = 03_Specials.cns	;Tecnicas
+st3	 = 04_DMs.cns		;DMs
+st4	 = 05_Others.cns	;Otros
+sprite   = 98Mai.sff
+anim     = 98Mai.air
+sound    = 98Mai.snd
+pal1     = Pal/Mai01.act
+pal2     = Pal/Mai01.act
+pal3     = Pal/Mai01.act
+pal4     = Pal/Mai01.act
+pal5     = Pal/Mai01.act
+pal6     = Pal/Mai01.act

@@ -1,0 +1,31 @@
+Ralf primera version semi completa
+
+que tiene
+-3 poderes simples
+-3 super poderes
+-presentacion con  heidern , leona , whip, y claro con clark (al estilo kof 98)
+
+-todos los ataques de kof 98 
+
+que le falta
+- 1 intro (la de la botella , los sonidos)
+- 1 win K.o 
+
+
+ Este chars es Open source y eres libre de arreglar bug o añadir ataque
+no haci ponerle fondo Um y esas chorradas que quiero ni pensar...
+
+tiene algunos bug pero para su version siguiente arreglare ( 2012?)
+
+
+este chars lo puedes encontrar en el foro KMC
+Direccion http://www.kofmugenchile.co.cc/
+
+agradecimientos
+Al team Kmc por el hospedaje del chars y por varias otras cosas
+Leandro : me saco de varias dudas y esas cosas
+shammanalpha : sus comando me ayudaron a entender mas esto de mugen
+
+eso seria 
+
+saludos desde Chile para el mundo

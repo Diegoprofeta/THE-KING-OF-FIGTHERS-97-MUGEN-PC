@@ -1,0 +1,602 @@
+
+[Statedef -2]
+
+;[State -2, ƒfƒoƒbƒO]
+;Type = AppendToClipboard
+;Trigger1 = 1
+;Text = "(5)=%d,(6)=%d,(7)=%d,SPX=%d,P2Back=%d\n"
+;Params = var(5),var(6),(var(7)),Floor(ScreenPos X),(EnemyNear,BackEdgeBodyDist)
+;IgnoreHitPause = 1
+
+;[State -2, ƒfƒoƒbƒN]
+;type = AppendToClipboard
+;trigger1 = 1
+;text =  "P2BDX:%f,P2BDY:%f,P2VX%f,BACK%d,FRONT%d,\n"
+;params = P2BodyDist X, P2BodyDist Y, EnemyNear,vel x, backedgebodydist, frontedgebodydist
+;IgnoreHitPause = 1
+
+[State -2, ƒ`[ƒ€ƒCƒ“ƒgƒ]
+type = ChangeState            
+value = 190                    
+triggerall = RoundsExisted = 0 
+triggerall = TeamMode = Turns  
+trigger1 = StateNo = 5900    
+
+[State -2, ƒ‰ƒCƒtƒo[Á‹]
+type = AssertSpecial
+trigger1 = RoundState != 2
+flag = NoBarDisplay
+
+[State -2, ‹ó’†ƒK[ƒh•s‰Âi©•ªj]
+type = AssertSpecial
+trigger1 = Vel X > 0 || !(P2StateType = A)
+flag = NoAirGuard
+ignorehitpause = 1
+
+[State -2, ‹ó’†ƒK[ƒh•s‰Âi‘Šèj]
+type = AssertSpecial
+triggerall = P2StateType = A
+trigger1 = EnemyNear(var(58)),Vel X > 0 || !(StateType = A)
+flag = UnGuardAble
+ignorehitpause = 1
+
+[State -2, ƒWƒƒƒOƒ‹§ŒÀ‰ğœ]
+type = AssertSpecial
+trigger1 = 1
+flag = NoJuggleCheck
+ignorehitpause = 1
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = 1
+value = 1.0
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = Life = [888,999]
+value = 0.96
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = Life = [777,887]
+value = 0.92
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = Life = [666,776]
+value = 0.88
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = Life = [555,665]
+value = 0.84
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = Life = [444,554]
+value = 0.80
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = Life = [333,443]
+value = 0.68
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = Life = [222,332]
+value = 0.64
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = Life = [111,221]
+value = 0.52
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = Life = [10,110]
+value = 0.48
+
+[State -2, –hŒä—Í•â³]
+type = DefenceMulSet
+trigger1 = Life = [1,9]
+value = 0.24
+
+[State -2, ‚b‚g‚P]
+type = VarSet
+triggerall = var(10)
+trigger1 = (StateNo = [200,635]) 
+var(5) = 4
+ignorehitpause = 1
+
+[State -2, ‚b‚g‚Q]
+type = VarSet
+triggerall = var(10)
+trigger1 = (StateNo = [1000,2000))
+var(5) = 7
+ignorehitpause = 1
+
+[State -2, ‚b‚g‚R]
+type = VarSet
+triggerall = var(10)
+trigger1 = (StateNo = [2000,3000))
+var(5) = 14
+ignorehitpause = 1
+
+[State -2, ‚b‚gƒ_ƒ[ƒWƒŠƒZƒbƒg]
+type = VarSet
+trigger1 = !var(10)
+var(5) = 0
+
+[State -2, ‚b‚gƒ_ƒ[ƒWƒŠƒZƒbƒg]
+type = VarSet
+trigger1 = MoveGuarded = 1
+trigger2 = ProjGuardedTime(1300) = 1
+trigger3 = ProjGuardedTime(2011) = 1
+trigger4 = ProjGuardedTime(2012) = 1
+trigger5 = ProjGuardedTime(2013) = 1
+trigger6 = ProjGuardedTime(2014) = 1
+trigger7 = ProjGuardedTime(9000) = 1
+trigger8 = ProjGuardedTime(9200) = 1
+var(5) = 0
+
+[State -2. ‰ğœ”¼”•â³]
+type = VarAdd
+trigger1 = ProjHitTime(9000) = 1
+var(6) = 1
+ignorehitpause = 1
+
+[State -2, ‰ğœUŒ‚’l]
+type = VarSet
+triggerall = ProjHitTime(9000) = 1
+trigger1 = Floor((15+var(5))*(0.5**var(6))) >= 1
+fvar(2) = Floor((15+var(5))*(0.5**var(6)))
+ignorehitpause = 1
+
+[State -2, ‰ğœUŒ‚’l]
+type = VarSet
+triggerall = ProjHitTime(9000) = 1
+trigger1 = Floor((15+var(5))*(0.5**var(6))) < 1
+fvar(2) = 1
+ignorehitpause = 1
+
+[State -2, ‚l‚`‚w”­“®ƒ^ƒCƒ}[]
+type = VarAdd
+trigger1 = var(7) > 0
+var(7) = -1
+ignorehitpause = 1
+
+[State -2, ‚l‚`‚w”­“®ƒ^ƒCƒ}[]
+type = VarSet
+trigger1 = var(7) < 0
+var(7) = 0
+ignorehitpause = 1
+
+[State -2, ‚l‚`‚w”­“®’†UŒ‚—Í•â³]
+type = varset
+trigger1 = var(7)
+fvar(1) = 1.25
+ignorehitpause = 1
+
+[State -2, ‚l‚`‚w”­“®’†UŒ‚—Í•â³]
+type = varset
+trigger1 = !var(7)
+fvar(1) = 1
+ignorehitpause = 1
+
+[State -2, Facing]
+type = VarSet
+trigger1 = 1
+var(8) = -(Facing)*(EnemyNear(var(58)),Facing)
+ignorehitpause = 1
+
+[State -2, ‹ó’†˜A‘±ƒqƒbƒg§ŒÀ]
+type = VarSet
+triggerall = P2MoveType = H
+trigger1 = P2Statetype = A
+trigger1 = MoveHit = 1 
+trigger2 = NumTarget(230) || NumTarget(250) || NumTarget(255) || NumTarget(430) || NumTarget(640) 
+trigger2 = MoveHit = 1
+trigger3 = ProjHitTime(1300) = 0
+trigger4 = ProjHitTime(9200) = 0
+var(9) = 1
+ignorehitpause = 1
+
+[State -2, ‹ó’†˜A‘±ƒqƒbƒg§ŒÀƒŠƒZƒbƒg]
+type = VarSet
+triggerall = !(NumTarget(230) || NumTarget(430))
+trigger1 = EnemyNear(var(58)),Life > 0 && EnemyNear(var(58)),Ctrl
+trigger2 = var(11) = [1,2]
+trigger3 = P2MoveType != H
+trigger4 = P2StateType = L
+trigger5 = P2StateNo = 5120
+trigger6 = NumPartner
+trigger6 = !(P2StateType = A || P2StateType = L)
+trigger6 = Partner,NumTarget
+trigger7 = ProjHitTime(1000) = 0
+trigger8 = ProjHitTime(9000) = 0
+var(9) = 0
+ignorehitpause = 1
+
+[State -2, ƒJƒEƒ“ƒ^[ƒqƒbƒg”»’è]
+type = VarSet
+triggerall = !var(10)
+triggerall = !var(11)
+trigger1 = P2MoveType = A
+var(10) = 1
+ignorehitpause = 1
+
+[State -2, ƒJƒEƒ“ƒ^[ƒqƒbƒg”»’è]
+type = VarAdd
+trigger1 = var(10)
+var(10) = 1
+ignorehitpause = 1
+
+[State -2, ƒJƒEƒ“ƒ^[ƒqƒbƒg”»’èƒŠƒZƒbƒg]
+type = VarSet
+triggerall = var(10) > 10
+trigger1 = P2MoveType != A  && ProjHit = 0
+trigger2 = var(11)
+var(10) = 0
+ignorehitpause = 1
+
+[State -2,@ƒJƒEƒ“ƒ^[ƒqƒbƒg‚n‚m]
+type = VarSet
+triggerall = !var(11)
+triggerall = var(10)
+triggerall = StateNo != [800,900)
+trigger1 = MoveHit
+trigger2 = ProjHitTime(0) = 0
+var(11) = 1
+ignorehitpause = 1
+
+[State -2, ƒ^ƒCƒ€ƒJƒEƒ“ƒg]
+type = VarAdd
+trigger1 = var(11)
+var(11) = 1
+ignorehitpause = 0
+
+[State -2, ƒŠƒZƒbƒg]
+type = VarSet
+triggerall = var(11)
+trigger1 = var(11) > 10
+trigger2 = P2MoveType != H
+var(11) = 0
+ignorehitpause = 1
+
+[State -2, ƒJƒEƒ“ƒ^[ƒqƒbƒgEƒtƒ‰ƒbƒVƒ…]
+type = EnvColor
+trigger1 = var(11) = 2
+value = 255,255,255
+time = 1
+under = 1
+
+[State -2,@‚b‚‚•‚‚”‚…‚’II]
+type = Explod
+triggerall = TeamSide = 1
+triggerall = NumExplod(7650) = 0
+triggerall = P2MoveType = H
+triggerall = var(11)
+trigger1 = MoveHit = 1
+trigger1 = StateNo != [800,900)
+trigger2 = ProjHit = 1
+anim = 7650
+id = 7650
+pos = 17,80
+postype = Left
+bindtime = 28
+removetime = 28
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+
+[State -2, ‚b‚‚•‚‚”‚…‚’II]
+type = Explod
+triggerall = TeamSide = 2
+triggerall = NumExplod(7650) = 0
+triggerall = P2MoveType = H
+triggerall = var(11)
+trigger1 = MoveHit = 1
+trigger1 = StateNo != [800,9000)
+trigger2 = ProjHit = 1
+anim = 7650
+id = 7650
+pos = -84,60
+postype = Right
+bindtime = 28
+removetime = 28
+ontop = 1
+ownpal = 1
+ignorehitpause = 1
+
+[State -2, ‹ó’†“G‚Ô‚Â‚©‚è”»’è]
+type = VarSet
+triggerall = StateType != A
+triggerall = EnemyNear(var(58)),StateType = A
+trigger1 = EnemyNear(var(58)),Vel Y >= 0
+trigger1 = P2BodyDist Y > -60
+var(13) = 1
+ignorehitpause = 1
+
+[State -2, ‹ó’†“G‚Ô‚Â‚©‚è”»’èƒŠƒZƒbƒg]
+type = VarSet
+triggerall = var(13)
+trigger1 = EnemyNear(var(58)),StateType != A
+trigger2 = EnemyNear(var(58)),Vel Y < 0
+var(13) = 0
+ignorehitpause = 1
+
+[State -2, ‚b‚o‚O]
+type = VelSet
+triggerall = !(EnemyNear(var(58)),StateType = A)
+triggerall = EnemyNear(var(58)),BackEdgeBodyDist <= 10
+triggerall = MoveHit = 1
+trigger1 = StateNo = 230 && NumTarget(230)
+trigger2 = StateNo = 250 && NumTarget(250)
+trigger3 = StateNo = 255 && NumTarget(255)
+trigger4 = StateNo = 430 && NumTarget(430)
+trigger5 = StateNo = 1100 && NumTarget(1100)
+trigger6 = StateNo = 1200 && NumTarget(1200)
+x = 0
+Ignorehitpause = 1
+
+[State -2, ‚b‚o‚P]
+type = VelSet
+triggerall = !(EnemyNear(var(58)),StateType = A)
+triggerall = EnemyNear(var(58)),BackEdgeBodyDist <= 10
+triggerall = MoveContact = 1
+trigger1 = StateNo = 200 && NumTarget(200) && MoveGuarded = 1
+trigger2 = StateNo = 220 && NumTarget(220) && MoveGuarded = 1
+trigger3 = StateNo = 400 && NumTarget(400) && MoveGuarded = 1
+trigger4 = StateNo = 420 && NumTarget(420) && MoveGuarded = 1
+x = -5.75-(var(7)>0)*1.35
+
+[State -2, ‚b‚o‚Q]
+type = VelSet
+triggerall = !(EnemyNear(var(58)),StateType = A)
+triggerall = EnemyNear(var(58)),BackEdgeBodyDist <= 10
+triggerall = MoveContact = 1
+trigger1 = StateNo = 200 && NumTarget(200) && MoveHit = 1
+trigger2 = StateNo = 210 && NumTarget(210)
+trigger3 = StateNo = 220 && NumTarget(220) && MoveHit = 1
+trigger4 = StateNo = 230 && NumTarget(230) && MoveGuarded = 1
+trigger5 = StateNo = 400 && NumTarget(400) && MoveHit = 1
+trigger6 = StateNo = 410 && NumTarget(410)
+trigger7 = StateNo = 420 && NumTarget(420) && MoveHit = 1
+trigger8 = StateNo = 430 && NumTarget(430) && MoveGuarded = 1
+trigger9 = StateNo = 1100 && NumTarget(1100) && MoveGuarded = 1
+trigger10 = StateNo = 1200 && NumTarget(1200) && MoveGuarded = 1
+x = -10.35-(var(7)>0)
+
+[State -2, ‚b‚o‚R]
+type = VelSet
+triggerall = !(EnemyNear(var(58)),StateType = A)
+triggerall = EnemyNear(var(58)),BackEdgeBodyDist <= 10
+triggerall = MoveGuarded = 1
+trigger1 = StateNo = 250 && NumTarget(250)
+trigger2 = StateNo = 255 && NumTarget(255)
+x = -13.75-(var(7)>0)*2.25
+
+[State -2, c‘œÁ‹]
+type = AfterImageTime
+trigger1 = MoveType = H
+time = 0
+
+[State -2, ‘å_ƒGƒtƒFƒNƒgÁ‹]
+type = RemoveExplod
+trigger1 = StateNo != 2100
+trigger2 = StateNo = 2100
+trigger2 = AnimElem = 76, >= 0
+ID = 2100
+
+[State -2, ‰æ–Ê’[§ŒÀ]
+type = Width
+triggerall = !(EnemyNear(var(58)),StateType = A)
+trigger1 = EnemyNear(var(58)),BackEdgeBodyDist <= 5
+edge = 5,0
+
+[State -2, ‘Šè‹N‚«ã‚ª‚è–³“G]
+type = NotHitBy
+trigger1 = P2StateNo = 5120
+trigger1 = EnemyNear(var(58)),AnimTime = -1
+value = SCA
+time = 4
+
+[State -2, ‘Šè‹N‚«ã‚ª‚è–³“G]
+type = NotHitBy
+trigger1 = P2StateNo = 5120
+trigger1 = EnemyNear(var(58)),AnimTime = -1
+value = ,AT
+time = 13
+
+[State -2, “Š‚°ƒnƒ–h~—p]
+type = NotHitBy
+trigger1 = (StateNo = [130,140)) || (StateNo = (140,160))
+time = 1
+value = ,AT
+ignorehitpause = 1
+
+[State -2, ”ò‚Ñ“¹‹ïƒqƒbƒg]
+type = PowerAdd
+trigger1 = ProjContactTime(1000) = 0
+trigger2 = ProjContactTime(1300) = 0
+trigger3 = ProjContactTime(9000) = 0
+trigger4 = ProjContactTime(9200) = 0
+value = 100
+ignorehitpause = 1
+
+[State -2, ¬ƒ{ƒCƒX’â~]
+type = StopSnd
+trigger1 = StateNo != 2000
+channel = 1
+
+[State -2, ¬‰¹’â~]
+type = StopSnd
+trigger1 = StateNo != 2000
+channel = 2
+
+[State -2, ’n–Â‚è‰¹’â~]
+type = StopSnd
+trigger1 = StateNo != 2100
+channel = 3
+
+[State -2, ƒpƒ[ƒQ[ƒWŠÇ—ƒwƒ‹ƒp[]
+type = Helper
+triggerall = RoundState = 2
+trigger1 = NumHelper(8000) = 0
+id = 8000
+name = "PG"
+sprpriority = 1
+pos = 0,0
+postype = P1
+stateno = 8000
+helpertype = Normal
+pausemovetime = 99999999
+supermovetime = 99999999
+keyctrl = 0 
+ownpal = 1
+
+[State -2, ‰æ–Êƒtƒ‰ƒbƒVƒ…ƒwƒ‹ƒp[]
+type = Helper
+triggerall = WinKO > 0
+triggerall = P2Life = 0
+trigger1 = NumHelper(12000) = 0
+ID = 12000
+name = "Win Flash"
+postype = P1
+pos = 0,0
+facing = -1
+sprpriority = -1
+stateno = 12000
+helpertype = Normal
+keyctrl = 0
+ignorehitpause = 1
+ownpal = 1
+pausemovetime = 2147483647
+supermovetime = 2147483647
+
+;yƒK[ƒh—pƒwƒ‹ƒp[z----------------------------------------------------------------------------------
+
+[State -2, ƒK[ƒh•â•ƒwƒ‹ƒp[]
+type = Helper
+triggerall = NumHelper(30000) = 0
+trigger1 = var(59) 
+helpertype = Normal
+name = "GuardAssist"
+ID = 30000
+pos = -60,0
+postype = P1
+facing = 1
+stateno = 30000
+keyctrl = 0
+ownpal = 1
+supermovetime = 999999999
+pausemovetime = 999999900
+ignorehitpause = 1
+
+[State -2, ƒK[ƒh•â•]
+type = VarSet
+triggerall = !var(57)
+triggerall = NumHelper(30000)
+trigger1 = !InGuardDist && Helper(30000),InGuardDist
+trigger2 = EnemyNear(var(58)),MoveType = A && EnemyNear(var(58)),StateType = A && var(8) = -1 && (P2Dist X = (0,EnemyNear(var(58)),Const(size.attack.dist)])
+var(57) = 1
+ignorehitpause = 1
+
+[State -2, ƒK[ƒh•â•]
+type = VarAdd
+trigger1 = var(57)
+var(57) = 1
+ignorehitpause = 1
+
+[State -2, ƒK[ƒh•â•]
+type = VarSet
+triggerall = NumHelper(30000)
+triggerall = var(57)
+trigger1 = !(InGuardDist || Helper(30000),InGuardDist)
+trigger1 = !(EnemyNear(var(58)),MoveType = A && EnemyNear(var(58)),StateType = A && var(8) = -1 && (P2Dist X = (0,EnemyNear(var(58)),Const(size.attack.dist)]))
+trigger2 = var(57) > 60
+var(57) = 0
+ignorehitpause = 1
+
+;y“G¶‘¶Šm”Fz------------------------------------------------------------------------------------------
+
+;“G‚ª1‘Ì
+
+[State -2, EnemyNear]
+type = VarSet
+triggerall = var(59) 
+trigger1 = NumEnemy = 1
+trigger2 = NumEnemy > 1
+trigger2 = EnemyNear(1),Life = 0
+var(58) = 0
+ignorehitpause = 1
+
+[State -2, EnemyNear]
+type = VarSet
+triggerall = var(59) 
+trigger1 = NumEnemy > 1
+trigger1 = EnemyNear(0),Life = 0
+var(58) = 1
+ignorehitpause = 1
+
+;“G‚ª2‘ÌAƒp[ƒgƒi[‚ª‚¢‚é
+
+[State -2, EnemyNear]
+type = VarSet
+triggerall = var(59) 
+triggerall = NumPartner > 0
+triggerall = Partner,Life > 0
+triggerall = NumEnemy > 1
+triggerall = EnemyNear(0),Life > 0 && EnemyNear(1),Life > 0
+trigger1 = !(Partner,MoveType = A && Partner,NumTarget && EnemyNear(0),MoveType = H && EnemyNear(1),MoveType != H && !((EnemyNear(0),StateNo = [5000,5300]) || (EnemyNear(0),StateNo = [120,160])) && EnemyNear(0),GetHitVar(hitshaketime) = 0)
+trigger1 = !(Partner,MoveType = H && EnemyNear(0),NumTarget && EnemyNear(0),MoveType = A && !((Partner,StateNo = [5000,5300]) || (Partner,StateNo = [120,160])) && Partner,GetHitVar(hitshaketime) = 0)
+var(58) = 0
+ignorehitpause = 1
+
+[State -2, EnemyNear]
+type = VarSet
+triggerall = var(59) 
+triggerall = NumPartner > 0
+triggerall = Partner,Life > 0
+triggerall = NumEnemy > 1
+triggerall = EnemyNear(0),Life > 0 && EnemyNear(1),Life > 0
+trigger1 = (Partner,MoveType = A && Partner,NumTarget && EnemyNear(0),MoveType = H && EnemyNear(1),MoveType != H && !((EnemyNear(0),StateNo = [5000,5300]) || (EnemyNear(0),StateNo = [120,160])) && EnemyNear(0),GetHitVar(hitshaketime) = 0)
+trigger2 = (Partner,MoveType = H && EnemyNear(0),NumTarget && EnemyNear(0),MoveType = A && !((Partner,StateNo = [5000,5300]) || (Partner,StateNo = [120,160])) && Partner,GetHitVar(hitshaketime) = 0)
+var(58) = 1
+ignorehitpause = 1
+
+[State -2, “Š‚°–³Œøƒtƒ‰ƒO]
+type = VarSet
+trigger1 = EnemyNear(var(58)),StateNo = 5120 && EnemyNear(var(58)),AnimTime = -1
+var(54) = 1
+
+[State -2]
+type = VarAdd
+trigger1 = var(54)
+var(54) = 1
+
+[State -2]
+type = VarSet
+trigger1 = var(54) > 14
+var(54) = 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

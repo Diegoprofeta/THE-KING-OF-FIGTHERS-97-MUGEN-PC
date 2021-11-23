@@ -1,0 +1,2408 @@
+;================================================================================
+; Andy Bogard: Parte 3... Tecnicas especiales.
+;================================================================================
+; Hisouken (WP)
+[Statedef 1030]
+type    = S
+movetype= A
+physics = S
+;juggle  = 8
+poweradd= 95
+velset = 0,0
+anim = 1020
+ctrl = 0
+sprpriority = 2
+
+[State 1030, 0]
+type = PlaySnd
+trigger1 = Time = 0
+value = S100, 0
+
+[State 1030, 1]
+type = PlaySnd
+trigger1 = Time = 2
+value = S100, 6
+
+[State 1030, 2]
+type = Projectile
+trigger1 = Time = 11
+projanim = 1021
+projhitanim = -1
+offset = 62,-74
+projremovetime = 19
+projremove = 0
+projpriority = 2
+ProjID = 1030
+attr = S, SP
+damage   = 85, 9
+;givepower = 20, 10
+animtype = Back
+hitflag = MAF
+guardflag = M
+pausetime = 0,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 25,0
+hitsound = S200,2
+guardsound = S3,1
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 14
+ground.velocity = -4,-5
+guard.velocity = -6
+air.animtype = Back
+air.velocity = -4,-5
+;air.fall = 1
+fall = 1
+fall.recover = 0
+
+[State 1030, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;--------------------------------------
+; Hisouken (SP)
+[Statedef 1010]
+type    = S
+movetype= A
+physics = S
+juggle  = 8
+poweradd= 105
+velset = 0,0
+anim = 1011
+ctrl = 0
+sprpriority = 2
+
+[State 1010, 0]
+type = PlaySnd
+trigger1 = Time = 0
+value = S100, 0
+
+[State 1010, 1]
+type = PlaySnd
+trigger1 = AnimElem = 6
+value = S100, 4
+
+[State 1010, 2]
+type = Width
+trigger1 = AnimElem >= 3
+value = 30, 15
+
+[State 1010, 3]
+type = PosAdd
+trigger1 = Time = 15
+trigger2 = Time = 16
+trigger3 = Time = 17
+x = 10
+
+[State 1010, 4]
+type = Projectile
+trigger1 = AnimElem = 6
+projanim = 1022
+projhitanim = -1
+offset = 70,-67
+projremovetime = 14
+projremove = 0
+projpriority = 2
+ProjID = 1010
+attr = S, SP
+damage   = 95, 9
+;givepower = 20, 10
+animtype = Back
+hitflag = MAF
+guardflag = M
+pausetime = 0,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 25,0
+hitsound = S200,2
+guardsound = S3,1
+ground.type = High
+ground.slidetime = 14
+ground.hittime  = 16
+ground.velocity = -5,-4
+air.animtype = Back
+air.velocity = -2.5,-5
+down.bounce = 1
+fall = 1
+Fall.recover = 0
+
+[State 1010, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;--------------------------------------
+; Hisouken (99)
+[Statedef 1020]
+type = S
+movetype = A
+physics = N
+anim = 1090
+velset = 0,0
+ctrl = 0
+
+[State 1090, 0] ;Geki...
+type = PlaySnd
+trigger1 = Time = 20
+value = S100, 2
+
+[State 1090, 1] ;...Hishoken!
+type = PlaySnd
+trigger1 = Time = 62
+value = S100, 3
+
+[State 1090, 2] ;Small Blast
+type = PlaySnd
+trigger1 = Time = 32
+value = S100, 6
+
+[State 1090, 3] ;Large Blast
+type = PlaySnd
+trigger1 = Time = 54
+value = S100, 7
+
+[State 1090, 4] ;Small Blast
+type = Projectile
+trigger1 = AnimElem = 4
+projanim = 1095
+projhitanim = 1095
+offset = 50,-65
+velocity = 0
+projremovetime = 13
+projpriority = 4
+attr = S, SP
+damage   = 15, 5
+getpower = 0, 0
+animtype = Low
+hitflag = MAF
+guardflag = M
+pausetime = 6,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 25,0
+hitsound = S200,2
+guardsound = S3,1
+ground.type = Low
+ground.slidetime = 14
+ground.hittime  = 18
+ground.velocity = ifelse(p2bodydist x >= 20,-7,-10),0
+air.animtype = Back
+air.velocity = -2.5,-5
+air.juggle = 15
+
+[State 1090, 4] ;big Blast
+type = Projectile
+trigger1 = AnimElem = 14
+projanim = 1096
+projhitanim = 1096
+offset = 65,-70
+velocity = 0
+projremovetime = 60
+projpriority = 4
+projhits = 5
+projmisstime = 10
+attr = S, SP
+damage = 15, 5
+getpower = 0, 0
+animtype = Low
+hitflag = MAF
+guardflag = M
+pausetime = 0,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 25,0
+hitsound = S200,2
+guardsound = S3,1
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 18
+ground.velocity = 0,0
+air.animtype = Back
+air.velocity = -2.5,-5
+air.juggle = 15
+
+[State 1090, 6]
+type = Width
+trigger1 = Animelem >= 1
+value = 25, 25
+
+[State 1090, 7]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;================================================================================
+; Zaneiken WP (Inicio)
+[Statedef 1200]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 110
+ctrl = 0
+anim = 1200
+sprpriority = 2
+
+[State 1200, 0] ;Zaneiken!
+type = PlaySnd
+trigger1 = Time = 0
+value = S104,1
+
+[State 1200, 1] ;Zaneiken Launch Sound
+type = PlaySnd
+trigger1 = Time = 11
+value = S104,3
+
+[State 1200, 2] ;Start Movement
+type = VelSet
+trigger1 = Time >= 12
+x = 10
+
+[State 2110, Žc‘œ]
+type = AfterImage
+trigger1 = AnimElem = 5
+time = 24
+frameGap = 3
+length = 10
+palBright = 0, 0, 0
+palContrast = 128, 128, 128
+palAdd = 0, 0, 0
+palMul = 1, 1, 1
+trans = Add1
+
+[State 1200, 5] ;Miss
+type = ChangeState
+trigger1 = Time = 24
+value = 1201
+
+[State 1200, 6] ;Hit
+type = ChangeState
+trigger1 = P2bodydist X <= 25
+trigger1 = Time > 12
+value = 1202
+
+;---------------------------------------------------------------------------
+; Zaneiken WP (Quedaste corto)
+[Statedef 1201]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+anim = 1201
+sprpriority = 2
+
+[State 1201, 0] ;Stop Movement
+type = VelSet
+trigger1 = Time = 0
+x = 0
+
+[State 1201, 1] ;Stop AfterImages
+type = AfterImageTime
+trigger1 = Time = 0
+value = 0
+
+[State 1201, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Zaneiken WP (Codazo conecta)
+[Statedef 1202]
+type    = S
+movetype= A
+physics = S
+juggle  = 8
+poweradd= 0
+ctrl = 0
+anim = 1202
+sprpriority = 2
+priority =1
+
+[State 1202, 0]
+type = HitDef
+trigger1 = AnimElem = 1
+attr = S, NA
+animtype  = Hard
+damage    = 110,11
+;givepower = 10, 5
+hitflag = MAF
+guardflag = M
+pausetime = 8,8
+sparkno = S4060
+guard.sparkno = S4120
+sparkxy = -20,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = Low
+ground.hittime = 19
+ground.slidetime = 19
+ground.velocity = -13
+air.velocity = -4.5,-6
+ground.cornerpush.veloff = -13
+air.cornerpush.veloff = -6
+
+[State 1000, var]
+type = Varset
+trigger1 = !var(50)
+trigger1 = time > 1
+trigger1 = command = "holdfwd" && command = "y"
+var(13) = 1
+
+[State 1000, State] ;'98 Finisher
+type = ChangeState
+triggerall = !var(50)
+triggerall = Var(13) = 1
+triggerall = Time >= 6
+trigger1 = moveguarded = 1
+trigger2 = p2movetype = H
+value = 1210
+
+[State 1000, State] ;'98 Finisher
+type = ChangeState
+triggerall = var(50)
+triggerall = Time >= 6
+trigger1 = movecontact
+value = 1210
+
+[State 1202, 1] ;Continue Movement breifly
+type = VelSet
+trigger1 = Time = 0
+x = 4
+
+[State 1202, 2] ;Stop AfterImages
+type = AfterImageTime
+trigger1 = Time = 0
+value = 0
+
+[State 1202, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Zaneiken Y (inicio)
+[Statedef 1205]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 70
+ctrl = 0
+anim = 1205
+sprpriority = 2
+
+[State 1205, 0] ;Zaneiken!
+type = PlaySnd
+trigger1 = Time = 0
+value = S104, 1
+
+[State 1205, 1] ;Zaneiken Launch Sound
+type = PlaySnd
+trigger1 = Time = 11
+value = S104,3
+
+[State 1205, 2] ;Start Movement
+type = VelSet
+trigger1 = Time >= 13
+x = 10
+
+[State 1525, 3] ; AfterImages
+type = Afterimage
+trigger1 = animelem = 5
+time = 44
+framegap = 3
+length = 10
+PalBright   =   0,  0,  0
+PalContrast = 128,128,128
+PalAdd      =   0,  0,  0
+PalMul      =  1,1,1;.9, .9, .9
+Trans = Add1
+
+[State 1200, FollowupReset]
+type = VarSet
+trigger1 = time = 0
+var(13) = 0
+
+[State 1205, 5] ;Miss
+type = ChangeState
+trigger1 = Time = 44
+value = 1206
+
+[State 1205, 6] ;Hit
+type = ChangeState
+trigger1 = P2bodydist X <= 25
+trigger1 = Time > 12
+value = 1207
+value = 0
+
+;---------------------------------------------------------------------------
+; Zaneiken Y (Falla por corta distancia)
+[Statedef 1206]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+anim = 1206
+sprpriority = 2
+
+[State 1206, 0] ;Stop Movement
+type = VelSet
+trigger1 = Time = 0
+x = 0
+
+[State 1206, 1] ;Stop AfterImages
+type = AfterImageTime
+trigger1 = Time = 0
+value = 0
+
+[State 1206, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Zaneiken Y (Codazo conecta)
+[Statedef 1207]
+type    = S
+movetype= A
+physics = S
+juggle  = 8
+poweradd = 0
+ctrl = 0
+anim = 1207
+sprpriority = 2
+priority = 1
+
+[State 1207, 0]
+type = HitDef
+trigger1 = AnimElem = 1
+attr = S, NA
+animtype  = Medium
+damage    = 115,12
+;givepower = 10, 5
+hitflag = MAF
+guardflag = M
+pausetime = 8,8
+sparkno = S4060
+guard.sparkno = S4120
+sparkxy = -20,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = Low
+ground.hittime = 19
+ground.slidetime = 19
+ground.velocity = -8
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -18
+air.cornerpush.veloff = -6
+
+[State 1000, var]
+type = Varset
+trigger1 = !var(50)
+trigger1 = time > 1
+trigger1 = command = "holdfwd" && command = "y"
+var(13) = 1
+
+[State 1000, State] ;'98 Finisher
+type = ChangeState
+triggerall = !var(50)
+triggerall = Var(13) = 1
+triggerall = Time >= 6
+trigger1 = moveguarded = 1
+trigger2 = p2movetype = H
+value = 1210
+
+[State 1000, State] ;'98 Finisher
+type = ChangeState
+triggerall = var(50)
+triggerall = Time >= 6
+trigger1 = movecontact
+value = 1210
+
+[State 1207, 1] ;Continue Movement breifly
+type = VelSet
+trigger1 = Time = 0
+x = 6
+
+[State 1207, 4] ;Stop AfterImages
+type = AfterImageTime
+trigger1 = Time = 0
+value = 0
+
+[State 1207, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+; Aletazo final
+[Statedef 1210]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+anim = 1210
+sprpriority = 2
+
+[State 1210, 0] ;Continue Movement
+type = VelSet
+trigger1 = Time = 0
+x = 17
+
+[State 1210, 1]
+type = PlaySnd
+trigger1 = Time = 0
+value = 1,1
+
+[State 1210, 2]
+type = HitDef
+trigger1 = Time = 5
+attr = S, SA
+animtype  = Back
+damage    = 15, 2
+;givepower = 10, 5
+priority = 1
+hitflag = MAF
+guardflag = M
+pausetime = 8,8
+sparkno = S4060
+guard.sparkno = S4120
+sparkxy = -10,-50
+hitsound   = S200,4
+guardsound = S3,1
+ground.type = Low
+ground.slidetime = 17
+ground.hittime  = 18
+ground.velocity = -3, -6
+air.velocity = -3,-6
+guard.velocity = -8
+fall = 1
+
+[State 1210, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;================================================================================
+; mulazo volador (WK)
+[Statedef 1520]
+type    = A
+movetype= I
+physics = A
+juggle  = 0
+poweradd= 110
+ctrl = 0
+anim = 1520
+sprpriority = 2
+
+[State 1520, 0]
+type = VelSet
+trigger1 = Time >= 0
+x = 0
+y = 0
+
+[State 1200, FollowupReset]
+type = VarSet
+trigger1 = time = 0
+var(14) = 0
+
+[State 1520, 1]
+type = PlaySnd
+trigger1 = AnimElem = 4
+value = 102, 0
+
+[State 1520, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1525
+
+;---------------------------------------------------------------------------
+; Mulazo volador (SK)
+[Statedef 1521]
+type    = A
+movetype= I
+physics = A
+juggle  = 0
+poweradd= 115
+ctrl = 0
+anim = 1521
+sprpriority = 2
+
+[State 1521, 0]
+type = VelSet
+trigger1 = Time >= 0
+x = 0
+y = 0
+
+[State 1200, FollowupReset] ;Code from Deuce. Thanks again.
+type = VarSet
+trigger1 = time = 0
+var(14) = 0
+
+[State 1521, 1]
+type = PlaySnd
+trigger1 = AnimElem = 4
+value = 102, 0
+
+[State 1521, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1525
+
+;---------------------------------------------------------------------------
+; Mulazo volador (Descenso)
+[Statedef 1525]
+type    = A
+movetype= A
+physics = N
+juggle  = 0
+;poweradd= 0
+ctrl = 0
+anim = 1525
+sprpriority = 2
+
+[State 1525, 0]
+type = PlaySnd
+trigger1 = Time = 0
+value = 103, 1
+
+[State 1525, 1]
+type = VelSet
+trigger1 = prevstateno = 1520
+trigger1 = Time >= 0
+x = 6
+y = 7.5
+
+[State 1525, 1]
+type = VelSet
+trigger1 = prevstateno = 1521
+trigger1 = Time >= 0
+x = 9
+y = 7.5
+
+[State 1525, 2]
+type = PosSet
+trigger1 = Pos Y >= -1
+y = -1
+
+[State 1525, 3]
+type = VelSet
+trigger1 = Pos Y >= -1
+y = 0
+
+[State 1525, 3] ; AfterImages
+type = Afterimage
+trigger1 = Time = 0
+time = 40
+framegap = 3
+length = 10
+PalBright = 0, 0, 0
+PalContrast = 128,128,128
+PalAdd = 0, 0, 0
+PalMul = 1,1,1;.9, .9, .9
+Trans = Add1
+
+[State 1525, 2]
+type = HitDef
+trigger1 = AnimElem = 1
+attr = A, SA
+animtype  = Medium
+damage    = 100,10
+;givepower = 15, 5
+hitflag = MAF
+guardflag = M
+pausetime = 10,10
+sparkno = S4060
+guard.sparkno = S4120
+sparkxy = 0,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = High
+ground.hittime = 19
+ground.slidetime = 16
+ground.velocity = -8
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -18
+air.cornerpush.veloff = -6
+
+[State 1525, 4]
+type = ChangeState
+trigger1 = Time >= 1
+trigger1 = Pos Y >= -1
+value = 1530
+
+;---------------------------------------------------------------------------
+; Mulazo volador (Aterrizando)
+[Statedef 1530]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+;poweradd= 0
+ctrl = 0
+anim = 1530
+sprpriority = 2
+
+[State 1530, 1] ;Stop AfterImages
+type = AfterImageTime
+trigger1 = Time = 0
+value = 0
+
+[State 1525, 0] ;Dive Sound
+type = PlaySnd
+trigger1 = Time = 0
+value = 0, 2
+
+[State 1000, var]; patada baja
+type = Varset
+trigger1 = !var(30)
+trigger1 = time >= 1
+trigger1 = command = "y"
+var(14) = 1
+
+[State 1000, var]; patada alta
+type = Varset
+trigger1 = !var(30)
+trigger1 = time >= 1
+trigger1 = command = "b"
+var(14) = 2
+
+[State 1000, var]; patada con taco
+type = Varset
+trigger1 = !var(30)
+trigger1 = time >= 1
+trigger1 = command = "x"
+var(14) = 3
+
+[State 1000, var]; golpe centrado
+type = Varset
+trigger1 = !var(30)
+trigger1 = time >= 1
+trigger1 = command = "a"
+trigger2 = var(30)
+trigger2 = time >= 1
+var(14) = 4
+
+[State 1530, 2]
+type = ChangeState
+trigger1 = var(14) = 1
+value = 1535
+ctrl = 0
+
+[State 1530, 2]
+type = ChangeState
+trigger1 = var(14) = 2
+value = 1540
+ctrl = 0
+
+[State 1530, 2]
+type = ChangeState
+trigger1 = var(14) = 3
+value = 240
+ctrl = 0
+
+[State 1530, 2]
+type = ChangeState
+trigger1 = var(14) = 4
+value = 1545
+ctrl = 0
+
+[State 1530, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 11
+ctrl = 1
+
+;-----------------------------------------------------
+; Patada baja (post mulazo volador)(99 punch)
+[Statedef 1535]
+type    = C
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 20
+ctrl = 0
+anim = 1535
+sprpriority = 2
+facep2 = 1
+
+[State 1535, 1] ;Velocity
+type = VelSet
+trigger1 = Time = 0
+x = 6
+
+[State 1535, 2] ;Snd fx
+type = PlaySnd
+trigger1 = Time = 0
+value = 1,1
+
+[State 1535, 3] ;Hit Code
+type = HitDef
+trigger1 = Time = 5
+attr = C, SA
+animtype  = Back
+damage    = 20, 2
+;givepower = 10, 5
+priority = 1
+hitflag = MAF
+guardflag = L
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-50
+hitsound   = S200,3
+guardsound = S3,1
+ground.type = Low
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -3, -6
+air.velocity = -3,-6
+guard.velocity = -8
+juggle = 15
+fall = 1
+fall.recover = 1
+yaccel = 0.44
+
+[State 1535, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;-----------------------------------------------------
+; Patada alta (post mulazo volador)(99 Kick)
+[Statedef 1540]
+type    = A
+movetype= A
+physics = N
+juggle  = 0
+poweradd= 25
+ctrl = 0
+anim = 1540
+sprpriority = 2
+facep2 = 1
+
+[State 1540, 1] ;Velocity
+type = VelSet
+trigger1 = Time = 0
+x = 5
+y = -5
+
+[State 1540, 2] ;Velocity
+type = VelAdd
+trigger1 = Time >= 0
+y = .4
+
+[State 1540, 3] ;Snd fx
+type = PlaySnd
+trigger1 = Time = 0
+value = 1,1
+
+[State 1540, 4] ;Hit Code
+type = HitDef
+trigger1 = Time = 5
+attr = A, SA
+animtype  = Back
+damage    = 30, 3
+;givepower = 10, 5
+priority = 1
+hitflag = MAF
+guardflag = H
+pausetime = 10,10
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -30,-50
+hitsound   = S200,2
+guardsound = S3,1
+ground.type = High
+ground.slidetime = 17
+ground.hittime  = 10
+ground.velocity = -4,-6
+air.velocity = -4,-6
+guard.velocity = -8
+juggle = 15
+fall = 1
+fall.recover = 1
+
+[State 1540, 7]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1541
+
+; regresando a status Standing
+[Statedef 1541]
+type    = S
+movetype= A
+physics = N
+juggle  = 8
+poweradd= 0
+ctrl = 0
+anim = 1541
+sprpriority = 2
+
+[State 1541, 0]
+type = VelSet
+trigger1 = Time = 0
+x = 0
+y = 0
+
+[State 1541, 1]
+type = PosSet
+trigger1 = Time = 0
+y = 0
+
+[State 1541, 1]
+type = Playsnd
+trigger1 = Time = 0
+value = 0,2
+
+[State 1541, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;-----------------------------------------------------
+; golpe centrado (post mulazo volador)(98 punch)
+[Statedef 1545]
+type    = C
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 20
+ctrl = 0
+anim = 1545
+sprpriority = 2
+facep2 = 1
+
+[State 1535, 1] ;Velocity
+type = VelSet
+trigger1 = Time = 0
+x = 6
+
+[State 1535, 2] ;Snd fx
+type = PlaySnd
+trigger1 = Time = 0
+value = 1,1
+
+[State 1535, 3] ;Hit Code
+type = HitDef
+trigger1 = AnimElem = 1
+attr = C, SA
+animtype  = Back
+damage    = 20, 2
+priority = 1
+hitflag = MAF
+guardflag = L
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-50
+hitsound   = S200,3
+guardsound = S3,1
+ground.type = Low
+ground.slidetime = 18
+ground.hittime  = 12
+ground.velocity = -3, -6
+air.velocity = -3,-6
+guard.velocity = -8
+juggle = 15
+fall = 1
+fall.recover = 1
+yaccel = 0.44
+
+[State 1535, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;================================================================================
+; shoryudan (WP) (98) (inicio)
+[Statedef 1300]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 140
+ctrl = 0
+anim = 1300
+sprpriority = 2
+priority = 1
+
+[State 1300, 0]
+type = PosAdd
+trigger1 = AnimElem = 4
+x = 5
+
+[State 3000, inv]
+type = NotHitBy
+trigger1 = time >=5
+value = SCA, NA,SA,HA,NP,SP,HP
+
+[State 1300, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger1 = P2bodydist X > 6
+attr = S, SA
+animtype  = Medium
+damage    = 30,3
+;givepower = 10, 5
+hitflag = MA
+guardflag = M
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 0,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = High
+ground.hittime = 14
+ground.slidetime = 17
+ground.velocity = 8
+guard.velocity = -12
+air.velocity = -4,-4
+ignorehitpause = 1
+;forcestand = 1
+
+[State 1300, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger1 = P2bodydist X <= 6
+attr = S, SA
+animtype  = Medium
+damage    = 30,3
+;givepower = 10, 5
+hitflag = MA
+guardflag = M
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 0,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = High
+ground.hittime = 14
+ground.slidetime = 17
+ground.velocity = -8,0
+guard.velocity = -12
+air.velocity = -4,-4
+ignorehitpause = 1
+;forcestand = 1
+
+[State 1300, 2] ;Shoryudan!
+type = PlaySnd
+trigger1 = AnimElem = 4
+value = S101, 0
+
+[State 1300, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1305
+
+; Shoryudan (WP) (ataque y descenso)
+[Statedef 1305]
+type    = A
+movetype= A
+physics = N
+juggle  = 10
+;poweradd= 0
+ctrl = 0
+anim = 1305
+sprpriority = 2
+priority = 1
+
+[State 1305, 0] ;Shoryudan Sound
+type = PlaySnd
+trigger1 = Time = 0
+value = 103, 1
+
+[State 1305, 1]
+type = Explod
+trigger1 = Time = 0
+anim = 1350
+id = 1350
+sprpriority = 8
+ontop = 1
+ownpal = 1
+postype = p1
+pos = 20,-80
+removetime = 10
+bindtime = -1
+
+[State 1305, 2]
+type = Velset
+trigger1 = Time = 0
+x = 5
+y = -8
+
+[State 1305, 3]
+type = VelAdd
+trigger1 = Time >= 5 || Time <= 15
+trigger1 = Vel X >= 0
+x = -.4
+y = .5
+
+[State 1306, 4]
+type = VelAdd
+trigger1 = Time >= 15
+x = .2
+
+[State 1305, 5] ;Rising Hits
+type = HitDef
+trigger1 = animelem = 1
+trigger2 = animelem = 2
+trigger3 = animelem = 3
+;trigger4 = time = 7
+;trigger5 = time = 11
+attr = A, SA
+damage = 20
+;givepower = 15, 10
+hitflag = MAF
+guardflag = M
+priority = 1
+pausetime = 2,1
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200, 2
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -1,-6
+guard.velocity = -12
+air.velocity = -1,-6
+air.fall = 1
+fall.recover = 1
+
+[State 1305, 6] ;Final Blow
+type = HitDef
+trigger1 = animelem = 4
+attr = A, SA
+damage = 35,0
+;givepower = 15, 10
+hitflag = MAF
+guardflag = M
+priority = 1
+pausetime = 3,4
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200, 2
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2.5,-8.5
+guard.velocity = -12
+air.velocity = -2.5,-8.5
+fall = 1
+fall.recover = 0
+yaccel = 0.45
+
+[State 1305, 7]
+type = Veladd
+trigger1 = Time >= 14
+x = 0
+y = 0.5
+
+[State 1305, 8]
+type = ChangeState
+trigger1 = pos y >= 0 && vel y >= 0
+value = 1310
+
+; Shoryudan (WP)(Aterrizaje)
+[Statedef 1310]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+anim = 1310
+sprpriority = 2
+
+[State 1310, 0]
+type = VelSet
+trigger1 = Time = 0
+x = 0
+y = 0
+
+[State 1305, 0] ;Shoryudan Sound
+type = PlaySnd
+trigger1 = Time = 0
+value = 0, 2
+
+[State 1310, 1]
+type = PosSet
+trigger1 = Time = 0
+y = 0
+
+[State 1310, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Shoryudan (SP) (98) (Inicio)
+[Statedef 1316]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 150
+ctrl = 0
+anim = 1316
+sprpriority = 2
+priority = 1
+
+[State 1316, 0]
+type = PosAdd
+trigger1 = AnimElem = 4
+x = 5
+
+[State 3000, inv]
+type = NotHitBy
+trigger1 = time >=8
+value = SCA, NA,SA,HA,NP,SP,HP
+
+[State 1316, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger1 = P2bodydist X > 6
+attr = S, SA
+animtype  = Medium
+damage    = 30,3
+;givepower = 10, 5
+hitflag = MAF
+guardflag = M
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 0,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = High
+ground.hittime = 12
+ground.slidetime = 17
+ground.velocity = 8
+guard.velocity = -12
+air.velocity = -4,-4
+
+[State 1316, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger1 = P2bodydist X <= 6
+attr = S, SA
+animtype  = Medium
+damage    = 30,3
+;givepower = 10, 5
+hitflag = MAF
+guardflag = M
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 0,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = High
+ground.hittime = 12
+ground.slidetime = 17
+ground.velocity = -8,0
+guard.velocity = -12
+air.velocity = -4,-4
+
+[State 1316, 2] ;Shoryudan!
+type = PlaySnd
+trigger1 = AnimElem = 4
+value = S101, 0
+
+[State 1316, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1320
+
+;---------------------------------------------------------------------------
+; Shoryudan (SP) (Kof '98) (attack)
+[Statedef 1320]
+type    = A
+movetype= A
+physics = N
+juggle  = 10
+ctrl = 0
+anim = 1320
+sprpriority = 2
+priority = 1
+
+[State 1320, 0] ;Shoryudan Sound
+type = PlaySnd
+trigger1 = Time = 0
+value = 103, 1
+
+[State 1320, 1]
+type = Explod
+trigger1 = Time = 0
+anim = 1350
+id = 1350
+sprpriority = 8
+ontop = 1
+ownpal = 1
+postype = p1
+pos = 20,-80
+removetime = 10
+bindtime = -1
+
+[State 1321, 2] ;Movement
+type = Velset
+trigger1 = Time = 0
+x = 5
+y = -9
+
+[State 1321, 3]
+type = VelAdd
+trigger1 = Time >= 0 || Time <= 20
+trigger1 = Vel X >= 0
+x = -.25
+y = .35
+
+[State 1306, 4]
+type = VelAdd
+trigger1 = Time >= 20
+x = .2
+
+[State 1306, 4]
+type = VelAdd
+trigger1 = animelem =6, >= 3
+y = .44
+
+[State 1320, 7]
+type = HitDef
+trigger1 = animelem = 1
+trigger2 = animelem = 2
+trigger3 = animelem = 3
+trigger4 = animelem = 4
+attr = A, SA
+damage = 20,2
+;givepower = 15, 10
+hitflag = MAF
+guardflag = M
+priority = 1
+pausetime = 2,1
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200, 2
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2,-10
+air.velocity = -2,-10
+guard.velocity = -12
+air.fall = 1
+fall.recover = 0
+
+[State 1320, 8]
+type = HitDef
+Trigger1 = animelem = 5
+attr = A, SA
+damage = 35,4
+;givepower = 15, 10
+hitflag = MAF
+guardflag = H
+priority = 1
+pausetime = 3,4
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200, 2
+guardsound = S3,1
+animtype = up
+ground.type = High
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -4,11
+air.velocity = -4,11
+guard.velocity = -12
+fall = 1
+fall.recover = 0
+
+[State 1320, 9]
+type = ChangeState
+trigger1 = pos y >= 0 && vel y >=0
+value = 1310; (Descenso)
+
+;---------------------------------------------------------------------------
+;Kuhadan (WK) (inicio)
+[Statedef 1100]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 135
+ctrl = 0
+anim = 1100
+sprpriority = 2
+
+[State 1105, 1]
+type = PlaySnd
+trigger1 = Time = 8
+value = 103,0
+
+[State 1105, 2]
+type = HitDef
+trigger1 = AnimElem = 5
+attr = S, SA
+damage = 25,3
+;80/((hitcount+1)*2), 4
+;givepower = 15, 10
+hitflag = MAF
+guardflag = M
+priority = 1
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200,3
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 17
+ground.hittime = 17
+ground.velocity = -11
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -10
+air.cornerpush.veloff = -6
+air.fall = 1
+fall.recover = 1
+
+[State 1105, 0]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = S103, 1
+
+[State 1100, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1105
+
+;---------------------------------------------------------------------------
+; Kuhadan WK (Attack)
+[Statedef 1105]
+type    = A
+movetype= A
+physics = N
+juggle  = 10
+;poweradd= 0
+ctrl = 0
+anim = 1105
+sprpriority = 2
+
+[State 1105, 2]
+type = HitDef
+trigger1 = AnimElem = 1
+attr = A, SA
+damage = 25,3
+;80/((hitcount+1)*2), 4
+;givepower = 15, 10
+hitflag = MAF
+guardflag = H
+priority = 1
+pausetime = 6,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200,3
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 19
+ground.hittime = 19
+ground.velocity = -9
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -10
+air.cornerpush.veloff = -6
+air.fall = 1
+fall.recover = 1
+
+[State 1105, 2]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = A, SA
+damage = 25,3
+;80/((hitcount+1)*2), 4
+;givepower = 15, 10
+hitflag = MAF
+guardflag = H
+priority = 1
+pausetime = 6,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200,3
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 19
+ground.hittime = 19
+ground.velocity = -9
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -10
+air.cornerpush.veloff = -6
+air.fall = 1
+fall.recover = 1
+
+[State 1105, 2]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = A, SA
+damage = 25,3
+;80/((hitcount+1)*2), 4
+;givepower = 15, 10
+hitflag = MAF
+guardflag = H
+priority = 1
+pausetime = 6,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200,3
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 19
+ground.hittime = 19
+ground.velocity = -9
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -10
+air.cornerpush.veloff = -6
+air.fall = 1
+fall.recover = 1
+
+[State 1105, 2]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = A, SA
+damage = 25,3
+;80/((hitcount+1)*2), 4
+;givepower = 15, 10
+hitflag = MAF
+guardflag = H
+priority = 1
+pausetime = 6,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200,3
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 19
+ground.hittime = 19
+ground.velocity = -9
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -10
+air.cornerpush.veloff = -6
+air.fall = 1
+fall.recover = 1
+
+[State 1105, 3]
+type = Velset
+trigger1 = Time = 0
+x = 4
+y = -6
+
+[State 1105, 4]
+type = VelAdd
+trigger1 = Time >= 1
+x = 0
+y = .40
+
+[State 1105, 5]
+type = VelSet
+trigger1 = AnimTime = 0
+x = 0
+y = 0
+
+[State 1105, 6]
+type = PosSet
+trigger1 = AnimTime = 0
+y = 0
+
+[State 1105, 7]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1110
+
+;---------------------------------------------------------------------------
+; Kuhadan WK (En tierra)
+[Statedef 1110]
+type    = S
+movetype= A
+physics = S
+juggle  = 8
+poweradd= 0
+ctrl = 0
+anim = 1110
+sprpriority = 2
+
+[State 1105, 6]
+type = Playsnd
+trigger1 = Time = 0
+value = 0,2
+
+[State 1100, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Kuhadan SK (Inicio)
+[Statedef 1115]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 145
+ctrl = 0
+anim = 1115
+sprpriority = 2
+
+[State 1120, 1]
+type = PlaySnd
+trigger1 = Time = 8
+value = 103,0
+
+[State 1105, 2]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = S, SA
+damage = 28,3
+;80/((hitcount+1)*2), 4
+;givepower = 12, 10
+hitflag = MAF
+guardflag = M
+priority = 1
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200,3
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 17
+ground.hittime = 17
+ground.velocity = -11
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -10
+air.cornerpush.veloff = -6
+air.fall = 1
+fall.recover = 1
+
+[State 1120, 0]
+type = PlaySnd
+trigger1 = AnimElem = 4
+value = S103, 1
+
+[State 1115, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1120
+
+;---------------------------------------------------------------------------
+; Kuhadan SK (Attack)
+[Statedef 1120]
+type    = A
+movetype= A
+physics = N
+juggle  = 10
+;poweradd= 0
+ctrl = 0
+anim = 1120
+sprpriority = 2
+
+[State 1120, 1]
+type = HitDef
+trigger1 = AnimElem = 1
+attr = A, SA
+damage = 28,3
+hitflag = MAF
+guardflag = H
+priority = 1
+pausetime = 6,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200,3
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 19
+ground.hittime = 19
+ground.velocity = -9
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -10
+air.cornerpush.veloff = -6
+air.fall = 1
+fall.recover = 1
+
+[State 1120, 2]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = A, SA
+damage = 28,3
+;80/((hitcount+1)*2), 4
+;givepower = 15, 10
+hitflag = MAF
+guardflag = H
+priority = 4
+pausetime = 6,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200,3
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 19
+ground.hittime = 19
+ground.velocity = -9
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -10
+air.cornerpush.veloff = -6
+air.fall = 1
+fall.recover = 1
+
+[State 1120, 2]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = A, SA
+damage = 28,3
+;80/((hitcount+1)*2), 4
+;givepower = 15, 10
+hitflag = MAF
+guardflag = H
+priority = 1
+pausetime = 6,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200,3
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 19
+ground.hittime = 19
+ground.velocity = -9
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -10
+air.cornerpush.veloff = -6
+air.fall = 1
+fall.recover = 1
+
+[State 1120, 2]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = A, SA
+damage = 28,3
+;80/((hitcount+1)*2), 4
+;givepower = 15, 10
+hitflag = MAF
+guardflag = H
+priority = 1
+pausetime = 6,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200,3
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 19
+ground.hittime = 19
+ground.velocity = -9
+air.velocity = -3.5,-6
+ground.cornerpush.veloff = -10
+air.cornerpush.veloff = -6
+air.fall = 1
+fall.recover = 1
+
+[State 1120, 3]
+type = Velset
+trigger1 = Time = 0
+x = 5
+y = -6
+
+[State 1120, 4]
+type = VelAdd
+trigger1 = Time >= 1
+x = 0
+y = .35
+
+[State 1120, 5]
+type = VelSet
+trigger1 = AnimTime = 0
+x = 0
+y = 0
+
+[State 1120, 6]
+type = PosSet
+trigger1 = AnimTime = 0
+y = 0
+
+[State 1120, 7]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1125
+
+;---------------------------------------------------------------------------
+; Kuhadan B (Aterrizando)
+[Statedef 1125]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+anim = 1125
+sprpriority = 2
+
+[State 1105, 6]
+type = Playsnd
+trigger1 = Time = 0
+value = 0,2
+
+[State 1125, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;===========================================================================
+;===========================================================================
+; shoryudan (WP) (EX) (inicio)
+[Statedef 1400]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 140
+ctrl = 0
+anim = 1330
+sprpriority = 2
+priority = 1
+
+[State 1300, 0]
+type = PosAdd
+trigger1 = AnimElem = 4
+x = 5
+
+[State 3000, inv]
+type = NotHitBy
+trigger1 = time >=5
+value = SCA, NA,SA,HA,NP,SP,HP
+
+[State 1300, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger1 = P2bodydist X > 6
+attr = S, SA
+animtype  = Medium
+damage    = 30,3
+;givepower = 10, 5
+hitflag = MA
+guardflag = M
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 0,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = High
+ground.hittime = 14
+ground.slidetime = 17
+ground.velocity = 8
+guard.velocity = -12
+air.velocity = -4,-4
+ignorehitpause = 1
+;forcestand = 1
+
+[State 1300, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger1 = P2bodydist X <= 6
+attr = S, SA
+animtype  = Medium
+damage    = 30,3
+;givepower = 10, 5
+hitflag = MA
+guardflag = M
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 0,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = High
+ground.hittime = 14
+ground.slidetime = 17
+ground.velocity = -8,0
+guard.velocity = -12
+air.velocity = -4,-4
+ignorehitpause = 1
+;forcestand = 1
+
+[State 1300, 2] ;Shoryudan!
+type = PlaySnd
+trigger1 = AnimElem = 3
+value = S101, 0
+
+[State 1300, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1405
+
+; Shoryudan (WP)(EX) (ataque y descenso)
+[Statedef 1405]
+type    = A
+movetype= A
+physics = N
+juggle  = 10
+ctrl = 0
+anim = 1335
+sprpriority = 2
+priority = 1
+
+[State 1305, 0] ;Shoryudan Sound
+type = PlaySnd
+trigger1 = Time = 0
+value = 103, 1
+
+[State 1305, 1]
+type = Explod
+trigger1 = AnimElem = 2
+anim = 1351
+id = 1351
+sprpriority = 8
+ontop = 1
+ownpal = 1
+postype = p1
+pos = -10,-100
+removetime = 10
+bindtime = -1
+
+[State 1305, 2]
+type = Velset
+trigger1 = Time = 0
+x = 5
+y = -8
+
+[State 1305, 3]
+type = VelAdd
+trigger1 = Time >= 5 || Time <= 15
+trigger1 = Vel X >= 0
+x = -.4
+y = .5
+
+[State 1306, 4]
+type = VelAdd
+trigger1 = Time >= 15
+x = .2
+
+[State 1305, 5] ;Rising Hits
+type = HitDef
+trigger1 = animelem = 1
+trigger2 = animelem = 2
+trigger3 = animelem = 3
+attr = A, SA
+damage = 20
+hitflag = MAF
+guardflag = M
+priority = 1
+pausetime = 2,1
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200, 2
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -1,-6
+guard.velocity = -12
+air.velocity = -1,-6
+air.fall = 1
+fall.recover = 1
+
+[State 1305, 6] ;Final Blow
+type = HitDef
+trigger1 = animelem = 4
+attr = A, SA
+damage = 35,0
+;givepower = 15, 10
+hitflag = MAF
+guardflag = M
+priority = 1
+pausetime = 3,4
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200, 2
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2.5,-8.5
+guard.velocity = -12
+air.velocity = -2.5,-8.5
+fall = 1
+fall.recover = 0
+yaccel = 0.45
+
+[State 1305, 7]
+type = Veladd
+trigger1 = Time >= 14
+x = 0
+y = 0.5
+
+[State 1305, 8]
+type = ChangeState
+trigger1 = pos y >= 0 && vel y >= 0
+value = 1410; (Descenso)
+
+;---------------------------------------------------------------------------
+; Shoryudan (SP) (EX) (Inicio)
+[Statedef 1416]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= 150
+ctrl = 0
+anim = 1340
+sprpriority = 2
+priority = 1
+
+[State 1316, 0]
+type = PosAdd
+trigger1 = AnimElem = 4
+x = 5
+
+[State 3000, inv]
+type = NotHitBy
+trigger1 = time >=8
+value = SCA, NA,SA,HA,NP,SP,HP
+
+[State 1316, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger1 = P2bodydist X > 6
+attr = S, SA
+animtype  = Medium
+damage    = 30,3
+;givepower = 10, 5
+hitflag = MAF
+guardflag = M
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 0,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = High
+ground.hittime = 12
+ground.slidetime = 17
+ground.velocity = 8
+guard.velocity = -12
+air.velocity = -4,-4
+
+[State 1316, 1]
+type = HitDef
+trigger1 = AnimElem = 4
+trigger1 = P2bodydist X <= 6
+attr = S, SA
+animtype  = Medium
+damage    = 30,3
+;givepower = 10, 5
+hitflag = MAF
+guardflag = M
+pausetime = 12,12
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = 0,-60
+hitsound   = S200, 2
+guardsound = S3,1
+ground.type = High
+ground.hittime = 12
+ground.slidetime = 17
+ground.velocity = -8,0
+guard.velocity = -12
+air.velocity = -4,-4
+
+[State 1316, 2] ;Shoryudan!
+type = PlaySnd
+trigger1 = AnimElem = 3
+value = S101, 0
+
+[State 1316, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 1420
+
+;---------------------------------------------------------------------------
+; Shoryudan (SP) (EX) (attack)
+[Statedef 1420]
+type    = A
+movetype= A
+physics = N
+juggle  = 10
+ctrl = 0
+anim = 1345
+sprpriority = 2
+priority = 1
+
+[State 1320, 0] ;Shoryudan Sound
+type = PlaySnd
+trigger1 = Time = 0
+value = 103, 1
+
+[State 1305, 1]
+type = Explod
+trigger1 = AnimElem = 2
+anim = 1351
+id = 1351
+sprpriority = 8
+ontop = 1
+ownpal = 1
+postype = p1
+pos = -10,-100
+removetime = 10
+bindtime = -1
+
+[State 1321, 2] ;Movement
+type = Velset
+trigger1 = Time = 0
+x = 5
+y = -7
+
+[State 1321, 3]
+type = VelAdd
+trigger1 = Time >= 0 || Time <= 20
+trigger1 = Vel X >= 0
+x = -.25
+y = .35
+
+[State 1306, 4]
+type = VelAdd
+trigger1 = Time >= 20
+x = .2
+
+[State 1306, 4]
+type = VelAdd
+trigger1 = animelem =6, >= 3
+y = .44
+
+[State 1320, 7]
+type = HitDef
+trigger1 = animelem = 1
+trigger2 = animelem = 2
+trigger3 = animelem = 3
+attr = A, SA
+damage = 20,2
+;givepower = 15, 10
+hitflag = MAF
+guardflag = M
+priority = 1
+pausetime = 2,1
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound   = S200, 2
+guardsound = S3,1
+animtype = Med
+ground.type = High
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -2,-10
+air.velocity = -2,-10
+guard.velocity = -12
+air.fall = 1
+fall.recover = 0
+
+[State 1320, 9]
+type = ChangeState
+trigger1 = pos y >= 0 && vel y >=0
+value = 1310; (Descenso)
+
+; EX Shoryudan (Aterrizaje)
+[Statedef 1410]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+anim = 1310
+sprpriority = 2
+
+[State 1310, 0]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 0
+y = 0
+
+[State 1305, 0] ;Shoryudan Sound
+type = PlaySnd
+trigger1 = Time = 0
+value = 0, 2
+
+[State 1310, 1]
+type = PosSet
+trigger1 = AnimElem = 1
+y = 0
+
+[State 1310, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;===========================================================================
+; Dam Breaker
+[Statedef 1600]
+type    = S
+movetype= A
+physics = N
+juggle  = 0
+poweradd= 0
+ctrl = 0
+anim = 1410
+sprpriority = 2
+velset = 4,0
+
+[State 1201, 0]
+type = VelSet
+trigger1 = AnimElem = 13
+x = 0
+
+[State 3003, 1] ;Stop AfterImages
+type = AfterImageTime
+trigger1 = Time = 0
+value = 0
+
+[State 3003, 1] ;Stop AfterImages
+type = hitadd
+trigger1 = animelem = 1
+value = -1
+
+[State 3002, 0]
+type = HitDef
+trigger1 = AnimElem = 2
+trigger2 = AnimElem = 6
+trigger3 = AnimElem = 9
+attr = S, HA
+damage = 40,5
+getpower = 0,0
+hitflag = MAF
+;guardflag = M
+priority = 1
+pausetime = 6,6
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-55
+hitsound = S200,4
+guardsound = S3,1
+animtype = Hard
+ground.type = High
+ground.slidetime = 0;19
+ground.hittime = 17
+ground.velocity = -8
+air.velocity = -2,-2
+ground.cornerpush.veloff = -1
+air.cornerpush.veloff = -1
+;envshake.time = 10
+;envshake.ampl = 3
+air.fall = 1
+fall.recover = 0
+kill = 0
+
+[State 3002, 1]
+type = movehitreset
+trigger1 = AnimElem = 12
+
+[State 3002, 1]
+type = HitDef
+trigger1 = AnimElem = 13
+attr = S, NA
+damage = 80
+animtype = hard
+hitflag = MAF
+;guardflag = M
+sparkno = S4070
+guard.sparkno = S4130
+sparkxy = -10,-61
+hitsound = S200,4
+guardsound = S3,0
+pausetime = 6,7
+ground.hittime = 17
+ground.type = high
+ground.slidetime = 17
+ground.velocity = -3,-10
+air.velocity = -3,-10
+fall = 1
+fall.recover = 0
+yaccel = .5
+hit.priority = 1
+hit.getpower = 10
+
+[State 3002, 5]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;===========================================================================
+;===========================================================================
+
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+[Statedef 5600]
+type    = S
+movetype= I
+physics = S
+velset = 0,0
+anim = 5600
+ctrl = 0
+
+[state vel]
+type = velset
+trigger1 = animelem >= 2
+trigger1 = animelemtime (5) < 4
+x = -11
+
+[State 811, END]
+type = selfstate
+Trigger1 = AnimTime = 0
+value = 0
+ctrl = 1

@@ -1,0 +1,40 @@
+;-=========================================================================-
+; * Character:          Clark Steel
+; * From :              The King of Fighters 98 (c) SNK/SNK Playmore
+; * Mugen converter:    OrochiKOF97 & Scal
+; * Contents:           Files definition
+;-=========================================================================-
+
+[Info]
+name = "Clark Steel"
+displayname = "Clark Steel"    
+versiondate = 07.15.2004 
+author = "OrochiKOF97 & Scal"   
+pal.defaults = 1,2,3,4,5,6,7,8,9,10,11,12
+
+[Files]
+cns = clark98.cns
+cmd = clark98.cmd
+stcommon = common1.cns
+sprite = clark98.sff
+anim = clark98.air
+st = clark98_O.st	    ; Overrides
+st1 = clark98_M.st      ; Misc. KOF template
+st2 = clark98_N.st	    ; Basic/Normal moves
+st3 = clark98_S.st	    ; Special moves
+st4 = clark98_D.st	    ; Desesparation moves
+st5 = config.txt	    ; Configuration file
+sound = clark98.snd	    ; Sounds
+pal1 = clark98_02.act     ; KOF98 second palette
+pal2 = clark98_04.act     ; KOF98 fourth palette
+pal3 = clark98_06.act     ; KOF97 first palette (EX mode)
+pal4 = clark98_01.act     ; KOF98 first palette
+pal5 = clark98_03.act     ; KOF98 third palette
+pal6 = clark98_05.act     ; KOF96 second palette
+pal7 = clark98_08.act     ; KOF98UM sixth palette
+pal8 = clark98_10.act     ; KOF98UM eighth (??) palette
+pal9 = clark98_12.act     ; Ultrarox palette
+pal10 = clark98_07.act    ; KOF97 second palette (EX mode)
+pal11 = clark98_09.act    ; KOF98UM seventh palette
+pal12 = clark98_11.act    ; KOF99 first palette
+

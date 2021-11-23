@@ -1,0 +1,110 @@
+;-=========================================================================-
+; * Character:          Clark Steel
+; * From :              The King of Fighters 98 (c) SNK/SNK Playmore
+; * Mugen converter:    OrochiKOF97 & Scal
+; * Contents:           Configuration switches
+;-=========================================================================-
+
+[Statedef 5910]
+type = S
+
+;-=========================================================================-
+; Game mode
+;-=========================================================================-
+; Defines the game mode (KOF02 or Retro). That game mode can be toggled by
+; pressing Start during a taunt if the functionality is enabled (see below).
+;
+; Values:
+;	-1 = Selection key defines the mode:
+;		* X, Y or Z = KOF02 mode
+;		* A, B or C = Retro mode
+;	 0 = KOF02 mode by default
+;	 1 = Retro mode by default
+
+[State 5910, DefineGameMode]
+type = VarSet
+trigger1 = !Time
+var(58) = -1	; <- Put your value here
+
+;-=========================================================================-
+; Game mode toggle
+;-=========================================================================-
+; Allows / disallows the player to toggle the game mode.
+;
+; Values:
+;	 0 = Off, game mode cannot be changed during a match
+;	 1 = On, game mode can be changed during a match
+
+[State 5910, DefineGameModeToggle]
+type = VarSet
+trigger1 = !Time
+var(53) = 1	; <- Put your value here
+
+;-=========================================================================-
+; Sound set
+;-=========================================================================-
+; Specifies the sound set to use.
+;
+; Values:
+;	-1 = Depends on the game mode:
+;		* If game mode is KOF02, The King of Fighters 2002 sounds
+;		* If game mode is Retro, The King of Fighters '94/'98 sounds
+;	 0 = Always The King of Fighters 2002 sounds
+;	 1 = Always The King of Fighters '94/'98 sounds
+
+[State 5910, DefineSoundSet]
+type = VarSet
+trigger1 = !Time
+var(55) = -1	; <- Put your value here
+
+;-=========================================================================-
+; Dodge
+;-=========================================================================-
+; Allows / disallows the character to dodge like KOF Extra mode.
+; If dodge is enabled, it can be perform by pressing A+B without holding
+; forwards or backwards. If you hold one of the direction, a roll will be 
+; performed instead.
+;
+; Values:
+;	 0 = Off, dodge is disabled
+;	 1 = On, dodge is enabled
+
+[State 5910, DefineDodge]
+type = VarSet
+trigger1 = !Time
+var(52) = 0	; <- Put your value here
+
+;-=========================================================================-
+; Power charge
+;-=========================================================================-
+; Allows / disallows the character to power charge in order to increase its
+; power bar level.
+;
+; Values:
+;	 0 = Off, charge is disabled
+;	 1 = On, charge is enabled
+
+[State 5910, DefinePowerCharge]
+type = VarSet
+trigger1 = !Time
+var(51) = 1	; <- Put your value here
+
+;-=========================================================================-
+; HSDM background
+;-=========================================================================-
+; Selects the blue KOF02 or the green KOF02UM HSDM background effect.
+;
+; Values:
+;	 0 = KOF02 HSDM background effect
+;	 1 = KOF02UM HSDM background effect
+
+[State 5910, DefineHSDMBackground]
+type = VarSet
+trigger1 = !Time
+var(50) = 1	; <- Put your value here
+
+[State 5910, GoToResume]
+type = ChangeState
+trigger1 = !Time
+value = 5900
+ctrl = 0

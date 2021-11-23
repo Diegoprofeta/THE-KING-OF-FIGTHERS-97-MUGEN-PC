@@ -1,0 +1,39 @@
+[Info]
+Name         ="Kyo-98"
+DisplayName  ="Kyo"
+VersionDate  =05,29,2007
+MugenVersion =06,14,2003
+Author       ="Zelgadis"
+Pal.Defaults =1,2,3,4,5,6
+
+[Files]
+Cmd      =Kyo-98.cmd
+Cns      =Kyo-98.cns
+St       =Kyo-98.cns
+StCommon =common1.cns
+Sprite   =Kyo-98.sff
+Anim     =Kyo-98.air
+Sound    =Kyo-98.snd
+pal1=Paletas/Kyo-98-Original.act
+pal2=Paletas/Kyo-98-Original.act
+pal3=Paletas/Kyo-98-Original.act
+pal4=Paletas/Kyo-98-Original.act
+pal5=Paletas/Kyo-98-Original.act
+pal6=Paletas/Kyo-98-Original.act
+pal7=Paletas/Kyo-98-Original.act
+pal8=Paletas/Kyo-98-Original.act
+pal9=Paletas/Kyo-98-Original.act
+pal10=Paletas/Kyo-98-Original.act
+pal11=Paletas/Kyo-98-Original.act
+pal12=Paletas/Kyo-98-Original.act
+st1=Kyo-98-N.cns
+st2=Kyo-98-S.cns
+st3=Kyo-98-H.cns
+st4=Kyo-98-2-3.cns
+
+
+
+
+[Arcade]
+intro.storyboard  =
+ending.storyboard =

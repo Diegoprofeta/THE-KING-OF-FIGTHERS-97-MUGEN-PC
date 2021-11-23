@@ -1,0 +1,30 @@
+This Yashiro Nanakase is made by Angel Myst.
+I'm Fangke. My site is 
+http://go3.163.com/ooooo3/index.html
+And Yashiro is released at
+http://www.bwhd.com/emuzone/Mugen/news.htm (China Mugen News, My friend Misamu K Young's site)
+Thanks for Angel Myst's permission. I'll do it best.
+Thanks lp(kmuser) who contact Angel and gain permission. Also thanks for his abetment. :-)
+
+What I updated is:
+
+More damage Anims for fall.
+Dizzy animation.
+Taunt action.
+Intro with Shermie.
+An Orochi win pose from kof97.
+No use? Haha, there're two Super Motions:
+Hoeru Daichi (Howling Earth)
+Araburu Daichi (Wild Earth Warrior) 
+And, I rebuild Sff file with a shared pal. 
+
+What's Left?
+
+Some DMs remain in Orochi form?
+Sounds fix.
+Evade w/o moving
+Evade -> attack
+more AI?
+and...endless?
+
+

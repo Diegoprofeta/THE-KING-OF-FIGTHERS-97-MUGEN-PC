@@ -1,0 +1,25 @@
+[Info]
+name = "Billy_ByEhnyd"
+displayname = "Billy"
+author = "Ehnyd"
+pal.defaults = 4,1
+;localcoord = 384,224
+
+[Files]
+cmd	= 98Billy.cmd
+cns	= 01_Normal.cns
+st	= 01_Normal.cns
+st1     = 02_Attacks.cns
+st2     = 03_Specials.cns
+st3     = 04_DMs.cns
+st4     = 05_Otros.cns
+stcommon = common1.cns
+sprite  = 98Billy.sff
+anim    = 98Billy.air
+sound   = 98Billy.snd
+pal1	= Pal/Billy01.act
+pal2	= Pal/Billy01.act
+pal3	= Pal/Billy01.act
+pal4	= Pal/Billy01.act
+pal5	= Pal/Billy01.act
+pal6	= Pal/Billy01.act

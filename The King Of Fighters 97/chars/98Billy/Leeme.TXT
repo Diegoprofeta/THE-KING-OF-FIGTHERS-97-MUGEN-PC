@@ -1,0 +1,167 @@
+---------------------------------------------------------------------
+Nombre:                     Billy Kane
+Juego de Origen:            The King of Fighters '98: Ultimate Match
+Autor                       Ehnyd (A.K.A.: <<VRG>>)
+web                         http://kofmugenchile.co.cc
+---------------------------------------------------------------------
+Archivos contenidos:
+Billy.air	; Animaciones
+Billy.cmd	; Comandos
+01_Main.cns	; Constantes (Data y poses)
+02_attacks.cns	; Constantes (Ataques comunes)
+03_Specials.cns	; Constantes (Tecnicas)
+04_DMs.cns	; Constantes (Supers)
+05_Otros.cns	; Constantes (Codigo Modo Adv.)
+98Billy.def	; Archivo definicion
+98Billy.sff	; Archivo Sprites
+98Billy.snd	; Archivo audios
+Leeme.txt	; Lo que estas leyendo
+
+Billy01.act	; Azul y Rojo
+Billy02.act	; Violeta y Rojo
+Billy03.act	; Negro y Rojo
+Billy04.act	; Negro y Azul
+Billy05.act	; Azul oscuro y Rojo
+Billy06.act	; Verde y Rojo
+
+Extra01.act	; Por completo Rojo
+Extra02.act	; Basado en Kyo
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Version 2.4
+-Correccion en Chain Combos
+-Depuracion de AI. Nivel: Intermedio.
+
+Version 2.3
+-Correccion en algunos canales de audio.
+-Correccion de animaciones de intro.
+-Correccion de Chain Combos.
+-Implementacion de AI. Nivel: Intermedio
+
+Version 2.2
+-Ajustes en Chain Combos.
+-Ajustes en el code de ataques con fuego.
+-Agregado audio en aterrizaje (Tenicas y otros)
+-DM / SDM Guren SatsuKon, corregido y depurado.
+-Mejorados tiempos en algunos ataques.
+
+Version 2.1
+-Correccion de archivo CMD, AIR y TXT
+-Correccion en documento TXT (Nombre de archivos no coincide)
+-cambio de propiedades de ataques SP y SK (Close)
+
+Version 2.0. ¿Qué se le hizo?
+-Se ha rediseñado por completo el char, dejando de lado algunas cosas
+ que se utilizaron en su momento como base.
+-En base a lo anterior, se han rediseñado las paletas.
+-Archivos AIR, CMD y CNS, rediseñados en totalidad.
+-Se han cambiado en totalidad las propiedades a todos los ataques.
+-Se ha retocado el codigo de la barra TIME.
+-Burla, Winpos e intros, modificados (y añadidos algunos nuevos.)
+-posee TODOS y CADA UNO de los ataques que realiza en KOF'98 UM. En
+ algunos caso, varia el comando.
+-Se ha traido animaciones de intro y Winner de KOF'02 UM.
+-Se han renovado el set de spark cuando el oponente es quemado.
+-Entre otras cosas que de seguro he olvidado mencionar...
+
+=====================================================================
+---------------------------------------------------------------------
+                           Lista de Comandos
+Simbologia
+WP  = Golpe Debil
+WK  = Patada Debil
+SP  = Golpe Fuerte
+SK  = Patada Fuerte
+
+F   = adelante
+B   = atras
+D   = abajo
+U   = arriba
+DF  = Diagonal abajo adelante
+DB  = Diagonal abajo atras
+QCF = Cuarto de circulo hacia adelante (D, DF, F)
+QCB = Cuarto de circulo hacia atras (D, DB, B)
+DP  = Adelante, Abajo, diagonal Abajo-adelante (F, D, DF)
+HCF = medio circulo hacia adelante (B, DB, D, DF, F)
+HCB = medio circulo hacia atras (F, DF, D, BD, B)
+x2  = debe hacerse dos veces
+
+=====================================================================
+======================
+| COMANDOS GENERALES |
+======================
+[f_b_N] + WP+WK      [Rolling Forward_Rollin Backward_Dodge]
+    <Dodge>Any Button    Dodge Ret
+WP+SK                Power Charge
+WK+SP                Start POW MAX Mode
+SP+SK                Nockdown Attack **Tambien funciona en el aire**
+
+===========
+| Agarres |
+===========
+F, SP			Jigoku Otoshi
+F, SK			Ippon Zuri Nage
+=====================
+| Comandos Normales |
+=====================
+F, WP			Dai Kaiten Geri
+F, WK			Boutaka Togiberi
+=======================
+| Tecnicas especiales |
+=======================
+WP varias veces		Senpuukon
+SP varias veces 	Shuuten Renpa Kon
+QCB, Golpe		Suzume Otoshi (HCB, SP for 02UM version)
+HCF, Golpe		Sansetsukon: Choudan Uchi
+    <S.C.> QCF, Golpe	    Kaen Sansetsu: Choudan Zuki
+DP, Golpe		Sen'en Sa Kon
+DP, Patada, (F_B_N)	Kyoushuu Hishou Kon (Direccion de la caida)
+QCB, WK 		Ka Ryuu Tsugeki Kon [Reversal]
+QCB, SK 		Sui Ryuu Tsugeki Kon [Reversal]
+QCF, WK 		Ka Ryuu Tsugeki Kon [Attack]
+QCF, SK 		Sui Ryuu Tsugeki Kon [Attack]
+
+==================
+| DM/SDM Attacks |
+==================
+QCF x2, Golpe		Tai Senpuu
+QCF, HCB, Golpe 	Chou Kaen Senpuu Kon
+F, HCF, Golpe		Salmander Slam
+HCF, DF, D, Patada	Guren SatsuKon
+
+---------------------------------------------------------------------
+=====================================================================
+---------------------------------------------------------------------
+                              CREDITS
+
+Elecbyte, razones obvias.
+SNK NeoGeo (SNKK Playmore), Por haber creado a este personaje.
+Atsushi Yamanishi, por ser el seiyuu en sus mejores apariciones.
+J.Lee, por ser el primero en M.U.G.E.N.izar un Billy Kane. La version
+       original del char me fue de mucho uso, y por ello, merece
+       buena parte del credito.
+Ses (http://ses.mgbr.net), por crear el MCM (MUGEN Character Maker)
+DCelso, por crear el Paletero.
+Zelgadis, por muchas... Muchas cosas.
+Koopakoot, por el CMD de su Billy. usado para revision de los Chain
+           Combos, y similares.
+mugenchina.org, por los sets de sprites de KOF'98UM, el cual me
+		sirvio bastante.
+
+				...
+
+A TODOS aquellos que me deben estar agarrando sentimientos cochinos
+ por no haberlos mencionado en este documento.
+
+				...
+
+			Y a tí... Por usarlo.
+
+---------------------------------------------------------------------
+                          Este char fue actualizado el 26/07/2012...
+                                                      Hey, hey, hey.
+---------------------------------------------------------------------
+                                 F I N   D E L   D O C U M E N T O .
+---------------------------------------------------------------------
+=====================================================================

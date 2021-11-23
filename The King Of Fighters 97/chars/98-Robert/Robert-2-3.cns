@@ -1,0 +1,327 @@
+;===============================================================================
+[Statedef -2]
+;===========================================================================
+
+[State -2]
+type = AssertSpecial
+trigger1 = roundstate = [0,1]
+trigger2 = roundstate = 4
+trigger3 = Ctrl = 0 && (Anim = [0,2]) && MoveType != H
+trigger4 = WinKO
+flag = NoBarDisplay
+ignorehitpause = 1
+
+[State -2,]
+type = Width
+trigger1 = 1
+edge = 20,0
+
+;----------------------------------------------------------------------------
+;Explot K.O! by Facu-96
+[State -2,]
+type = Explod
+triggerall = numexplod(8100) <= 0
+trigger1 = WinKO
+trigger1 = RoundState = 3
+trigger1 = var(8) = 0
+IgnoreHitPause = 1
+anim = 8100
+removetime = -2
+id = 8100
+sprpriority = -9
+pos = 0,0
+postype = left
+bindtime = -1
+ignorehitpause = 1
+ownpal = 1
+
+[state -2,]
+type = playsnd
+trigger1 = WinKO
+trigger1 = RoundState = 3
+trigger1 = var(8) = 0
+IgnoreHitPause = 1
+persistent = 0
+value = 5200,0
+
+[state -2,]
+type = varset
+trigger1 = RoundState = 3
+IgnoreHitPause = 1
+v = 8
+value = 1
+
+[state -2,]
+type = varset
+trigger1 = RoundState = 2
+IgnoreHitPause = 1
+v = 8
+value = 0
+
+;-------------------------------------------------------------------
+;Counter by Facu-96
+[State -2,]
+Type = Explod
+trigger1 = movehit && numtarget && hitdefattr = SCA,AA
+trigger1 = var(10)
+trigger1 = (target,movetype = H) && !(target,time)
+trigger1 = NumExplod(8000) = 0
+ignorehitpause = 1
+id = 8000
+anim = ifelse(TeamSide = 2,8001,8000)
+postype = Left
+pos = 10 + (300 * (teamside = 2)),90
+bindtime = -1
+removetime = -2
+ontop = 1
+ownpal = 1
+facing = 1
+pausemovetime = 100
+
+[State -2,]
+type = varset
+trigger1 = 1
+var(10) = ifelse((p2movetype = A),1,0)
+
+;-------------------------------------------------------------------------
+
+[State -2,]
+type = Pause
+trigger1 = ProjHitTime(1000) = [5,15]
+trigger2 = ProjHitTime(2000) = [5,15]
+time = 1
+movetime = 0
+ignorehitpause = 1
+
+[State -2,]
+type = EnvColor
+trigger1 = ProjHitTime(2000) = 0
+id = 2000
+value = 245,245,245
+time = 1
+under = 1
+ignorehitpause = 1
+
+;----------------------------------------------------------------------------
+
+[State -2,]
+type = AfterImageTime
+trigger1 = MoveType = H
+time = 0
+
+[State -2,]
+type = StopSnd
+trigger1 = stateno != 101
+channel = 1
+
+[State -2,]
+type = StopSnd
+trigger1 = movetype = H
+channel = 2
+
+[State -2,]
+type = StopSnd
+trigger1 = stateno != 9801
+channel = 24
+
+[State -2,]
+type = StopSnd
+trigger1 = stateno != 9801
+channel = 25
+
+;--------------------------------------------------------------------------
+;Max Mode Kof-98 by Facu-96
+[State -2,]
+type = VarSet
+trigger1 = var(30) = 0
+trigger1 = Pos X < 0
+v = 30
+value = 1
+
+[State -2,]
+type = VarSet
+trigger1 = var(30) = 0
+trigger1 = Pos X >= 0
+v = 30
+value = 2
+
+[State -2,]
+type = VarSet
+trigger1 = var(7) < 0
+var(7) = 0
+ignorehitpause = 1
+
+[State -2,]
+type = VarAdd
+trigger1 = var(7) > 0
+v = 7
+ignorehitpause = 1
+value = -1
+
+[State -2,]
+type = PalFX
+triggerall = IsHelper != 1
+triggerall = timemod = 2,0
+trigger1 = Var(7) > 0
+time = 1
+add = 55,55,55
+ignorehitpause = 1
+
+[State -2,]
+type = ModifyExplod
+trigger1 = Var(7) != 0
+ID = 4102
+scale = (1100 - Var(7)) / 1100.0,1
+ontop = 1
+
+[State -2,]
+type = Explod
+trigger1 = Var(7) <= 0 && Var(30) = 1 && NumExplod(4100) != 0
+anim = 4101
+postype = left
+pos = 3,200
+ontop = 1
+supermove = 1
+ignorehitpause = 1
+ignoresuperpause = 1
+bindtime = 30
+ownpal = 1
+
+[State -2,]
+type = Explod
+trigger1 = Var(7) <= 0 && Var(30) = 2 && NumExplod(4100) != 0
+anim = 4106
+postype = right
+pos = -94,200
+ontop = 1
+supermove = 1
+ignorehitpause = 1
+ignoresuperpause = 1
+bindtime = 30
+ownpal = 1
+
+[State -2,]
+type = RemoveExplod
+trigger1 = Var(7) <= 0 && NumExplod(4100) != 0
+id = 4102
+
+[State -2,]
+type = RemoveExplod
+trigger1 = Var(7) <= 0 & NumExplod(4100) != 0
+id = 4100
+
+[State -2,]
+type = VarSet
+trigger1 = stateno = 2100
+trigger2 = stateno = 2400
+trigger3 = stateno = 2600
+v = 7
+value = 0
+
+;---------------------------------------------------------------------------
+
+[State -2,]
+type = displaytoclipboard
+trigger1 = 1
+text = "P2dist x = %.0f AI = %d\nRobert Garcia Creado Por Facu-96"
+params = p2bodydist x, var(0)
+
+;===============================================================================
+[Statedef -3]
+;===============================================================================
+
+;Saltos by Facu-96
+[State -3,]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 50
+trigger2 = stateno = 950
+value = 0,(var(5)>0)
+
+;---------------------------------------------------------------------------
+;Grito de Golpeado by Facu-96
+[State -3,]
+type = VarRandom
+triggerall = Time = 1
+trigger1 = stateno = 5000
+trigger2 = stateno = 5010
+trigger3 = stateno = 5020
+v = 4
+range = 0,8
+
+[State -3,]
+type = PlaySnd
+triggerall = Time = 1
+triggerall = Var(4) = [0,2]
+triggerall = alive = 1
+trigger1 = stateno = 5000
+trigger2 = stateno = 5010
+trigger3 = stateno = 5020
+value = 5000,0
+
+[State -3,]
+type = PlaySnd
+triggerall = Time = 1
+triggerall = Var(4) = [3,5]
+triggerall = alive = 1
+trigger1 = stateno = 5000
+trigger2 = stateno = 5010
+trigger3 = stateno = 5020
+value = 5000,1
+
+[State -3,]
+type = PlaySnd
+triggerall = Time = 1
+triggerall = Var(4) = [6,8]
+triggerall = alive = 1
+trigger1 = stateno = 5000
+trigger2 = stateno = 5010
+trigger3 = stateno = 5020
+value = 5000,2
+
+;----------------------------------------------------------------------------
+;AI by Facu-96
+[State -3,]
+type = Varset
+triggerall = var(9) != 1
+triggerall = RoundState != 3
+trigger1  = command = "AI_1"
+trigger2  = command = "AI_2"
+trigger3  = command = "AI_3"
+trigger4  = command = "AI_4"
+trigger5  = command = "AI_5"
+trigger6  = command = "AI_6"
+trigger7  = command = "AI_7"
+trigger8  = command = "AI_8"
+trigger9  = command = "AI_9"
+trigger10 = command = "AI_10"
+trigger11 = command = "AI_11"
+trigger12 = command = "AI_12"
+trigger13 = command = "AI_13"
+trigger14 = command = "AI_14"
+trigger15 = command = "AI_15"
+trigger16 = command = "AI_16"
+trigger17 = command = "AI_17"
+trigger18 = command = "AI_18"
+trigger19 = command = "AI_19"
+trigger20 = command = "AI_20"
+trigger21 = command = "AI_21"
+trigger22 = command = "AI_22"
+trigger23 = command = "AI_23"
+trigger24 = command = "AI_24"
+trigger25 = command = "AI_25"
+trigger26 = command = "AI_26"
+trigger27 = command = "AI_27"
+trigger28 = command = "AI_28"
+trigger29 = command = "AI_29"
+var(9) = 1
+
+[State -3,]
+type = VarSet
+triggerall = Alive && RoundState>2
+triggerall = IsHomeTeam && !IsHelper
+trigger1 = TeamSide = 2
+trigger2 = MatchNo > 1
+var(9) = 1
+
+;------------------------------------------------------------------------------

@@ -1,0 +1,154 @@
+---------------------------------------------------------------------
+Nombre:                     Ryo Sakazaki
+Juego de Origen             The King of Fighters '98: The Slugfest
+Maqueta usada de base       Mouser
+Re-design                   Ehnyd (A.K.A.: <<VRG>>)
+Web                         http://kofmugenchile.co.cc
+---------------------------------------------------------------------
+Archivos contenidos:
+
+98Ryo.Air	; Animaciones
+98Ryo.cmd	; Comandos
+01_Main.cns	; Data principal
+02_Attacks	; Golpes y patadas simples
+03_Specials	; Tecnicas
+04_DMs  	; Supers
+05_Others	; Agarres y  otros comandos
+98Ryo.def	; Archivo de definicion
+98Ryo.sff	; Archivo de sprites
+98Ryo.snd	; Archivo de sonidos
+Leeme.txt	; Lo que estas leyendo
+
+Paletas de colores:
+Set1/98Ryo01.act ; 98UM color 1
+Set1/98Ryo02.act ; 98UM color 2
+Set1/98Ryo03.act ; 98UM color 3
+Set1/98Ryo04.act ; 98UM color 4
+Set1/98Ryo05.act ; 98UM color 6
+Set1/98Ryo06.act ; 98UM color 8
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Version 2.1 (28.11.2012 Update)
+-Implementacion de A.I.
+-Kyokugen-ryuu Renbu Ken, corregido para que solo funcione a corta
+ distancia.
+
+Version 2.0 (28.02.2012)(Trabajada en MUGEN 1.0 RC8)
+-en comparacion a lo hecho por Mouser, se ha rediseñado por completo
+ el char, dejando de lado las cosas que consideré estaban de más.
+-En consideracion a lo anterior, se han creado paletas nuevas usando
+ colores del '98UM.
+-Archivos AIR y CMD, rediseñados en totalidad.
+-Adecuacion del personaje en totalidad a KOF'98 en lo que se refiere
+ a golpes y patadas simples, removiendo varias cosas que son post
+ KOF'99.
+-Movimientos y sprites que fueron descartados en su momento, han
+ sido añadidos a esta version.
+-Tenma Haoh Shohou Ken (Fatal Fury Wild Ambition) ha cambiado su
+ animacion.
+-SDM Haoh Shohou Ken, asimilado para verse como en KOF'98.
+-SDM Ryuuko Ranbu, ha cambiado en animacion starter, y se han
+ añadido FXs de KOF'02UM.
+-Algunas propiedades de golpes, patadas y otros pueden sentirse
+ extraños en gameplay. Ello se debe a que a se conservaron algunas
+ cosas del CNS original de personaje en mencion.
+-Tecnica Kyokugen-ryuu Renbu Ken, agregado
+-Intros y Winposes han sido cambiadas por las del 98.
+-Algunas pausas de projectiles han sido removidas y/o cambiadas.
+
+=====================================================================
+---------------------------------------------------------------------
+                           Lista de Comandos
+Simbologia
+WP  = Golpe Debil
+WK  = Patada Debil
+SP  = Golpe Fuerte
+SK  = Patada Fuerte
+p   = Cualquier golpe
+k   = Cualquier patada
+
+F   = adelante
+B   = atras
+D   = abajo
+U   = arriba
+DF  = Diagonal abajo adelante
+DB  = Diagonal abajo atras
+QCF = Cuarto de circulo hacia adelante (D,DF,F)
+QCB = Cuarto de circulo hacia atras (D,DB,B)
+DP  = Adelante, abajo, diagonal Abajo-adelante
+RDP = Atras, abajo, diagonal abajo-atras
+HCF = medio circulo hacia adelante (B,DB,D,DF,F)
+HCB = medio circulo hacia atras (F,DF,D,BD,B)
+[Close] = junto al rival
+[Air] = Solo en el aire
+
+=====================================================================
+======================
+| Comandos Generales |
+======================
+[f_b_N] + WP+WK      [Rolling Forward_Rollin Backward_Dodge]
+    <Dodge>Any Button    Dodge Ret
+WP+SK                Power Charge
+WK+SP                Start POW MAX Mode
+SP+SK                Nockdown Attack **Tambien funciona en el aire**
+
+===========
+| Agarres |
+===========
+(B_F) + SP			Tani Otoshi
+(B_F) + SK			Tomoe Nage
+
+=====================
+| Comandos Normales |
+=====================
+F + WP                          Hyouchuu Wari
+DF + WP                         ???
+
+=======================
+| Tecnicas especiales |
+=======================
+QCF, WP                         Ko'oh Ken  [98 EX]
+QCF, SP                         Ko'oh Ken  [98 Normal]
+[Air] QCF, Golpe                Tenma Ko'oh Ken
+DP, Golpe                       Kohou
+QCF, Patada                     Moh Koh Raijin Satsu
+QCB, Golpe                      Moh Koh Raijin Gou
+HCB, Patada                     Hien Shippu Kyaku [98 Nrm]
+#DB, F, Patada                  Hien Shippu Kyaku [98 UM]
+[Close] HCB, F, SP              Kyokugen-ryuu Renbu Ken
+F, B, F, golpe                  Zanretsu Ken
+
+==================
+| DM/SDM Attacks |
+==================
+F, HCF, Golpe                   Haoh Shohou Ken
+[Air] F, HCF, Golpe             Tenma Haoh Shohou Ken
+QCF x2, Golpe                   Tenshi Haoh Ken
+QCF, HCB, Golpe                 Ryuuko Ranbu
+
+---------------------------------------------------------------------
+=====================================================================
+---------------------------------------------------------------------
+                              CREDITS
+
+Elecbyte, razones obvias XD!
+SNK NeoGeo (Actualmente SNKK Playmore), Por haberlo creado.
+Ses (http://ses.mgbr.net), por el MCM
+DCelso, por crear el Paletero
+mugenchina.org, por los sprites de KOF'98UM
+Shammahomega1, por ayudarme a corregir el codigo de saltos, el cual
+ me estaba dando un dolor de cabeza de esos...
+Mouser, por haber creado a este personaje, y por ser creador de tipo
+ OpenSouce (¡¡¡Larga vida al codigo abierto!!!!).
+Tel (www.gamefaqs.com), por su FAQ/Movelist de KOF'98UM usado para
+ tomar los nombres de los ataques y checar chain combos u otros
+ usos.
+
+Y a tí... Por bajar y jugar con este char.
+---------------------------------------------------------------------
+                            Este char fue actualizado el 28/02/2012.
+---------------------------------------------------------------------
+                                 F I N   D E L   D O C U M E N T O .
+---------------------------------------------------------------------
+=====================================================================

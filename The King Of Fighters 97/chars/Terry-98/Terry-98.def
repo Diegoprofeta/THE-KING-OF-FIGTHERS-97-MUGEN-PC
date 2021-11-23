@@ -1,0 +1,46 @@
+[Info]
+Name         ="Terry-98"
+DisplayName  ="Terry Bogard"
+VersionDate  =06,30,2008
+MugenVersion =06,14,2003
+Author       ="Zelgadis"
+Pal.Defaults =1,2,3,4,5,6
+
+[Files]
+Cmd      =Terry-98.cmd
+Cns      =Terry-98.cns
+St       =Terry-98.cns
+StCommon =common1.cns
+Sprite   =Terry-98.sff
+Anim     =Terry-98.air
+Sound    =Terry-98.snd
+pal1=Paletas/Terry-98-1.act
+pal2=Paletas/Terry-98-2.act
+pal3=Paletas/Terry-98-3.act
+pal4=Paletas/Terry-98-Orignial.act
+pal5=Paletas/Terry-98-5.act
+pal6=Paletas/Terry-98-6.act
+pal7=Paletas/Terry-98-1.act
+pal8=Paletas/Terry-98-2.act
+pal9=Paletas/Terry-98-3.act
+pal10=Paletas/Terry-98-Orignial.act
+pal11=Paletas/Terry-98-5.act
+pal12=Paletas/Terry-98-6.act
+st1=Terry-98-N.cns
+st2=Terry-98-S.cns
+st3=Terry-98-H.cns
+st4=Terry-98-2-3.cns
+
+;---------Terry Normal------------------
+
+;---------Terry EX----------------------
+
+
+
+
+;---カラーパレット---
+
+
+[Arcade]
+intro.storyboard  =History.def
+ending.storyboard =

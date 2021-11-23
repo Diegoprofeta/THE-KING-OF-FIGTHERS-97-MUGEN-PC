@@ -1,0 +1,32 @@
+[Info]
+Name         ="Iori-98"
+DisplayName  ="Iori"
+versiondate  =28/02/2008
+MugenVersion =06/14/2003
+Author       ="Zelgadis"
+Pal.Defaults =1,2,3,4,5
+
+[Files]
+Cmd      =Iori-98.cmd
+Cns      =Iori-98.cns
+St       =Iori-98.cns
+StCommon =common1.cns
+Sprite   =Iori-98.sff
+Anim     =Iori-98.air
+Sound    =Iori-98.snd
+pal1=paletas\Iori-98-Original.act
+pal2=paletas\Iori-98-Original.act
+pal3=paletas\Iori-98-Original.act
+pal4=paletas\Iori-98-Original.act
+pal5=paletas\Iori-98-Original.act
+pal6=paletas\Iori-98-Original.act
+st1=Iori-98-N.cns
+st2=Iori-98-S.cns
+st3=Iori-98-H.cns
+st4=Iori-98-2-3.cns
+
+
+
+[Arcade]
+intro.storyboard=History.def
+ending.storyboard=

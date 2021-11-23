@@ -1,0 +1,2403 @@
+
+[Statedef -3]
+
+[State -3, ‚`‚h”»’è]
+Type = VarSet
+TriggerAll = !var(59)
+TriggerAll = RoundState = [1,2]
+Trigger1  = Command = "AI0"  || Command = "AI1"  || Command = "AI2"
+Trigger2  = Command = "AI3"  || Command = "AI4"  || Command = "AI5"
+Trigger3  = Command = "AI6"  || Command = "AI7"  || Command = "AI8"
+Trigger4  = Command = "AI9"  || Command = "AI10" || Command = "AI11"
+Trigger5  = Command = "AI12" || Command = "AI13" || Command = "AI14"
+Trigger6  = Command = "AI15" || Command = "AI16" || Command = "AI17"
+Trigger7  = Command = "AI18" || Command = "AI19" || Command = "AI20"
+Trigger8  = Command = "AI21" || Command = "AI22" || Command = "AI23"
+Trigger9  = Command = "AI24" || Command = "AI25" || Command = "AI26"
+Trigger10 = Command = "AI27" || Command = "AI28" || Command = "AI29"
+Trigger11 = Command = "AI30" || Command = "AI31" || Command = "AI32"
+Trigger12 = Command = "AI33" || Command = "AI34" || Command = "AI35"
+Trigger13 = Command = "AI36" || Command = "AI37" || Command = "AI38"
+Trigger14 = Command = "AI39" || Command = "AI40" || Command = "AI41"
+Trigger15 = Command = "AI42" || Command = "AI43" || Command = "AI44"
+Trigger16 = Command = "AI45" || Command = "AI46" || Command = "AI47"
+Trigger17 = Command = "AI48" || Command = "AI49" || Command = "AI50"
+Trigger18 = NumHelper(20000)
+Trigger18 = Helper(20000),var(59)
+Trigger19 = 0     ;íŽž‹N“®—p
+var(59) = 1
+ignorehitpause = 1
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;“ÁŽês“®
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+
+[State -3, ’§”­]
+Type = ChangeState
+value = 195
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = StateType != A
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = PrevStateNo != 195
+TriggerAll = EnemyNear(var(58)),MoveType != A
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Life > P2Life
+TriggerAll = Random < 800
+TriggerAll = NumTarget
+Trigger1 = Target,StateNo = 1150
+Trigger2 = Target,StateNo = 1250
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;Ø‚è‘Ö‚¦‚µ
+;PrevStateNo = [120,159] PrevStateNo = [5000,5270] EnemyNear,HitDefAttr = SCA,AT;“Š‚°
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;yØ‚è‘Ö‚¦‚µz------------------------------------------------------------------------------------------
+
+[State -3, ‚b“Š‚°]
+type = ChangeState
+value = 800
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(54)
+TriggerAll = !((P2StateNo = [35,52]) || (P2StateNo = [130,155]))
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = (abs(P2BodyDist X) <= 24)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L) && EnemyNear(var(58)),MoveType = A
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22])
+TriggerAll = EnemyNear(var(58)),StateNo < 1000 || (EnemyNear(var(58)),StateNo >= 1000 && (EnemyNear(var(58)),HitDefAttr = SCA,AA,AP || EnemyNear(var(58)),AnimTime = -1))
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = Random < 250
+Trigger1 = !(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT)
+Trigger2 = EnemyNear(var(58)),AnimTime = -1
+
+[State -3, ‚c“Š‚°]
+type = ChangeState
+value = 850
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(54)
+TriggerAll = !((P2StateNo = [35,52]) || (P2StateNo = [130,155]))
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = (abs(P2BodyDist X) <= 24)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L) && EnemyNear(var(58)),MoveType = A
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22])
+TriggerAll = EnemyNear(var(58)),StateNo < 1000 || (EnemyNear(var(58)),StateNo >= 1000 && (EnemyNear(var(58)),HitDefAttr = SCA,AA,AP || EnemyNear(var(58)),AnimTime = -1))
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = Random < 750
+Trigger1 = !(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT)
+Trigger2 = EnemyNear(var(58)),AnimTime = -1
+
+[State -3, ‹Ù‹}‰ñ”ð@‘O]
+type = ChangeState
+value = 700
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(EnemyNear(var(58)),HitDefAttr = SCA,AT)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L) && EnemyNear(var(58)),MoveType = A
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = EnemyNear(var(58)),AnimTime <= -33
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = EnemyNear(var(58)),StateNo < 2000 || (EnemyNear(var(58)),StateNo >= 2000 && (EnemyNear(var(58)),HitDefAttr = SCA,AA || EnemyNear(var(58)),AnimTime = -33)) || StateNo = [200,700)
+Trigger1 = Random < 800
+
+[State -3, ‹Ù‹}‰ñ”ð@Œã]
+type = ChangeState
+value = 750
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(EnemyNear(var(58)),HitDefAttr = SCA,AT)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L) && EnemyNear(var(58)),MoveType = A
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = EnemyNear(var(58)),AnimTime <= -3
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = EnemyNear(var(58)),StateNo < 2000 || (EnemyNear(var(58)),StateNo >= 2000 && (EnemyNear(var(58)),HitDefAttr = SCA,AA || EnemyNear(var(58)),AnimTime = -33)) 
+TriggerAll = Random < 800
+Trigger1 = (P2BodyDist X = [-15,50)) && EnemyNear(var(58)),AnimTime <= -33
+Trigger2 = (P2BodyDist X = [50,75)) && EnemyNear(var(58)),AnimTime <= -30
+Trigger3 = (P2BodyDist X = [75,100)) && EnemyNear(var(58)),AnimTime <= -25
+Trigger4 = (P2BodyDist X = [100,125)) && EnemyNear(var(58)),AnimTime <= -18
+Trigger5 = (P2BodyDist X = [125,150)) && EnemyNear(var(58)),AnimTime <= -12
+Trigger6 = (P2BodyDist X = [150,175)) && EnemyNear(var(58)),AnimTime <= -9
+Trigger7 = (P2BodyDist X = [175,200)) && EnemyNear(var(58)),AnimTime <= -6
+
+[State -3, ‘OƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 42
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = A
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),HitDefAttr = SC,AT || (!(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT) && EnemyNear(var(58)),StateNo >= 1000)
+TriggerAll = !(EnemyNear(var(58)),AnimTime = -1)
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < 800
+TriggerAll = EnemyNear(var(58)),Vel X > 0
+Trigger1 = EnemyNear(var(58)),Const(size.height) >= 65*(1-(EnemyNear(var(58)),StateType = C)*0.5)
+Trigger1 = P2BodyDist X-(4.2*12+EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*var(8)*20) <= 60
+Trigger2 = EnemyNear(var(58)),Const(size.height) < 65*(1-(EnemyNear(var(58)),StateType = C)*0.5)
+Trigger2 = P2BodyDist X-(4.2*12+EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*var(8)*20) >= -25
+
+[State -3, ‚’¼ƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 41
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = A
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),HitDefAttr = SC,AT || (!(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT) && EnemyNear(var(58)),StateNo >= 1000)
+TriggerAll = !(EnemyNear(var(58)),AnimTime = -1)
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < 800
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+Trigger1 = P2BodyDist X-(EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*var(8)*20) = [-25,60]
+
+[State -3, ŒãƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 43
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = A
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),HitDefAttr = SC,AT || (!(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT) && EnemyNear(var(58)),StateNo >= 1000)
+TriggerAll = !(EnemyNear(var(58)),AnimTime = -1)
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < 800
+TriggerAll = EnemyNear(var(58)),Vel X > 0
+Trigger1 = P2BodyDist X-(-4.2*12+EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*var(8)*20) < 30
+
+;yŒ„•t‚«z----------------------------------------------------------------------------------------------
+
+[State -3, ‘Oi]
+type = ChangeState
+value = 21
+Ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = !(EnemyNear(var(58)),MoveType = H || (EnemyNear(var(58)),MoveType = I && EnemyNear(var(58)),StateNo < 200))
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = var(8) = -1
+TriggerAll = P2BodyDist X > 60
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = 22 && Time > 10)
+TriggerAll = Random < 800
+Trigger1 = EnemyNear(var(58)),AnimTime < -Floor(P2BodyDist X/2.6)
+
+[State -3, ƒ_ƒbƒVƒ…]
+type = ChangeState
+value = 100
+Ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = !(EnemyNear(var(58)),MoveType = H || (EnemyNear(var(58)),MoveType = I && EnemyNear(var(58)),StateNo < 200))
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = var(8) = -1
+TriggerAll = P2BodyDist X > 80
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22])
+TriggerAll = Random < 800
+Trigger1 = EnemyNear(var(58)),AnimTime < -2-Floor(P2BodyDist X/9.7)
+
+[State -3, ƒ_ƒbƒVƒ…]
+type = ChangeState
+value = 100
+Ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A
+TriggerAll = !(EnemyNear(var(58)),MoveType = H || (EnemyNear(var(58)),MoveType = I && EnemyNear(var(58)),StateNo < 200))
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = P2BodyDist X > 60
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22])
+TriggerAll = Random < 800
+TriggerAll = EnemyNear(var(58)),AnimTime > 0
+Trigger1 = EnemyNear(var(58)),Vel Y > 0
+Trigger1 = EnemyNear(var(58)),Vel X <= 0    
+
+[State -3, ‘OƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 42
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = !(EnemyNear(var(58)),MoveType = H) || (EnemyNear(var(58)),MoveType = I && EnemyNear(var(58)),StateNo < 200)
+TriggerAll = var(8) = -1
+TriggerAll = P2BodyDist X = [60,160]
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < 800
+Trigger1 = EnemyNear(var(58)),AnimTime < -12
+
+[State -3, ‘ŠŽè‚ðˆø‚«ž‚ñ‚Å°‚ð”²‚­]
+type = ChangeState
+value = 2100
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(54)
+TriggerAll = !((P2StateNo = [35,52]) || (P2StateNo = [130,155]))
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = !(EnemyNear(var(58)),MoveType = H || EnemyNear(var(58)),Ctrl)
+TriggerAll = !(EnemyNear(var(58)),StateNo = 140 || EnemyNear(var(58)),PrevStateNo = 140)
+TriggerAll = EnemyNear(var(58)),StateNo >= 200
+TriggerAll = EnemyNear(var(58)),PrevStateNo != 5120
+TriggerAll = EnemyNear(var(58)),StateNo != [5000,5270]
+TriggerAll = EnemyNear(var(58)),AnimTime <= -21
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*21*var(8) = [-70,70]
+TriggerAll = (EnemyNear(var(58)),StateNo = [700,3000]) || !(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT) && (EnemyNear(var(58)),MoveType = A) || (EnemyNear(var(58)),MoveType = I)
+TriggerAll = (PrevStateNo = [130,159]) || (PrevStateNo = [5000,5029]) || !(InGuardDist || var(57)) || var(8) = -1
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Random < 800
+TriggerAll = Power >= 1000
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‰æ–Ê‘S‘Ì‚ÉŒõ‚ð—‚Ñ‚¹‚é]
+type = ChangeState
+value = 2000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = !(EnemyNear(var(58)),MoveType = H || EnemyNear(var(58)),Ctrl)
+TriggerAll = !(EnemyNear(var(58)),StateNo = 140 || EnemyNear(var(58)),PrevStateNo = 140)
+TriggerAll = EnemyNear(var(58)),StateNo >= 200
+TriggerAll = EnemyNear(var(58)),PrevStateNo != 5120
+TriggerAll = EnemyNear(var(58)),StateNo != [5000,5270]
+TriggerAll = EnemyNear(var(58)),AnimTime <= -15
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*15*var(8) > 150
+TriggerAll = (EnemyNear(var(58)),StateNo = [700,3000]) || !(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT) && (EnemyNear(var(58)),MoveType = A) || (EnemyNear(var(58)),MoveType = I)
+TriggerAll = (PrevStateNo = [130,159]) || (PrevStateNo = [5000,5029]) || !(InGuardDist || var(57)) || var(8) = -1
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Random < 800
+TriggerAll = Power >= 1000
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‘O•û‚ÉƒoƒŠƒA‚ð’£‚é]
+type = ChangeState
+value = 1100
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = !(EnemyNear(var(58)),MoveType = H || EnemyNear(var(58)),Ctrl)
+TriggerAll = !(EnemyNear(var(58)),StateNo = 140 || EnemyNear(var(58)),PrevStateNo = 140)
+TriggerAll = EnemyNear(var(58)),StateNo >= 200
+TriggerAll = EnemyNear(var(58)),PrevStateNo != 5120
+TriggerAll = EnemyNear(var(58)),StateNo != [5000,5270]
+TriggerAll = EnemyNear(var(58)),AnimTime <= -11
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*11*var(8) = [-15,50]
+TriggerAll = (EnemyNear(var(58)),StateNo = [700,3000]) || !(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT) && (EnemyNear(var(58)),MoveType = A) || (EnemyNear(var(58)),MoveType = I)
+TriggerAll = (PrevStateNo = [130,159]) || (PrevStateNo = [5000,5029]) || !(InGuardDist || var(57)) || var(8) = -1
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‚R‚g‚h‚sŒ^‚Ì”ò‚Ñ“¹‹ï]
+type = ChangeState
+value = 1000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = !(EnemyNear(var(58)),MoveType = H || EnemyNear(var(58)),Ctrl)
+TriggerAll = !(EnemyNear(var(58)),StateNo = 140 || EnemyNear(var(58)),PrevStateNo = 140)
+TriggerAll = EnemyNear(var(58)),StateNo >= 200
+TriggerAll = EnemyNear(var(58)),PrevStateNo != 5120
+TriggerAll = EnemyNear(var(58)),StateNo != [5000,5270]
+TriggerAll = EnemyNear(var(58)),AnimTime <= -18
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*18*var(8) > 50
+TriggerAll = (EnemyNear(var(58)),StateNo = [700,3000]) || !(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT) && (EnemyNear(var(58)),MoveType = A) || (EnemyNear(var(58)),MoveType = I)
+TriggerAll = (PrevStateNo = [130,159]) || (PrevStateNo = [5000,5029]) || !(InGuardDist || var(57)) || var(8) = -1
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, —§‚¿‚a]
+type = ChangeState
+value = 220
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = !(EnemyNear(var(58)),MoveType = H || EnemyNear(var(58)),Ctrl)
+TriggerAll = !(EnemyNear(var(58)),StateNo = 140 || EnemyNear(var(58)),PrevStateNo = 140)
+TriggerAll = EnemyNear(var(58)),StateNo >= 200
+TriggerAll = EnemyNear(var(58)),PrevStateNo != 5120
+TriggerAll = EnemyNear(var(58)),StateNo != [5000,5270]
+TriggerAll = EnemyNear(var(58)),AnimTime <= -4
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*7*var(8) = [15,65] 
+TriggerAll = (PrevStateNo = [130,159]) || (PrevStateNo = [5000,5029]) || !(InGuardDist || var(57)) || var(8) = -1
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < 800
+Trigger1 = (EnemyNear(var(58)),StateNo = [200,649]) || !(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT) && (EnemyNear(var(58)),MoveType = A) || (EnemyNear(var(58)),MoveType = I)
+
+[State -3, —§‚¿‚c]
+type = ChangeState
+value = 230
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = !(EnemyNear(var(58)),MoveType = H || EnemyNear(var(58)),Ctrl)
+TriggerAll = !(EnemyNear(var(58)),StateNo = 140 || EnemyNear(var(58)),PrevStateNo = 140)
+TriggerAll = EnemyNear(var(58)),StateNo >= 200
+TriggerAll = EnemyNear(var(58)),PrevStateNo != 5120
+TriggerAll = EnemyNear(var(58)),StateNo != [5000,5270]
+TriggerAll = EnemyNear(var(58)),AnimTime <= -4
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*7*var(8) = [15,65] 
+TriggerAll = (PrevStateNo = [130,159]) || (PrevStateNo = [5000,5029]) || !(InGuardDist || var(57)) || var(8) = -1
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < 800
+Trigger1 = (EnemyNear(var(58)),StateNo = [200,649]) || !(EnemyNear(var(58)),HitDefAttr = SCA,AA,AP,AT) && (EnemyNear(var(58)),MoveType = A) || (EnemyNear(var(58)),MoveType = I)
+
+;y‘Î‹óz------------------------------------------------------------------------------------------------
+
+[State -3, ‰æ–Ê‘S‘Ì‚ÉŒõ‚ð—‚Ñ‚¹‚é]
+type = ChangeState
+value = 2000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = A
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = InGuardDist
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = Random%30 = 0
+TriggerAll = Power >= 1000
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y < 0
+TriggerAll = P2BodyDist X > 100
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*15+0.5*EnemyNear(var(58)),Const(movement.yaccel)*16*15*(EnemyNear(var(58)),Vel Y != 0) = [-224,10]
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ŽÎ‚ßã‚ÉƒoƒŠƒA‚ð’£‚é]
+type = ChangeState
+value = 1200
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = A
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = InGuardDist
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = Random%20 = 0
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*13*var(8) = [-15-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(13)*50,40]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*13+0.5*EnemyNear(var(58)),Const(movement.yaccel)*14*13*(EnemyNear(var(58)),Vel Y != 0) = [-150,-100]
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‘O•û‚ÉƒoƒŠƒA‚ð’£‚é]
+type = ChangeState
+value = 1100
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = A
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = InGuardDist
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = Random%20 = 0
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*11*var(8) = [-5-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(13)*50,50]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*11+0.5*EnemyNear(var(58)),Const(movement.yaccel)*12*11*(EnemyNear(var(58)),Vel Y != 0) = [-135,-35]
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‹Ù‹}‰ñ”ð@‘O]
+type = ChangeState
+value = 700
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = A
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = InGuardDist || var(57)
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = Random < 800
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*33+0.5*EnemyNear(var(58)),Const(movement.yaccel)*34*33*(EnemyNear(var(58)),Vel Y != 0) < 0
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger1 = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*33*var(8) = [-55-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(17)*50,155]
+Trigger2 = BackEdgeBodyDist < 10
+
+[State -3, ‹Ù‹}‰ñ”ð@Œã]
+type = ChangeState
+value = 750
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = A
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = InGuardDist || var(57)
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = Random < 800
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*33+0.5*EnemyNear(var(58)),Const(movement.yaccel)*34*33*(EnemyNear(var(58)),Vel Y != 0) < 0
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger1 = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*33*var(8) = [-155-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(17)*50,25]
+Trigger2 = BackEdgeBodyDist > 60
+
+[State -3, —§‚¿‚c]
+type = ChangeState
+value = 230
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = A
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = InGuardDist
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = Random%50 = 0
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y >= 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*4*var(8) = [30-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(17)*50,65]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*4+0.5*EnemyNear(var(58)),Const(movement.yaccel)*5*4*(EnemyNear(var(58)),Vel Y != 0) = [-120,-50]
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, —§‚¿‚c]
+type = ChangeState
+value = 230
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = A
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = InGuardDist
+TriggerAll = EnemyNear(var(58)),Time >= 30+Random%20 || !Time && Life < 777 || Life < 333 || (PrevStateNo = [5000,5270]) || (PrevStateNo = [120,159])
+TriggerAll = Random%50 = 0
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y >= 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*8*var(8) = [-15-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(17)*50,30]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*8+0.5*EnemyNear(var(58)),Const(movement.yaccel)*9*8*(EnemyNear(var(58)),Vel Y != 0) = [-165,-85]
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‰æ–Ê‘S‘Ì‚ÉŒõ‚ð—‚Ñ‚¹‚é]
+type = ChangeState
+value = 2000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*15+0.5*EnemyNear(var(58)),Const(movement.yaccel)*16*15*(EnemyNear(var(58)),Vel Y != 0) = [-224,10]
+TriggerAll = Random < 999-Life
+TriggerAll = Power >= 1000
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚c]
+type = ChangeState
+value = 1700
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y < 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2Dist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*44*var(8) = [175,205]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*44+0.5*EnemyNear(var(58)),Const(movement.yaccel)*45*44*(EnemyNear(var(58)),Vel Y != 0) = [-170,10]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚b]
+type = ChangeState
+value = 1600
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y < 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2Dist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*40*var(8) = [125,155]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*40+0.5*EnemyNear(var(58)),Const(movement.yaccel)*41*40*(EnemyNear(var(58)),Vel Y != 0) = [-170,10]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚a]
+type = ChangeState
+value = 1500
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y < 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2Dist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*36*var(8) = [75,105]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*36+0.5*EnemyNear(var(58)),Const(movement.yaccel)*37*36*(EnemyNear(var(58)),Vel Y != 0) = [-170,10]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚`]
+type = ChangeState
+value = 1400
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y < 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2Dist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*32*var(8) = [25,55]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*32+0.5*EnemyNear(var(58)),Const(movement.yaccel)*33*32*(EnemyNear(var(58)),Vel Y != 0) = [-170,10]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ŽÎ‚ßã‚ÉƒoƒŠƒA‚ð’£‚é]
+type = ChangeState
+value = 1200
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y >= 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*13*var(8) = [0-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(13)*50,50]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*13+0.5*EnemyNear(var(58)),Const(movement.yaccel)*14*13*(EnemyNear(var(58)),Vel Y != 0) = [-150,-105]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‘O•û‚ÉƒoƒŠƒA‚ð’£‚é]
+type = ChangeState
+value = 1100
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y >= 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*11*var(8) = [-5-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(13)*50,50]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*11+0.5*EnemyNear(var(58)),Const(movement.yaccel)*12*11*(EnemyNear(var(58)),Vel Y != 0) = [-135,-35]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‚R‚g‚h‚sŒ^‚Ì”ò‚Ñ“¹‹ï]
+type = ChangeState
+value = 1000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y >= 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*18*var(8) = [0-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(13)*50,40]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*18+0.5*EnemyNear(var(58)),Const(movement.yaccel)*19*18*(EnemyNear(var(58)),Vel Y != 0) = [-190,-25]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, —§‚¿‚c]
+type = ChangeState
+value = 230
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y >= 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*4*var(8) = [30-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(17)*50,65]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*4+0.5*EnemyNear(var(58)),Const(movement.yaccel)*5*4*(EnemyNear(var(58)),Vel Y != 0) = [-120,-50]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+
+[State -3, —§‚¿‚c]
+type = ChangeState
+value = 230
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel X >= 0
+TriggerAll = EnemyNear(var(58)),Vel Y >= 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*8*var(8) = [-15-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(17)*50,30]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*8+0.5*EnemyNear(var(58)),Const(movement.yaccel)*9*8*(EnemyNear(var(58)),Vel Y != 0) = [-165,-85]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+
+[State -3, ‹Ù‹}‰ñ”ð@‘O]
+type = ChangeState
+value = 700
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < 800
+TriggerAll = EnemyNear(var(58)),Vel X > 0
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*33+0.5*EnemyNear(var(58)),Const(movement.yaccel)*34*33*(EnemyNear(var(58)),Vel Y != 0) < 0
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger1 = BackEdgeBodyDist < 10
+
+[State -3, ‹Ù‹}‰ñ”ð@Œã]
+type = ChangeState
+value = 750
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < 800
+TriggerAll = EnemyNear(var(58)),Vel X > 0
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*33+0.5*EnemyNear(var(58)),Const(movement.yaccel)*34*33*(EnemyNear(var(58)),Vel Y != 0) < 0
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger1 = BackEdgeBodyDist > 60
+
+[State -3, ‘OƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 42
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel Y < 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*11*var(8) = [55-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(17)*50,95]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*11+0.5*EnemyNear(var(58)),Const(movement.yaccel)*12*11*(EnemyNear(var(58)),Vel Y != 0) = [-200,-100]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+
+[State -3, ‚’¼ƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 41
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel Y < 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*12*var(8) = [10-(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(17)*50,70]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*12+0.5*EnemyNear(var(58)),Const(movement.yaccel)*13*12*(EnemyNear(var(58)),Vel Y != 0) = [-160,-100]
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+
+[State -3, ŒãƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 43
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(9)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),MoveType = I
+TriggerAll = !MoveContact || Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),Vel Y < 0
+TriggerAll = P2Dist X > 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*12*var(8) = [-155+(EnemyNear(var(58)),Const(size.air.back)+EnemyNear(var(58)),Const(size.air.front))-var(17)*50,-115]
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*12+0.5*EnemyNear(var(58)),Const(movement.yaccel)*13*12*(EnemyNear(var(58)),Vel Y != 0) = [-140,-80]
+TriggerAll = BackEdgeBodyDist > 150
+TriggerAll = Random < 800
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+
+;y‘Î”ò‚Ñ“¹‹ïz------------------------------------------------------------------------------------------
+
+[State -3, ‰æ–Ê‘S‘Ì‚ÉŒõ‚ð—‚Ñ‚¹‚é]
+Type = ChangeState
+Value = 2000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < Floor(P2BodyDist X)
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = var(8) = 1 && P2Dist X >= 0
+TriggerAll = PrevStateNo != 2000
+TriggerAll = Power >= 1000
+Trigger1 = EnemyNear(var(58)),NumProj = 1
+Trigger2 = EnemyNear(var(58)),HitDefAttr = SC,NP,SP
+
+[State -3, ’e‚ð’µ‚Ë•Ô‚·]
+Type = ChangeState
+Value = 1300
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < Floor(P2BodyDist X)
+TriggerAll = var(8) = 1 && P2Dist X >= 0
+Trigger1 = EnemyNear(var(58)),NumProj = 1
+Trigger2 = EnemyNear(var(58)),HitDefAttr = SC,NP,SP
+
+[State -3, ‚R‚g‚h‚sŒ^‚Ì”ò‚Ñ“¹‹ï]
+Type = ChangeState
+Value = 1000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < Floor(P2BodyDist X)
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = var(8) = 1 && P2Dist X >= 0
+TriggerAll = PrevStateNo != 1000
+Trigger1 = EnemyNear(var(58)),NumProj = 1
+Trigger2 = EnemyNear(var(58)),HitDefAttr = SC,NP,SP
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;ƒK[ƒh 
+;inguarddist EnemyNear,HitDefAttr = SCA,AA;‘ÅŒ‚
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+
+[State -3, ƒK[ƒh]
+type = ChangeState
+value = 120
+ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(StateNo = [120,160]) || StateNo = 140 
+TriggerAll = StateType != A 
+TriggerAll = !(EnemyNear(var(58)),HitDefAttr = SCA,AT)
+TriggerAll = Random < 700 || Life < 333
+Trigger1 = EnemyNear(var(58)),NumProj > 0 || var(56)
+Trigger1 = InGuardDist || var(57)
+Trigger2 = !(EnemyNear(var(58)),NumProj = 0 || var(56))
+Trigger2 = InGuardDist || var(57)
+Trigger2 = EnemyNear(var(58)),HitDefAttr = SCA,AA
+Trigger2 = !(EnemyNear(var(58)),AnimTime > 0 && EnemyNear(var(58)),StateType = A && EnemyNear(var(58)),Vel Y > 0 && EnemyNear(var(58)),Vel X <= 0)
+Trigger3 = InGuardDist || var(57)
+Trigger3 = Random%30 = 0
+
+[State -3, ƒK[ƒhƒLƒƒƒ“ƒZƒ‹‚Ó‚Á‚Æ‚Î‚µ]
+type = ChangeState
+value = 255
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = Power >= 1000
+TriggerAll = StateNo = 150 || StateNo = 152
+TriggerAll = EnemyNear(var(58)),HitDefAttr = SCA,NA
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = EnemyNear(var(58)),AnimTime <= -6
+TriggerAll = P2Dist Y = [-120,10]
+TriggerAll = Random < 800
+Trigger1 = P2BodyDist X = [5,40]
+
+[State -3, ƒK[ƒhƒLƒƒƒ“ƒZƒ‹‹Ù‹}‰ñ”ðE‘O]
+type = ChangeState
+value = 700
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = Power >= 1000
+TriggerAll = StateNo = 150 || StateNo = 152
+TriggerAll = P2BodyDist X = [15,95]
+TriggerAll = EnemyNear(var(58)),AnimTime <= -33-4
+TriggerAll = Random < 800
+Trigger1 = EnemyNear(var(58)),StateNo < 2000
+Trigger1 = P2Dist X >= 0
+
+[State -3, ƒK[ƒhƒLƒƒƒ“ƒZƒ‹‹Ù‹}‰ñ”ðEŒã]
+type = ChangeState
+value = 750
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = Power >= 1000
+TriggerAll = StateNo = 150 || StateNo = 152
+TriggerAll = Random < 800
+Trigger1 = EnemyNear(var(58)),StateNo < 2000
+Trigger1 = P2Dist X < 0
+
+[State -3, ‹Ù‹}‰ñ”ð]
+type = ChangeState
+value = 700
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = !(EnemyNear(var(58)),HitDefAttr = SCA,AT)
+TriggerAll = Random < 800
+TriggerAll = InGuardDist || var(57) || (EnemyNear(var(58)),HitDefAttr = SCA,AP)
+TriggerAll = var(8) = 1 && P2Dist X >= 0
+TriggerAll = EnemyNear(var(58)),StateNo < 2000
+Trigger1 = EnemyNear(var(58)),MoveType = A
+Trigger1 = EnemyNear(var(58)),HitDefAttr = SCA,NP,SP
+Trigger1 = EnemyNear(var(58)),Time < 20
+Trigger1 = EnemyNear(var(58)),AnimTime <= -33
+Trigger2 = InGuardDist || var(57) 
+Trigger2 = EnemyNear(var(58)),HitDefAttr = SCA,NA
+Trigger2 = EnemyNear(var(58)),AnimTime <= -33
+Trigger3 = InGuardDist || var(57) 
+Trigger3 = EnemyNear(var(58)),HitDefAttr = SCA,SA,HA
+Trigger3 = EnemyNear(var(58)),AnimTime <= -33 || EnemyNear(var(58)),AnimTime > 0
+Trigger3 = P2BodyDist X-(5*15+EnemyNear(var(58)),Vel X*EnemyNear(var(58)),Const(movement.yaccel)*25) < -20
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;’nã‹N‚«U‚ß 
+;EnemyNear,StateType = L EnemyNear,AnimTime P2bodyDist Y P2bodyDist X
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+
+[State -3, ƒ_ƒbƒVƒ…]
+type = ChangeState
+value = 100
+ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = P2StateType = L
+TriggerAll = Ctrl || (StateNo = [21,22]) 
+TriggerAll = var(8) = -1
+TriggerAll = P2BodyDist X > 40
+TriggerAll = Random < 800
+TriggerAll = Random%30 = 0
+Trigger1 = P2StateNo = [5100,5110]
+Trigger2 = P2StateNo = 5120
+Trigger2 = EnemyNear(var(58)),AnimTime < -25
+
+[State -3, ƒ_ƒbƒVƒ…]
+type = ChangeState
+value = 100
+ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = P2StateType = L
+TriggerAll = Ctrl || (StateNo = [21,22]) 
+TriggerAll = StateNo != 52
+TriggerAll = P2BodyDist X > 40
+TriggerAll = var(8) = 1
+TriggerAll = Random%2 = 1 
+TriggerAll = Random < 800
+Trigger1 = P2StateNo = [5100,5110]
+
+[State -3, ‘Oi]
+Type = ChangeState
+Value = 21
+Ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = P2StateType = L
+TriggerAll = Ctrl || (StateNo = 22 && Time > 10)
+TriggerAll = P2StateNo = [5050,5110]
+TriggerAll = Random < 800
+Trigger1 = P2BodyDist X > 45
+Trigger1 = Random%20 = 1
+
+[State -3, Œã‘Þ]
+Type = ChangeState
+Value = 22
+Ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = P2StateType = L
+TriggerAll = Ctrl || (StateNo = 21 && Time > 10)
+TriggerAll = P2StateNo = [5050,5110]
+TriggerAll = !(BackEdgeBodyDist < 15)
+TriggerAll = Random < 800
+Trigger1 = P2BodyDist X < 25
+Trigger1 = Random%5 = 1
+
+[State -3, ƒoƒbƒNƒXƒeƒbƒv]
+type = ChangeState
+value = 105
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = EnemyNear(var(58)),StateType = L && EnemyNear(var(58)),StateNo = [5000,5300)
+TriggerAll = Ctrl || StateNo = [21,22]
+TriggerAll = P2BodyDist X <= 40
+TriggerAll = BackEdgeBodyDist > 60
+Trigger1 = EnemyNear(var(58)),StateNo = 5120
+Trigger1 = EnemyNear(var(58)),AnimTime = [-3,-1]
+Trigger1 = Random%2 = 1
+
+[State -3, ‘OƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 42
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = EnemyNear(var(58)),StateType = L
+TriggerAll = Ctrl || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = P2BodyDist X = [60,120]
+TriggerAll = Random < 800
+TriggerAll = Random%20 = 0
+Trigger1 = EnemyNear(var(58)),StateNo = 5120
+Trigger1 = EnemyNear(var(58)),AnimTime = -20+4
+
+[State -3, ‘ŠŽè‚ðˆø‚«ž‚ñ‚Å°‚ð”²‚­]
+Type = ChangeState
+Value = 2100
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = P2StateType = L
+TriggerAll = Ctrl || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = P2BodyDist X = [50,70)
+TriggerAll = Random < 800
+TriggerAll = Power >= 1000
+Trigger1 = P2StateNo = 5120
+Trigger1 = EnemyNear(var(58)),AnimTime = -17+13
+
+[State -3, ‚R‚g‚h‚sŒ^‚Ì”ò‚Ñ“¹‹ï]
+type = ChangeState
+value = 1000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = EnemyNear(var(58)),StateType = L
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = Random < 800
+TriggerAll = EnemyNear(var(58)),StateNo = 5120
+Trigger1 = EnemyNear(var(58)),AnimTime = -18+4
+Trigger1 = P2Dist X = [16,47]
+Trigger2 = EnemyNear(var(58)),AnimTime = -34+4
+Trigger2 = P2Dist X = [76,99]
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚`]
+type = ChangeState
+value = 1400
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = EnemyNear(var(58)),StateType = L
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = Random < 800
+TriggerAll = Random%10 = 0
+TriggerAll = EnemyNear(var(58)),StateNo = 5120
+Trigger1 = EnemyNear(var(58)),AnimTime = -28+4
+Trigger1 = P2Dist X = [25,55]
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚a]
+type = ChangeState
+value = 1500
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = EnemyNear(var(58)),StateType = L
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = Random < 800
+TriggerAll = Random%10 = 0
+TriggerAll = EnemyNear(var(58)),StateNo = 5120
+Trigger1 = EnemyNear(var(58)),AnimTime = -32+4
+Trigger1 = P2Dist X = [75,105]
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚b]
+type = ChangeState
+value = 1600
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = EnemyNear(var(58)),StateType = L
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = Random < 800
+TriggerAll = Random%10 = 0
+TriggerAll = EnemyNear(var(58)),StateNo = 5120
+Trigger1 = EnemyNear(var(58)),AnimTime = -36+4
+Trigger1 = P2Dist X = [125,155]
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚c]
+type = ChangeState
+value = 1700
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = EnemyNear(var(58)),StateType = L
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = Random < 800
+TriggerAll = Random%10 = 0
+TriggerAll = EnemyNear(var(58)),StateNo = 5120
+Trigger1 = EnemyNear(var(58)),AnimTime = -40+4
+Trigger1 = P2Dist X = [175,205]
+
+[State -3, ‚µ‚á‚ª‚Ý‚b]
+Type = ChangeState
+Value = 410
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = P2StateType = L
+TriggerAll = Ctrl || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = P2BodyDist X = [-5,60)
+TriggerAll = Random < 800
+Trigger1 = P2StateNo = 5120
+Trigger1 = EnemyNear(var(58)),AnimTime = -19+4
+
+[State -3, —§‚¿‚c]
+Type = ChangeState
+Value = 230
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = P2StateType = L
+TriggerAll = Ctrl || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = P2BodyDist X = [-5,60)
+TriggerAll = Random < 800
+Trigger1 = P2StateNo = 5120
+Trigger1 = EnemyNear(var(58)),AnimTime = -7+4
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;’nã–Ú‰Ÿ‚µ 
+;Prevstateno EnemyNear,Movetype = H EnemyNear,stateno = [120,159]
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+
+[State -3, ƒ_ƒbƒVƒ…]
+Type = ChangeState
+Value = 100
+Ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = P2BodyDist X > 50
+TriggerAll = Ctrl || StateNo = 21
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = EnemyNear(var(58)),MoveType = H && !(EnemyNear(var(58)),StateNo = [120,160))
+TriggerAll = EnemyNear(var(58)),GetHitVar(hittime) + EnemyNear(var(58)),GetHitVar(hitshaketime) >= 12
+TriggerAll = EnemyNear(var(58)),GetHitVar(yvel) = 0
+Trigger1 = Random < 800
+
+[State -3, ‘Oi]
+Type = ChangeState
+Value = 21
+Ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = P2BodyDist X < 50
+TriggerAll = Ctrl || (StateNo = 22 && Time > 10)
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = EnemyNear(var(58)),MoveType = H && !(EnemyNear(var(58)),StateNo = [120,160))
+TriggerAll = EnemyNear(var(58)),GetHitVar(hittime) + EnemyNear(var(58)),GetHitVar(hitshaketime) >= 6
+TriggerAll = EnemyNear(var(58)),GetHitVar(yvel) = 0
+Trigger1 = Random < 800
+
+[State -3, —§‚¿‚a]
+Type = ChangeState
+Value = 220
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = Ctrl || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = EnemyNear(var(58)),MoveType = H && !(EnemyNear(var(58)),StateNo = [120,160))
+TriggerAll = EnemyNear(var(58)),GetHitVar(hittime) + EnemyNear(var(58)),GetHitVar(hitshaketime) >= 4-2
+TriggerAll = EnemyNear(var(58)),GetHitVar(yvel) = 0
+TriggerAll = P2BodyDist X = [-5,55)
+Trigger1 = Random < 800 || Life < 333
+
+[State -3, —§‚¿‚c]
+Type = ChangeState
+Value = 230
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = Ctrl || (StateNo = [21,22]) || (StateNo= [100,101])
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = EnemyNear(var(58)),MoveType = H && !(EnemyNear(var(58)),StateNo = [120,160))
+TriggerAll = EnemyNear(var(58)),GetHitVar(hittime) + EnemyNear(var(58)),GetHitVar(hitshaketime) >= 4-2
+TriggerAll = EnemyNear(var(58)),GetHitVar(yvel) = 0
+TriggerAll = P2BodyDist X = [-5,55)
+Trigger1 = Random < 800
+
+[State -3, ‘Oi]
+type = ChangeState
+value = 21
+Ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L) && EnemyNear(var(58)),MoveType = H
+TriggerAll = EnemyNear(var(58)),StateNo = [150,153]
+TriggerAll = EnemyNear(var(58)),GetHitVar(hittime) + EnemyNear(var(58)),GetHitVar(hitshaketime) >= 5
+TriggerAll = Ctrl || (StateNo = 22 && Time > 10)
+TriggerAll = Random < 800
+Trigger1 = EnemyNear(var(58)),Vel X = 0 && (15-EnemyNear(var(58)),GetHitVar(hitshaketime) > 0)
+Trigger1 = P2BodyDist X = [-5,55)
+Trigger2 = EnemyNear(var(58)),Vel X = 0 && (15-EnemyNear(var(58)),GetHitVar(hitshaketime) <= 0)
+Trigger2 = P2BodyDist X = [-5,55)
+Trigger3 = !(EnemyNear(var(58)),Vel X = 0)
+Trigger3 = P2BodyDist X = [-5,50)
+
+[State -3, ‘OƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 42
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L) && EnemyNear(var(58)),MoveType = H
+TriggerAll = EnemyNear(var(58)),StateNo = [150,153]
+TriggerAll = EnemyNear(var(58)),GetHitVar(hittime) + EnemyNear(var(58)),GetHitVar(hitshaketime) >= 13
+TriggerAll = Ctrl || (StateNo = 22 && Time > 10)
+TriggerAll = Random < 800
+Trigger1 = EnemyNear(var(58)),Vel X = 0 && (15-EnemyNear(var(58)),GetHitVar(hitshaketime) > 0)
+Trigger1 = P2BodyDist X = [40,100)
+Trigger2 = EnemyNear(var(58)),Vel X = 0 && (15-EnemyNear(var(58)),GetHitVar(hitshaketime) <= 0)
+Trigger2 = P2BodyDist X = [40,100)
+Trigger3 = !(EnemyNear(var(58)),Vel X = 0)
+Trigger3 = P2BodyDist X = [40,100)
+
+[State -3, ‚’¼ƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 41
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L) && EnemyNear(var(58)),MoveType = H
+TriggerAll = EnemyNear(var(58)),StateNo = [150,153]
+TriggerAll = EnemyNear(var(58)),GetHitVar(hittime) + EnemyNear(var(58)),GetHitVar(hitshaketime) >= 13
+TriggerAll = Ctrl || (StateNo = 22 && Time > 10)
+TriggerAll = Random < 800
+Trigger1 = EnemyNear(var(58)),Vel X = 0 && (15-EnemyNear(var(58)),GetHitVar(hitshaketime) > 0)
+Trigger1 = P2BodyDist X = [5,40)
+Trigger2 = EnemyNear(var(58)),Vel X = 0 && (15-EnemyNear(var(58)),GetHitVar(hitshaketime) <= 0)
+Trigger2 = P2BodyDist X = [5,40)
+Trigger3 = !(EnemyNear(var(58)),Vel X = 0)
+Trigger3 = P2BodyDist X = [5,40)
+
+[State -3, —§‚¿‚c]
+type = ChangeState
+value = 230
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L) && EnemyNear(var(58)),MoveType = H
+TriggerAll = EnemyNear(var(58)),StateNo = [150,153]
+TriggerAll = EnemyNear(var(58)),GetHitVar(hittime) + EnemyNear(var(58)),GetHitVar(hitshaketime) >= 4-2
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < 800
+Trigger1 = EnemyNear(var(58)),Vel X = 0 && (7-EnemyNear(var(58)),GetHitVar(hitshaketime) > 0)
+Trigger1 = P2BodyDist X = [-5,55)
+Trigger2 = EnemyNear(var(58)),Vel X = 0 && (7-EnemyNear(var(58)),GetHitVar(hitshaketime) <= 0)
+Trigger2 = P2BodyDist X = [-5,55)
+Trigger3 = !(EnemyNear(var(58)),Vel X = 0)
+Trigger3 = P2BodyDist X = [-5,55)
+
+[State -3, ‚µ‚á‚ª‚Ý‚b]
+type = ChangeState
+value = 410
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L) && EnemyNear(var(58)),MoveType = H
+TriggerAll = EnemyNear(var(58)),StateNo = [150,153]
+TriggerAll = EnemyNear(var(58)),GetHitVar(hittime) + EnemyNear(var(58)),GetHitVar(hitshaketime) >= 18-2
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = Random < 800
+Trigger1 = EnemyNear(var(58)),Vel X = 0 && (7-EnemyNear(var(58)),GetHitVar(hitshaketime) > 0)
+Trigger1 = P2BodyDist X = [-5,55)
+Trigger2 = EnemyNear(var(58)),Vel X = 0 && (7-EnemyNear(var(58)),GetHitVar(hitshaketime) <= 0)
+Trigger2 = P2BodyDist X = [-5,55)
+Trigger3 = !(EnemyNear(var(58)),Vel X = 0)
+Trigger3 = P2BodyDist X = [-5,55-(EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)))
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;’nãŒq‚¬ 
+;Movecontact MoveHit MoveGuarded AnimElem = ,>0
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+
+[State -3, ’e‚ð’µ‚Ë•Ô‚·]
+Type = ChangeState
+Value = 1300
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = MoveHit = [1,5]
+TriggerAll = EnemyNear(var(58)),MoveType = H
+TriggerAll = P2Dist X >= 0
+TriggerAll = Life < 333
+Trigger1 = StateNo = 210
+Trigger2 = StateNo = 220 
+Trigger3 = StateNo = 410
+Trigger4 = StateNo = 420
+
+[State -3, ’e‚ð’µ‚Ë•Ô‚·]
+Type = ChangeState
+Value = 1300
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = MoveHit = [1,5]
+TriggerAll = EnemyNear(var(58)),MoveType = H
+TriggerAll = P2Dist X >= 0
+TriggerAll = Random < 800
+Trigger1 = StateNo = 200
+Trigger2 = StateNo = 210
+Trigger3 = StateNo = 220 
+Trigger4 = StateNo = 400 
+Trigger5 = StateNo = 410
+Trigger6 = StateNo = 420
+
+[State -3, ‘ŠŽè‚ðˆø‚«ž‚ñ‚Å°‚ð”²‚­]
+Type = ChangeState
+Value = 2100
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !var(54)
+TriggerAll = !((P2StateNo = [35,52]) || (P2StateNo = [130,155]))
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = MoveHit = [1,5]
+TriggerAll = EnemyNear(var(58)),MoveType = H
+TriggerAll = P2Dist X >= 0
+TriggerAll = P2BodyDist X-(EnemyNear(var(58)),GetHitVar(xvel))*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*var(8)*21 = [-60,60]
+TriggerAll = Random < 800
+TriggerAll = Power >= 1000
+Trigger1 = StateNo = 200
+Trigger2 = StateNo = 210
+Trigger3 = StateNo = 220 
+Trigger4 = StateNo = 400 
+Trigger5 = StateNo = 410
+Trigger6 = StateNo = 420
+
+[State -3, ‰æ–Ê‘S‘Ì‚ÉŒõ‚ð—‚Ñ‚¹‚é]
+Type = ChangeState
+Value = 2000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = MoveHit = [1,5]
+TriggerAll = EnemyNear(var(58)),MoveType = H
+TriggerAll = P2Dist X >= 0
+TriggerAll = Random < 800
+TriggerAll = Power >= 1000
+Trigger1 = StateNo = 200
+Trigger2 = StateNo = 210
+Trigger3 = StateNo = 220 
+Trigger4 = StateNo = 400 
+Trigger5 = StateNo = 410
+Trigger6 = StateNo = 420
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚a]
+Type = ChangeState
+Value = 1500
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = MoveHit = [1,5]
+TriggerAll = EnemyNear(var(58)),MoveType = H
+TriggerAll = P2Dist X >= 0
+TriggerAll = P2Dist X = [55,125-(EnemyNear(var(58)),GetHitVar(xvel))*(EnemyNear(var(58)),Facing)]
+TriggerAll = Random < 800
+Trigger1 = StateNo = 210
+Trigger2 = StateNo = 220 
+Trigger3 = StateNo = 410
+Trigger4 = StateNo = 420
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚`]
+Type = ChangeState
+Value = 1400
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = MoveHit = [1,5]
+TriggerAll = EnemyNear(var(58)),MoveType = H
+TriggerAll = P2Dist X >= 0
+TriggerAll = P2Dist X = [25,55-(EnemyNear(var(58)),GetHitVar(xvel))*(EnemyNear(var(58)),Facing)]
+TriggerAll = Random < 800
+TriggerAll = Random%5 = 0
+Trigger1 = StateNo = 210
+Trigger2 = StateNo = 220 
+Trigger3 = StateNo = 410
+Trigger4 = StateNo = 420
+
+[State -3, ‘O•û‚ÉƒoƒŠƒA‚ð’£‚é]
+Type = ChangeState
+Value = 1100
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = MoveHit = [1,5]
+TriggerAll = EnemyNear(var(58)),MoveType = H
+TriggerAll = P2Dist X >= 0
+TriggerAll = P2BodyDist X = [-5,45-(EnemyNear(var(58)),GetHitVar(xvel))*(EnemyNear(var(58)),Facing))
+TriggerAll = EnemyNear(var(58)),Const(size.ground.front) >= 25
+TriggerAll = Random < 800
+Trigger1 = StateNo = 210
+Trigger2 = StateNo = 220 
+Trigger3 = StateNo = 410
+Trigger4 = StateNo = 420
+
+[State -3, ‚R‚g‚h‚sŒ^‚Ì”ò‚Ñ“¹‹ï]
+Type = ChangeState
+Value = 1000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = !((EnemyNear(var(58)),StateNo = [820,821]) || (EnemyNear(var(58)),StateNo = [1150,1250]) || EnemyNear(var(58)),StateNo = 2050)
+TriggerAll = MoveHit = [1,5]
+TriggerAll = EnemyNear(var(58)),MoveType = H
+TriggerAll = P2Dist X >= 0
+TriggerAll = Random < 800
+Trigger1 = StateNo = 210
+Trigger2 = StateNo = 220 
+Trigger3 = StateNo = 410
+Trigger4 = StateNo = 420
+
+[State -3, ’e‚ð’µ‚Ë•Ô‚·]
+Type = ChangeState
+Value = 1300
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = MoveGuarded = [1,5]
+TriggerAll = EnemyNear(var(58)),MoveType = H
+TriggerAll = Random < 800
+TriggerAll = Random%2 = 0
+Trigger1 = StateNo = 200
+Trigger2 = StateNo = 210
+Trigger3 = StateNo = 220 
+Trigger4 = StateNo = 400 
+Trigger5 = StateNo = 410
+Trigger6 = StateNo = 420
+
+[State -3, ‚R‚g‚h‚sŒ^‚Ì”ò‚Ñ“¹‹ï]
+Type = ChangeState
+Value = 1000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType != A
+TriggerAll = !var(9)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)    
+TriggerAll = MoveGuarded = [1,5]
+TriggerAll = EnemyNear(var(58)),MoveType = H
+TriggerAll = Random < 800
+TriggerAll = Random%2 = 1
+Trigger1 = StateNo = 200
+Trigger2 = StateNo = 210
+Trigger3 = StateNo = 220 
+Trigger4 = StateNo = 400 
+Trigger5 = StateNo = 410
+Trigger6 = StateNo = 420
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+; ‹óƒLƒƒƒ“@‚Ô‚Á‚Ï@ –\‚ê
+;EnemyNear,Ctrl EnemyNear,MoveType=A P2BodyDist X
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+
+[State -3, ‰æ–Ê‘S‘Ì‚ÉŒõ‚ð—‚Ñ‚¹‚é]
+type = ChangeState
+value = 2000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = EnemyNear(var(58)),StateType != L
+TriggerAll = P2Dist Y+EnemyNear(var(58)),Vel Y*15+0.5*EnemyNear(var(58)),Const(movement.yaccel)*16*15*(EnemyNear(var(58)),Vel Y != 0) = [-224,10]
+TriggerAll = Random < 800
+TriggerAll = Power >= 1000
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger1 = EnemyNear(var(58)),StateNo = 5210
+Trigger1 = Time < 5
+Trigger2 = EnemyNear(var(58)),StateType = A
+Trigger2 = Time > 120
+
+[State -3, ’e‚ð’µ‚Ë•Ô‚·]
+Type = ChangeState
+value = 1300
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = Random < 800
+Trigger1 = StateNo = 200 && AnimElem = 7, = 1
+Trigger2 = StateNo = 210 && AnimElem = 12, = 1
+Trigger3 = StateNo = 220 && AnimElem = 8, = 1
+Trigger4 = StateNo = 230 && AnimElem = 8, = 1
+Trigger5 = StateNo = 400 && AnimElem = 7, = 1
+Trigger6 = StateNo = 410 && AnimElem = 12, = 1
+Trigger7 = StateNo = 420 && AnimElem = 8, = 1 
+Trigger8 = StateNo = 430 && AnimElem = 8, = 1
+
+[State -3, ‘ŠŽè‚ðˆø‚«ž‚ñ‚Å°‚ð”²‚­]
+Type = ChangeState
+value = 2100 
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = EnemyNear(var(58)),StateNo >= 200 && !(EnemyNear(var(58)),Ctrl)
+TriggerAll = EnemyNear(var(58)),Vel X > 0
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*21*var(8) = [-70,70] 
+TriggerAll = Random < 800
+TriggerAll = Power >= 1000
+TriggerAll = !MoveContact || Ctrl || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‘O•û‚ÉƒoƒŠƒA‚ð’£‚é]
+Type = ChangeState
+value = 1100 
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = EnemyNear(var(58)),StateNo >= 200 && !(EnemyNear(var(58)),Ctrl)
+TriggerAll = EnemyNear(var(58)),Vel X > 0
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*11*var(8) = [-5,50] 
+TriggerAll = Random < 800
+TriggerAll = !MoveContact || Ctrl || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‘ŠŽè‚ðˆø‚«ž‚ñ‚Å°‚ð”²‚­]
+type = ChangeState
+value = 2100
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = EnemyNear(var(58)),StateType != L
+TriggerAll = EnemyNear(var(58)),MoveType != H
+TriggerAll = Power >= 1000
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*21*var(8) = [-70,70+Random%20] 
+Trigger1 = Random < 5
+
+[State -3, ‰æ–Ê‘S‘Ì‚ÉŒõ‚ð—‚Ñ‚¹‚é]
+type = ChangeState
+value = 2000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = EnemyNear(var(58)),StateType != L
+TriggerAll = EnemyNear(var(58)),MoveType != H
+TriggerAll = Power >= 1000
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*15*var(8) > 200
+Trigger1 = Random < 5
+
+[State -3, ‚R‚g‚h‚sŒ^‚Ì”ò‚Ñ“¹‹ï]
+type = ChangeState
+value = 1000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = EnemyNear(var(58)),StateType != L
+TriggerAll = EnemyNear(var(58)),MoveType != H
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*18*var(8) > 200
+Trigger1 = Random < 10
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;’nãˆÚ“® 
+;Ctrl Random P2bodyDist X
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+
+[State -3, ‹Ù‹}‰ñ”ð@‘O]
+type = ChangeState
+value = 700
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = P2Dist X >= 0
+TriggerAll = P2BodyDist X > 90
+Trigger1 = Random%60 = 0
+
+[State -3, ‹Ù‹}‰ñ”ð@Œã]
+type = ChangeState
+value = 750
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = P2Dist X >= 0
+TriggerAll = P2BodyDist X > 60
+TriggerAll = BackEdgeBodyDist > 60
+Trigger1 = Random%40 = 0
+
+[State -3, ƒ_ƒbƒVƒ…]
+type = ChangeState
+value = 100
+ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && EnemyNear(var(58)),StateNo < 1000 && !(InGuardDist || var(57)))
+TriggerAll = Ctrl || StateNo = 21
+TriggerAll = P2Dist X >= 0
+TriggerAll = Random%120 = 0
+Trigger1 = P2BodyDist X > 180
+
+[State -3, ‘Oi]
+type = ChangeState
+value = 21
+ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = Ctrl || (StateNo = 22 && Time > 10)
+TriggerAll = P2Dist X >= 0
+Trigger1 = Random%80 = 0
+
+[State -3, Œã‘Þ]
+type = ChangeState
+value = 22
+ctrl = 0
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = Ctrl || (StateNo = 21 && Time > 10)
+TriggerAll = P2Dist X >= 0
+Trigger1 = Random%200 = 0
+
+[State -3, ƒoƒbƒNƒXƒeƒbƒv]
+type = ChangeState
+value = 105
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = Ctrl || (StateNo = 22 && Time > 10)
+TriggerAll = P2Dist X >= 0
+TriggerAll = BackEdgeBodyDist > 60
+Trigger1 = Random%500 = 0
+
+[State -3, ‚’¼ƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 41
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && EnemyNear(var(58)),StateNo < 1000 && !(InGuardDist || var(57)))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22])
+TriggerAll = P2BodyDist X = [15,65+Random%20]
+Trigger1 = Random%200 = 0
+
+[State -3, ‘OƒWƒƒƒ“ƒv]
+type = ChangeState
+value = 42
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && EnemyNear(var(58)),StateNo < 1000 && !(InGuardDist || var(57)))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+TriggerAll = P2BodyDist X = [60,160]
+Trigger1 = Random%500 = 0
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;’nã—§‚¿‰ñ‚è‹ZU‚è 
+;Ctrl Random EnemyNear,Movetype = I@inguarddist  P2bodyDist Y P2bodyDist X
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+
+[State -3, ‚R‚g‚h‚sŒ^‚Ì”ò‚Ñ“¹‹ï]
+Type = ChangeState
+value = 1000
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = P2BodyDist X-(Vel X+EnemyNear(var(58)),Vel X*18) > 25
+TriggerAll = Random < 25
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚`]
+Type = ChangeState
+value = 1400
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = P2Dist X-(Vel X+EnemyNear(var(58)),Vel X*28) = [25+Random%25,75+Random%25]
+TriggerAll = Random < 5
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚a]
+Type = ChangeState
+value = 1500
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = P2Dist X-(Vel X+EnemyNear(var(58)),Vel X*32) = [75+Random%25,125+Random%25]
+TriggerAll = Random < 5
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚b]
+Type = ChangeState
+value = 1600
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = P2Dist X-(Vel X+EnemyNear(var(58)),Vel X*32) = [125+Random%25,175+Random%25]
+TriggerAll = Random < 5
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‰Î’Œ‚ð‹N‚±‚·@‚c]
+Type = ChangeState
+value = 1700
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !((P2StateNo = [700,800)) && P2MoveType = I)
+TriggerAll = !(P2StateNo = 52000 && P2MoveType = I && EnemyNear(var(58)),AuthorName = "jin")
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = P2Dist X-(Vel X+EnemyNear(var(58)),Vel X*32) = [175+Random%25,225+Random%25]
+TriggerAll = Random < 5
+Trigger1 = Ctrl || StateNo = 1 || (StateNo = [21,22]) || (StateNo = [100,101])
+Trigger2 = StateNo = 200 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger3 = StateNo = 210 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger4 = StateNo = 220 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger5 = StateNo = 230 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger6 = StateNo = 400 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 4, >= 0 && AnimElem = 8, < 0)) 
+Trigger7 = StateNo = 410 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 11, >= 0 && AnimElem = 13, < 0)) 
+Trigger8 = StateNo = 420 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+Trigger9 = StateNo = 430 && ((MoveContact = [1,5]) || (!MoveContact && AnimElem = 3, >= 0 && AnimElem = 9, < 0)) 
+
+[State -3, ‚c“Š‚°]
+type = ChangeState
+value = 850
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = (abs(P2BodyDist X) <= 24)
+TriggerAll = Random < 750
+TriggerAll = Ctrl || (StateNo = [21,22])
+TriggerAll = EnemyNear(var(58)),MoveType = I
+Trigger1 = EnemyNear(var(58)),StateNo = [700,1000)
+Trigger2 = EnemyNear(var(58)),StateNo < 40
+Trigger3 = EnemyNear(var(58)),StateNo = [100,110]
+
+[State -3, ‚b“Š‚°]
+type = ChangeState
+value = 800
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(57))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = (abs(P2BodyDist X) <= 24)
+TriggerAll = Random < 250
+TriggerAll = Ctrl || (StateNo = [21,22])
+TriggerAll = EnemyNear(var(58)),MoveType = I
+Trigger1 = EnemyNear(var(58)),StateNo = [700,1000)
+Trigger2 = EnemyNear(var(58)),StateNo < 40
+Trigger3 = EnemyNear(var(58)),StateNo = [100,110]
+
+[State -3, —§‚¿‚a]
+type = ChangeState
+value = 220
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(58))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Random < 150
+Trigger1 = Ctrl || (StateNo = [21,22])
+Trigger1 = P2BodyDist X-(Vel X+EnemyNear(var(58)),Vel X*4) = [5,65]
+
+[State -3, —§‚¿‚c]
+type = ChangeState
+value = 230
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(58))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Random < 100
+Trigger1 = Ctrl || (StateNo = [21,22])
+Trigger1 = P2BodyDist X-(Vel X+EnemyNear(var(58)),Vel X*4) = [5,65]
+
+[State -3, ‚µ‚á‚ª‚Ý‚b]
+type = ChangeState
+value = 410
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(58))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Random < 50
+Trigger1 = Ctrl || (StateNo = [21,22])
+Trigger1 = P2BodyDist X-(Vel X+EnemyNear(var(58)),Vel X*18) = [5,60]
+
+[State -3, ‚Ó‚Á‚Æ‚Î‚µ]
+type = ChangeState
+value = 250
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(58))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Random < 5
+TriggerAll = Ctrl || (StateNo = [21,22])
+Trigger1 = P2BodyDist X-(Vel X+EnemyNear(var(58)),Vel X*14) = [20,40+Random%5]
+
+[State -3, ‚l‚`‚w”­“®]
+type = ChangeState
+value = 900
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = !(StateType = A || StateType = L)
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),MoveType = I || (EnemyNear(var(58)),MoveType = A && !(InGuardDist || var(57)))
+TriggerAll = !(InGuardDist || var(58))
+TriggerAll = EnemyNear(var(58)),NumProj = 0
+TriggerAll = Random < 800
+TriggerAll = Power >= 3000
+Trigger1 = Ctrl || (StateNo = [21,22])
+Trigger1 = P2BodyDist X-(Vel X+EnemyNear(var(58)),Vel X*28) > 150
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;‹ó’†—§‚¿‰ñ‚è‹ZU‚è 
+;Ctrl Random EnemyNear,Movetype = I@inguarddist  P2bodyDist Y P2bodyDist X
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+
+[State -3, ƒWƒƒƒ“ƒv‚c]
+type = ChangeState
+value = 630
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType = A
+TriggerAll = EnemyNear(var(58)),StateType != A || (EnemyNear(var(58)),StateNo = 5120 && EnemyNear(var(58)),AnimTime >= -16)
+TriggerAll = Ctrl
+TriggerAll = Pos Y+Vel Y*(8+6)+0.5*Const(movement.yaccel)*(6+8)*(6+7) > 0
+TriggerAll = Pos Y+Vel Y*8+0.5*Const(movement.yaccel)*9*8 >= -((EnemyNear(var(58)),Const(size.height)-20)*(1-(EnemyNear(var(58)),StateType = C)*0.5))
+TriggerAll = Random < 800
+Trigger1 = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*8*var(8) = [-50-(FrontEdgeBodyDist = 0)*10,60]
+
+[State -3, ƒWƒƒƒ“ƒv‚Ó‚Á‚Æ‚Î‚µ]
+type = ChangeState
+value = 640
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59) 
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType = A
+TriggerAll = !(EnemyNear(var(58)),StateType = A || EnemyNear(var(58)),StateType = L)
+TriggerAll = EnemyNear(var(58)),StateNo != 5120
+TriggerAll = EnemyNear(var(58)),PrevStateNo != 5120
+TriggerAll = Ctrl
+TriggerAll = Pos Y+Vel Y*(7+6)+0.5*Const(movement.yaccel)*(6+7)*(6+6)  > 0
+TriggerAll = Pos Y+Vel Y*7+0.5*Const(movement.yaccel)*8*7 >= -((EnemyNear(var(58)),Const(size.height)-20)*(1-(EnemyNear(var(58)),StateType = C)*0.5))
+TriggerAll = Random < 800
+Trigger1 = P2BodyDist X-EnemyNear(var(58)),Vel X*(EnemyNear(var(58)),BackEdgeBodyDist > 10)*7*var(8) = [0-(FrontEdgeBodyDist = 0)*10,50]
+
+[State -3, ƒWƒƒƒ“ƒv‚Ó‚Á‚Æ‚Î‚µ]
+type = ChangeState
+value = 640
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType = A
+TriggerAll = EnemyNear(var(58)),StateType = A
+TriggerAll = !var(9)
+TriggerAll = (EnemyNear(var(58)),StateNo = [50,60)) || EnemyNear(var(58)),Pos Y < -20
+TriggerAll = Pos Y+Vel Y*7+0.5*Const(movement.yaccel)*8*7  < 0
+TriggerAll = Ctrl 
+TriggerAll = P2Dist X >= 0
+TriggerAll = Random < 800
+Trigger1 = P2BodyDist X-(Vel X + EnemyNear(var(58)),Vel X)*7 <= 50
+Trigger1 = P2Dist Y+((EnemyNear(var(58)),Vel Y*7+0.5*EnemyNear(var(58)),Const(movement.yaccel)*8*7)-(Vel Y*6+0.5*Const(movement.yaccel)*8*7)) = [-60,60]
+
+[State -3, ƒWƒƒƒ“ƒv‚c]
+type = ChangeState
+value = 630
+IgnoreHitPause = 1
+TriggerAll = HitPauseTime = 0
+TriggerAll = var(59)
+TriggerAll = RoundState = 2 && Life > 0
+TriggerAll = StateType = A
+TriggerAll = EnemyNear(var(58)),StateType = A
+TriggerAll = !var(9)
+TriggerAll = (EnemyNear(var(58)),StateNo = [50,60)) || EnemyNear(var(58)),Pos Y < -20
+TriggerAll = Pos Y+Vel Y*8+0.5*Const(movement.yaccel)*9*8  < 0
+TriggerAll = Ctrl 
+TriggerAll = P2Dist X >= 0
+TriggerAll = Random < 800
+Trigger1 = P2BodyDist X-(Vel X + EnemyNear(var(58)),Vel X)*8 <= 70
+Trigger1 = P2Dist Y+((EnemyNear(var(58)),Vel Y*8+0.5*EnemyNear(var(58)),Const(movement.yaccel)*9*8)-(Vel Y*6+0.5*Const(movement.yaccel)*9*8)) = [-20,40]
+
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+;ƒ^ƒbƒOê—ps“®
+;var(?) 1=2;2 2=1;2 3=2;1
+;„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª„ª
+
+
+

@@ -1,0 +1,25 @@
+[Info]
+name = "Ryo Sakazaki"
+displayname = "Ryo"
+author = "Ehnyd"
+pal.defaults = 4,1
+;localcoord = 384,224
+
+[Files]
+cmd      = 98Ryo.cmd
+cns      = 01_Main.cns
+st       = 01_Main.cns
+st2      = 02_Attacks.cns
+st3      = 03_Specials.cns
+st4      = 04_DMs.cns
+st5      = 05_Others.cns
+stcommon = common1.cns
+sprite   = 98Ryo.sff
+anim     = 98Ryo.air
+sound    = 98Ryo.snd
+pal1     = pal/Ryo01.act
+pal2     = pal/Ryo01.act
+pal3     = pal/Ryo01.act
+pal4     = pal/Ryo01.act
+pal5     = pal/Ryo01.act
+pal6     = pal/Ryo01.act

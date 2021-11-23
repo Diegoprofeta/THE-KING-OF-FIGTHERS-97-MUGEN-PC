@@ -1,0 +1,23 @@
+[Info]
+name ="Shingo Yabuki"
+displayname ="SHINGO"
+author ="Mouser"
+pal.defaults =4,1
+mugenversion=
+
+[Files]
+cmd      = shingo.cmd
+cns      = Main.cns
+st       = Main.cns
+stcommon = common1.cns
+sprite   = shingo.sff
+anim     = shingo.air
+sound    = shingo.snd
+
+pal1=pal/01.act
+pal2=pal/01.act
+pal3=pal/01.act
+pal4=pal/01.act
+pal5=pal/01.act
+pal6=pal/01.act
+

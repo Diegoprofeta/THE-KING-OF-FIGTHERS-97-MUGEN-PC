@@ -1,0 +1,126 @@
+---------------------------------------------------------------------
+Nombre:                     Leona Heidern
+Juego de Origen:            The King of Fighters '96
+Autor                       Hero (Aunque parece de Tin)
+Edicion                     Ehnyd
+---------------------------------------------------------------------
+Archivos contenidos:
+98Leona.cmd             ; Comandos
+98Leona.cns             ; Constantes (Burlas, intros y similares)
+98Leona-N.cns           ; Constantes (Ataques sueltos)
+98Leona-S.cns           ; Constantes (Tecnicas comunes)
+98Leona-H.cns           ; Constantes (DM y SDM)
+98Miscellaneous.cns     ; Constantes (Varios)
+98Leona.air             ; Animaciones
+98Leona.def             ; Data definicion
+98Leona.sff             ; Archivos Sprites
+98Leona.snd             ; Sprites sonidos
+leeme.txt               ; Lo que estas leyendo
+
+Paletas de colores:
+Pal/Leona1.act          ; KOF 98 Color 1
+Pal/Leona2.act          ; KOF 98 Color 2
+Pal/Leona3.act          ; KOF 98 Color 3
+Pal/Leona4.act          ; KOF 98 Color 4
+Pal/Leona5.act          ; Basado en Ralf
+Pal/Leona6.act          ; Basado en Shingo
+
+---------------------------------------------------------------------
+COMPATIBLE CON Winmugen 2003.06.14 y la version DOS 2000.04.14
+---------------------------------------------------------------------
+Primera Version:
+Que tiene:
+-Sus tecnicas estan basadas en KOF 96
+-Todos sus DM y SDM de KOF 98UM
+-Adaptacion de los modos ADVANCE y EXTRA en un estilo unico.
+-Todo lo relativo a su estado Riot, los KOF posteriores o similar...
+ removido.
+
+Que le falta? Nada importante, solo...:
+*Más paletas.
+*Depurar Winpos e intros (CNS)
+*Editar posicion de algunos explods.
+*Alguna que otra cosa que se me ocurra
+=====================================================================
+---------------------------------------------------------------------
+                           Lista de Comandos
+Simbologia
+WP  = Golpe Debil
+WK  = Patada Debil
+SP  = Golpe Fuerte
+SK  = Patada Fuerte
+p   = Cualquier golpe
+k   = Cualquier patada
+
+F   = adelante
+B   = atras
+D   = abajo
+U   = arriba
+DF  = Diagonal abajo adelante
+DB  = Diagonal abajo atras
+QCF = Cuarto de circulo hacia adelante (D,DF,F)
+QCB = Cuarto de circulo hacia atras (D,DB,B)
+#   = Mantener palanca 1 segundo
+HCF = medio circulo hacia adelante (B,DB,D,DF,F)
+HCB = medio circulo hacia atras (F,DF,D,BD,B)
+x2  = debe hacerse dos veces
+=====================================================================
+======================
+| COMANDOS GENERALES |
+======================
+(f_b) + WP+WK           [Rolling Forward_Rollin Backward]
+N + WP+WK               Dodge
+WP+SK                   Power Charge
+WK+SP                   Start POW MAX Mode
+SP+SK                   Nockdown Attack (Tambien funciona en el aire)
+
+===========
+| Agarres |
+===========
+Leona Crush             (f_b) + C
+Orient Buckler          (f_b) + D
+Heidern Inferno         [Air] f + Any Button
+
+=====================
+| Comandos Normales |
+=====================
+Strike Kick             (f_b) + B
+
+=======================
+| Tecnicas especiales |
+=======================
+Baltic Launcher         #b, f, Golpe
+Ground Saber            #b, f, patada
+Sonic Kick                <Ground Saber>, f+D
+Moon Slasher            #d, u, Golpe
+X Caliber               #d, u, Patada
+Ice Slasher             [Air] qcb, Golpe
+Earring Bomb            hcb, Patada
+
+=================
+| DM/SDM Attack |
+=================
+V-Slasher		<En el aire> qcf, hcb, Golpe
+Rebel Spark		qcb, hcf, Patada
+Gravity Storm		qcf x2, Patada
+
+Nota: el POW MAX debe estar activado para ejecutar la tecnica como
+      SDM
+
+---------------------------------------------------------------------
+=====================================================================
+---------------------------------------------------------------------
+                              CREDITS
+
+SNK NeoGeo (Hoy: SNK Playmore), Por haber creado a este personaje.
+Ses (http://ses.mgbr.net), por crear el MCM (MUGEN Character Maker).
+DCelso, por crear el Paletero.
+Juanxoc, Bueh... el sabe.
+
+Y a tí... Por usarlo.
+---------------------------------------------------------------------
+ Este char fue terminado el 24/12/2008.
+---------------------------------------------------------------------
+                                 F I N   D E L   D O C U M E N T O .
+---------------------------------------------------------------------
+=====================================================================

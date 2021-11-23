@@ -1,0 +1,21 @@
+[Info]
+name = "Choi Bounge"
+displayname = "CHOI"
+author = "Noobic cube"
+pal.defaults = 4,1
+
+[Files]
+cmd     = choi.cmd
+cns     = choi.cns
+stcommon = common1.cns
+st      = choi.cns
+sprite  = choi.sff
+anim    = choi.air
+sound   = choi.snd
+pal1 = Pal/01.act
+pal2 = Pal/01.act
+pal3 = Pal/01.act
+pal4 = Pal/01.act
+pal5 = Pal/01.act
+pal6 = Pal/01.act
+

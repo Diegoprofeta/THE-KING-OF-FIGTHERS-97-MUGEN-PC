@@ -1,0 +1,1201 @@
+;===============================================================================
+;KIM KAPHWAN KOF-98 (ATAQUES NORMALES)
+;===============================================================================
+
+;Piña Debil
+[Statedef 200]
+type = S
+movetype = A
+physics = S
+anim = 200
+juggle = 8
+velset = 0
+ctrl = 0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 4,0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 400,0
+
+[State 200, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 25
+animtype = light
+hitflag = MAF
+guardflag = MA
+sparkno = S7000
+guard.sparkno = S7010
+sparkxy = -20,-60
+hitsound = S5,0
+guardsound = S6,0
+pausetime = 12,12
+ground.hittime = 9
+ground.type = low
+ground.slidetime = 9
+ground.velocity = -6.3
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 200, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Piña Debil Cerca
+[Statedef 205]
+type = S
+movetype = A
+physics = S
+anim = 205
+juggle = 8
+velset = 0
+ctrl = 0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4,0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 400,0
+
+[State 200, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 25
+animtype = light
+hitflag = MAF
+guardflag = MA
+sparkno = S7000
+guard.sparkno = S7010
+sparkxy = -15,-85
+hitsound = S5,0
+guardsound = S6,0
+pausetime = 12,12
+ground.hittime = 9
+ground.type = high
+ground.slidetime = 9
+ground.velocity = -6.3
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 200, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Patada Debil
+[Statedef 210]
+type = S
+movetype = A
+physics = S
+anim = 210
+juggle = 8
+velset = 0
+ctrl = 0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 401,0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 4,1
+
+[State 210, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 25
+animtype = light
+hitflag = MAF
+guardflag = MA
+sparkxy = -10,-90
+sparkno = S7000
+guard.sparkno = S7010
+hitsound = S5,1
+guardsound = S6,0
+pausetime = 12,12
+ground.hittime = 9
+ground.type = high
+ground.slidetime = 9
+ground.velocity = -6.3
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 210, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Patada Debil Cerca
+[Statedef 215]
+type = S
+movetype = A
+physics = S
+anim = 215
+juggle = 8
+velset = 0
+ctrl = 0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 401,0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 4,1
+
+[State 210, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 25
+animtype = light
+hitflag = MAF
+guardflag = MA
+sparkxy = -10,-68
+sparkno = S7000
+guard.sparkno = S7010
+hitsound = S5,1
+guardsound = S6,0
+pausetime = 12,12
+ground.hittime = 9
+ground.type = high
+ground.slidetime = 9
+ground.velocity = -6.3
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 210, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Piña Fuerte
+[Statedef 220]
+type = S
+movetype = A
+physics = S
+anim = 220
+juggle = 8
+velset = 0
+ctrl = 0
+poweradd = 25
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 4,2
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = 400,1
+
+[State 220, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 50
+animtype = medium
+hitflag = MAF
+guardflag = MA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -5,-70
+hitsound = S5,2
+guardsound = S6,0
+pausetime = 12,12
+ground.hittime = 17
+ground.type = high
+ground.slidetime = 17
+ground.velocity = -12.3
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Piña Fuerte Cerca
+[Statedef 225]
+type = S
+movetype = A
+physics = S
+anim = 225
+velset = 0
+juggle = 8
+ctrl = 0
+poweradd = 25
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 4,0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 400,1
+
+[State 220, 2]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = S, NA
+damage = 25
+animtype = medium
+hitflag = MAF
+guardflag = MA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -20,-50
+hitsound = S5,2
+guardsound = S6,0
+pausetime = 6,6
+ground.hittime = 17
+ground.type = low
+ground.slidetime = 17
+ground.velocity = 0
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 220, 2]
+type = HitDef
+trigger1 = AnimElem = 4
+attr = S, NA
+damage = 25
+animtype = medium
+hitflag = MAF
+guardflag = MA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -30,-70
+hitsound = S5,2
+guardsound = S6,0
+pausetime = 9,10
+ground.hittime = 17
+ground.type = high
+ground.slidetime = 17
+ground.velocity = -6
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Pata Fuerte
+[Statedef 230]
+type = S
+movetype = A
+physics = S
+anim = 230
+juggle = 8
+velset = 0
+ctrl = 0
+poweradd = 25
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 3
+value = 4,2
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 3
+value = 401,1
+
+[State 220, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 50
+animtype = medium
+hitflag = MAF
+guardflag = MA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -5,-90
+hitsound = S5,3
+guardsound = S6,0
+pausetime = 12,12
+ground.hittime = 17
+ground.type = high
+ground.slidetime = 17
+ground.velocity = -12.3
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Pata Fuerte Cerca
+[Statedef 235]
+type = S
+movetype = A
+physics = S
+anim = 235
+velset = 0
+juggle = 8
+ctrl = 0
+poweradd = 25
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 4,2
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 401,1
+
+[State 220, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 50
+animtype = medium
+hitflag = MAF
+guardflag = MA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -15,-90
+hitsound = S5,3
+guardsound = S6,0
+pausetime = 12,12
+ground.hittime = 12
+ground.type = high
+ground.slidetime = 12
+ground.velocity = -12
+air.velocity = -3,-6
+yaccel = .5
+ground.cornerpush.veloff = -15
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Adelante y Pat.1
+[Statedef 240]
+type = S
+movetype = A
+physics = S
+anim = 240
+juggle = 8
+velset = 0
+ctrl = 0
+poweradd = 20
+
+[State 220, pos]
+type = Posadd
+trigger1 = animelem = 3
+x = 15
+
+[State 220, pos]
+type = Posadd
+trigger1 = animelem = 9
+x = -15
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 6
+value = 4,1
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 3
+value = 240,0
+
+[State 220, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 30
+animtype = medium
+hitflag = MAF
+guardflag = MA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -25,-60
+hitsound = S5,3
+guardsound = S6,0
+pausetime = 12,13
+ground.hittime = 12
+ground.type = low
+ground.slidetime = 12
+guard.hittime = 12
+ground.velocity = -6
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+ground.cornerpush.veloff = -15
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Adelante y Pat.2
+[Statedef 241]
+type = S
+movetype = A
+physics = S
+anim = 240
+juggle = 8
+velset = 0
+ctrl = 0
+poweradd = 20
+
+[State 220, pos]
+type = Posadd
+trigger1 = time = 0
+x = 10
+
+[State 220, pos]
+type = Posadd
+trigger1 = animelem = 3
+x = 17
+
+[State 220, pos]
+type = Posadd
+trigger1 = animelem = 9
+x = -15
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 6
+value = 4,2
+
+[State 220, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 30
+animtype = medium
+hitflag = MAF
+guardflag = MA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -25,-60
+hitsound = S5,3
+guardsound = S6,0
+pausetime = 12,13
+ground.hittime = 17
+ground.type = low
+ground.slidetime = 17
+guard.hittime = 12
+ground.velocity = -6
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+ground.cornerpush.veloff = -15
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Adelante y Piña 1
+[Statedef 245]
+type = S
+movetype = A
+physics = S
+anim = 245
+juggle = 8
+velset = 0
+ctrl = 0
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 246
+
+;Adelante y Piña 2
+[Statedef 246]
+type = A
+movetype = A
+physics = N
+anim = 246
+juggle = 6
+velset = 0
+ctrl = 0
+poweradd = 25
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4,1
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 245,0
+
+[State 1000, vels]
+type = Posadd
+trigger1 = 1
+x = 4
+
+[State 1000, vels]
+type = Posadd
+trigger1 = time = 1
+y = -3
+
+[State 1000, vels]
+type = Posadd
+trigger1 = time = [2,5]
+y = -2
+
+[State 1000, vels]
+type = Posadd
+trigger1 = time = [6,7]
+y = -1
+
+[State 1000, vels]
+type = Posadd
+trigger1 = time = [10,11]
+y = 1
+
+[State 1000, vels]
+type = Posadd
+trigger1 = time = [12,15]
+y = 2
+
+[State 1000, vels]
+type = Posadd
+trigger1 = time = 16
+y = 3
+
+[State 220, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 30
+animtype = medium
+hitflag = MAF
+guardflag = MA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -15,-75
+hitsound = S5,3
+guardsound = S6,0
+pausetime = 12,12
+ground.hittime = 14
+ground.type = high
+ground.slidetime = 14
+guard.hittime = 12
+ground.velocity = -10
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 247
+
+;Adelante y Piña 3
+[Statedef 247]
+type = S
+movetype = A
+physics = S
+anim = 247
+velset = 0,0
+ctrl = 0
+
+[State 1002,]
+type = PlaySnd
+trigger1 = Time = 1
+value = 0,2
+
+[State 1000, vels]
+type = Posset
+trigger1 = time = 0
+y = 0
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------------
+;Rescatada 1
+[Statedef 300]
+type = S
+movetype = A
+physics = S
+anim = 300
+juggle = 8
+velset = 0
+ctrl = 0
+poweradd = 25
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4,2
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 300,0
+
+[State 220, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 80
+animtype = hard
+hitflag = MAF
+guardflag = MA
+sparkno = S7003
+guard.sparkno = S7011
+sparkxy = -6,-70
+hitsound = S5,4
+guardsound = S6,0
+pausetime = 12,12
+ground.hittime = 12
+ground.type = high
+ground.slidetime = 12
+ground.velocity = -5,-5
+air.velocity = -5,-5
+fall = 1
+fall.recover = 0
+fall.recovertime = 0
+ground.cornerpush.veloff = -15
+
+[State 210, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------------------
+;Rescatada 2
+[Statedef 305]
+type = S
+movetype = A
+physics = S
+anim = 305
+poweradd = -1000
+velset = 0
+ctrl = 0
+
+[State 310, 1]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 3
+value = 4,2
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 300,0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 12,1
+
+[State 220,]
+type = Posadd
+trigger1 = time = 0
+x = 10
+
+[State 220,]
+type = EnvColor
+trigger1 = AnimElem = 1
+value = 240,240,240
+time = 3
+
+[State 2000]
+type = Explod
+trigger1 = AnimElem = 1
+anim = 11001
+pos = -22,-80
+sprpriority = 9
+ownpal = 1
+bindtime = 1
+supermove = 1
+
+[State 220,]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+animtype  = diagup
+damage = 70
+guardflag = M
+pausetime = 12,12   
+sparkno = s7003
+guard.sparkno = s7012
+sparkxy = -6,-70     
+hitsound   = s5,4
+guardsound = s6,0
+ground.type = Low
+ground.slidetime = 20
+ground.hittime  = 20
+ground.velocity = -6,-5.5
+air.velocity = -6,-5.5
+fall = 1
+fall.recover = 0
+fall.recovertime = 0
+getpower = 0
+
+[State 210, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;Piña Debil Agach.
+[Statedef 400]
+type = C
+movetype = A
+physics = C
+anim = 400
+juggle = 8
+velset = 0
+ctrl = 0
+facep2 = 1
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 4,0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 400,0
+
+[State 200, 2]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = C, NA
+damage = 25
+animtype = light
+hitflag = MAF
+guardflag = MAF
+sparkno = S7000
+guard.sparkno = S7010
+sparkxy = -10,-40
+hitsound = S5,0
+guardsound = S6,0
+pausetime = 10,10
+ground.hittime = 12
+ground.type = low
+ground.slidetime = 12
+ground.velocity = -5.3
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 200, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 11
+ctrl = 1
+
+;Pat. Debil Agach.
+[Statedef 410]
+type = C
+movetype = A
+physics = C
+anim = 410
+juggle = 8
+velset = 0
+ctrl = 0
+facep2 = 1
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 401,0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 4,1
+
+[State 210, 2]
+type = HitDef
+trigger1 = AnimElem = 2
+attr = C, NA
+damage = 25
+animtype = light
+hitflag = MAF
+guardflag = L
+sparkxy = -10,-10
+sparkno = S7000
+guard.sparkno = S7010
+hitsound = S5,1
+guardsound = S6,0
+pausetime = 10,10
+ground.hittime = 12
+ground.type = low
+ground.slidetime = 12
+ground.velocity = -4.3
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 210, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 11
+ctrl = 1
+
+;Piña Fuerte Agach.
+[Statedef 420]
+type = C
+movetype = A
+physics = C
+anim = 420
+juggle = 8
+velset = 0
+ctrl = 0
+poweradd = 25
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 2
+value = 4,2
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 400,1
+
+[State 220, 2]
+type = HitDef
+trigger1 = time = 0
+attr = S, NA
+damage = 50
+animtype = medium
+hitflag = MAF
+guardflag = MA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = 0,-93
+hitsound = S5,2
+guardsound = S6,0
+pausetime = 11,11
+ground.hittime = 12
+ground.type = high
+ground.slidetime = 12
+ground.velocity = -11
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 11
+ctrl = 1
+
+;Pat. Fuerte Agach.
+[Statedef 430]
+type = C
+movetype = A
+physics = C
+anim = 430
+juggle = 8
+velset = 0
+ctrl = 0
+poweradd = 25
+
+[State 220, 1]
+type = PlaySnd
+trigger1 = AnimElem = 3
+value = 4,2
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 3
+value = 401,1
+
+[State 220, 2]
+type = HitDef
+trigger1 = AnimElem = 3
+attr = S, NA
+damage = 50
+animtype = hard
+hitflag = MAF
+guardflag = L
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -15,-10
+hitsound = S5,3
+guardsound = S6,0
+pausetime = 12,12
+ground.hittime = 12
+ground.type = trip
+ground.slidetime = 12
+ground.velocity = -2,-6
+air.velocity = -2,-6
+fall = 1
+fall.recover.time = 30
+yaccel = .5
+air.cornerpush.veloff = 0
+
+[State 220, 3]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 11
+ctrl = 1
+
+;Piña Debil Air
+[Statedef 600]
+type = A
+movetype = A
+physics = A
+anim = 600
+juggle = 8
+ctrl = 0
+
+[State 600, 2]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4,0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 400,0
+
+[State 600, 3]
+type = HitDef
+trigger1 = time = 0
+attr = A, NA
+damage = 25
+animtype = light
+hitflag = MAF
+guardflag = HA
+sparkno = S7000
+guard.sparkno = S7010
+sparkxy = 0,-20
+hitsound = S5,0
+guardsound = S6,0
+pausetime = 12,12
+ground.type = low
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -6.1
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+;Patada Debil Air
+[Statedef 610]
+type = A
+movetype = A
+physics = A
+juggle = 8
+anim = 610
+ctrl = 0
+
+[State 600, 2]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4,1
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 401,0
+
+[State 600, 3]
+type = HitDef
+trigger1 = time = 0
+attr = A, NA
+damage = 40
+animtype = light
+hitflag = MAF
+guardflag = HA
+sparkno = S7000
+guard.sparkno = S7010
+sparkxy = 0,-61
+hitsound = S5,1
+guardsound = S6,0
+pausetime = 12,12
+ground.type = low
+ground.slidetime = 9
+ground.hittime = 9
+ground.velocity = -6.1
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+;Piña Fuerte Air
+[Statedef 620]
+type = A
+movetype = A
+physics = A
+anim = 620
+juggle = 8
+ctrl = 0
+poweradd = 25
+
+[State 600, 2]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4,2
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 400,1
+
+[State 600, 3]
+type = HitDef
+trigger1 = TIME = 0
+attr = A, NA
+damage = 50
+animtype = medium
+hitflag = MAF
+guardflag = HA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -14,-45
+hitsound = S5,2
+guardsound = S6,0
+pausetime = 12,12
+ground.type = low
+ground.slidetime = 13
+ground.hittime = 13
+ground.velocity = -6.1
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+;Patada Fuerte Air
+[Statedef 630]
+type = A
+movetype = A
+physics = A
+anim = 630
+juggle = 8
+ctrl = 0
+poweradd = 25
+
+[State 600, 2]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4,2
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 401,1
+
+[State 600, 3]
+type = HitDef
+trigger1 = TIME = 0
+attr = A, NA
+damage = 50
+animtype = medium
+hitflag = MAF
+guardflag = HA
+sparkno = S7001
+guard.sparkno = S7011
+sparkxy = -10,-30
+hitsound = S5,3
+guardsound = S6,0
+pausetime = 12,12
+ground.type = low
+ground.slidetime = 13
+ground.hittime = 13
+ground.velocity = -6.1
+air.velocity = -3,-6
+yaccel = .5
+air.cornerpush.veloff = 0
+
+;Rescatada Aire
+[Statedef 640]
+type = A
+movetype = A
+physics = A
+anim = 640
+juggle = 12
+ctrl = 0
+poweradd = 25
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 300,0
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4,2
+
+[State 210, 2]
+type = HitDef
+trigger1 = time = 0
+attr = A, NA
+damage = 75
+animtype = hard
+hitflag = MAF
+guardflag = HA
+sparkxy = -10,-60
+hitsound = S5,4
+guardsound = S6,0
+sparkno = S7003
+guard.sparkno = S7011
+pausetime = 12,12
+ground.hittime = 12
+ground.type = high
+ground.slidetime = 12
+ground.velocity = -5,-5
+air.velocity = -5,-5
+air.type = high
+fall = 1
+fall.recover = 0
+fall.recovertime = 0
+air.cornerpush.veloff = 0

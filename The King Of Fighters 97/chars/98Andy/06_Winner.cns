@@ -1,0 +1,168 @@
+;===========================================================================
+; WINPOSE SELECT
+;===========================================================================
+; Win state decider
+[Statedef 180]
+type = S
+
+[State 190, varrandom]
+type = VarRandom
+trigger1 = time = 0
+v = 8
+range = 1,5
+
+[State 180, 1]
+type = ChangeState
+trigger1 = Var(8) = 1
+value = 181
+
+[State 180, 2]
+type = ChangeState
+trigger1 = Var(8) = 2
+value = 182
+
+[State 180, 3]
+type = ChangeState
+trigger1 = Var(8) = 3
+value = 183
+
+[State 180, 4]
+type = ChangeState
+trigger1 = Var(8) = 4
+value = 184
+
+[State 180, 4]
+type = ChangeState
+trigger1 = Var(8) = 5
+value = 185
+
+;===========================================================================
+; WINPOSE 1 - Mirar a la pantalla
+;===========================================================================
+; Win pose 1
+[Statedef 181]
+type = S
+ctrl = 0
+anim = 181
+velset = 0,0
+
+[State 181, end]
+type = AssertSpecial
+trigger1 = time < 300
+flag = RoundNotOver
+
+[State 181, 0]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = S20, 2
+
+[State 181, 1]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+time = 1
+
+
+
+;===========================================================================
+; WINPOSE 2 - De espalda a la pantalla
+;===========================================================================
+; Win pose 2
+[Statedef 182]
+type = S
+ctrl = 0
+anim = 182
+velset = 0,0
+
+[State 181, end]
+type = AssertSpecial
+trigger1 = time < 300
+flag = RoundNotOver
+
+[State 181, 1]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+time = 1
+
+
+;===========================================================================
+; WINPOSE 3 - Imagen intro KOF-M
+;===========================================================================
+; Win pose 3
+[Statedef 183]
+type = S
+ctrl = 0
+anim = 184
+velset = 0,0
+
+[State 181, end]
+type = AssertSpecial
+trigger1 = time < 300
+flag = RoundNotOver
+
+[State 184, 2]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = S20, 1
+
+[State 181, 1]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+time = 1
+
+
+;===========================================================================
+; WINPOSE 4 - Acrobacia de manos
+;===========================================================================
+[Statedef 184]
+type = S
+ctrl = 0
+anim = 186
+velset = 0,0
+
+[State 181, end]
+type = AssertSpecial
+trigger1 = time < 300
+flag = RoundNotOver
+
+[State 186, 1]
+type = PlaySnd
+trigger1 = AnimElem = 15
+value = S20, 1
+
+[State 181, 1]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+time = 1
+
+
+
+;===========================================================================
+; WINPOSE 5 - Chocar puños y mirar a la pantalla
+;===========================================================================
+; Win pose 1
+[Statedef 185]
+type = S
+ctrl = 0
+anim = 185
+velset = 0,0
+
+[State 181, end]
+type = AssertSpecial
+trigger1 = time < 300
+flag = RoundNotOver
+
+[State 181, 0]
+type = PlaySnd
+trigger1 = AnimElem = 5
+value = S20, 2
+
+[State 181, 1]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+time = 1
+

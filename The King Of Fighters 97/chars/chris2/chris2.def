@@ -1,0 +1,32 @@
+[Info]
+name     ="Chris"
+versiondate =12,03,2000
+mugenversion =11,29,2000
+author ="NeoGouki"
+pal.defaults =1,2,3,4,5,6
+displayname="Chris"
+
+[Files]
+cmd      =chris.cmd
+cns      =chris.cns
+st       =chris.cns
+stcommon =common1.cns
+sprite   =chris.sff
+anim     =chris.air
+sound    =chris.snd
+pal1=kof98e.act
+pal2=kof98e.act
+pal3=kof98e.act
+pal4=kof98e.act
+pal5=kof98e.act
+pal6=kof98e.act
+pal7=kof98e.act
+pal8=kof98e.act
+pal9=kof98e.act
+pal10=kof98e.act
+pal11=kof98e.act
+pal12=kof98e.act
+st1=AI.txt
+[Arcade]
+intro.storyboard=
+ending.storyboard=

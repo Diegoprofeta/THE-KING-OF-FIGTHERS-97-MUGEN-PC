@@ -1,0 +1,61 @@
+Chin Gentsai Character for WinMugen:
+
+Data de lançamento	: 20/06/2010 ;d/m/y
+Autor 			: Roach
+
+
+**** some news: ****
+
+Fixed some bugs in the moves, fixed the damges in the sdms,new intros,etc...
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Depois de algum tempo consegui terminar este personagem, sendo que esta é também a primeira versão lançada. 
+Sendo assim concerteza deverá possuir alguns bugs, caso eles apareçam (e irão aparecer) mencione eles em algum fórum que eu esteja fazendo parte ou me notifique por e-mail ou pelo próprio site oficial, pois tentarei os corrigir o mais breve possível.
+
+Este personagem é somente um trabalho de fan e não pode ser usado para qualquer tipo de propósitos comerciais. Você pode usar qualquer parte deste personagem para seu próprio trabalho de mugen PORÉM não libere sem antes me pedir permissão.
+Os prites edits são CLOSE SOURCE.
+
+Agradeço à Jin por liberar o seu código de rollfwd/back e recovery.
+À Le@n pelo código do portrait e outros.
+À KoFgUy pelo portrait do KOF02UN.
+E à muitos outros por por serem meus "bugger testers" xD!
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+After a long time I got to finish this character, then this is the first version released too.
+For sure he has some bugs, case it appears (and will) mention them in some forum that I'm participating or by e-mail or at the official site, because I'll try to fix them soon as possible. (sorry for my bad english).
+
+This character is purely fanwork and cannot be used for any commercial purposes. You can 
+use any part of this character for your own mugen works BUT don'trelease it before ask me to my permission.
+The sprites edits are CLOSE SOURCE.
+
+I thanks to Jin for his opensource codes of follfwd/back and recovery.
+Thanks to Le@n for the portraits codes and others.
+Thanks to KoFgUy for the protrait of KOF02UN.
+And to many others for being my "bugger testers" xD!
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+~ contact for support or anything else... ~
+
+mugenroach@hotmail.com
+www.mugenroach.webs.com
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+OBS: This Chis only was tested on MUGEN RC7.
+
+===========================================================================================================================
+
+  			                =====    =====     ===     =====    ==   ==
+  			   		======  =======  =======  ========  ==   ==
+  			   		==  ==  ==   ==  ==   ==  ==        =======
+  			  		== ==   ==   ==  =======  ==        =======
+  					==  ==  =======  =======  ========  ==   ==
+ 					==   ==  =====   ==   ==   =====    ==   ==
+
+===========================================================================================================================

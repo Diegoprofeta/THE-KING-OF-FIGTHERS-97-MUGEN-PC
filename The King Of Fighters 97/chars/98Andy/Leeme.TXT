@@ -1,0 +1,147 @@
+---------------------------------------------------------------------
+Nombre:                     Andy Bogard
+Juego de Origen:            The King of Fighters '98: The Slughfest
+Autor                       Ehnyd
+---------------------------------------------------------------------
+Archivos contenidos:
+Andy.air        ; Animaciones
+01_Main.cns     ; Constantes principales
+02_attacks.cns  ; Golpes y patadas varios
+03_specials.cns ; Tecnicas
+04_DMs.cns      ; DMs, SDMs y UDM
+05_others.cns   ; Animaciones varias
+Andy.def        ; Archivo de definicion
+Andy.sff        ; Sprites
+andy.cmd        ; Comandos
+Andy.snd        ; Sonido
+leeme.txt	; Lo que estas leyendo
+
+Paletas de colores:
+Andy_01.act     ; 98 Default
+Andy_02.act     ; 99 Alt
+Andy_03.act     ; Celeste
+Andy_04.act     ; Verde
+Andy_05.act     ; Azul
+Andy_05.act     ; Variante RBS EX Andy
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Segunda version.
+*Unblockable Destructor Move ahora es un solo golpe
+*SDM Zan'ei Ryuusei Ken modificado.
+*Gourin Kai corregido.
+*
+*
+
+Primera version:
+*Version compilada entre KOF'98 (modo normal y EX) y algo de KOF'99.
+*Modos ADVANCE y EXTRA mezclados.
+*intro vs Terry Bogard y Joe Higashi (las del 98)
+*Intro vs Geese (Edit)
+*Intro vs Mai (KOF 2001/97)
+*Pantalla de Winner.
+*Paletas diferentes a las originales del juego.
+*UDM ediatdo.
+*Animacion "Dodge" y "Dodge Ret" completamente original.
+
+=====================================================================
+---------------------------------------------------------------------
+                           Lista de Comandos
+Simbologia
+WP  = Golpe Debil
+WK  = Patada Debil
+SP  = Golpe Fuerte
+SK  = Patada Fuerte
+p   = Cualquier golpe
+k   = Cualquier patada
+
+F   = adelante
+B   = atras
+D   = abajo
+U   = arriba
+DF  = Diagonal abajo adelante
+DB  = Diagonal abajo atras
+QCF = Cuarto de circulo hacia adelante (D,DF,F)
+QCB = Cuarto de circulo hacia atras (D,DB,B)
+DP  = Adelante, abajo, diagonal Abajo-adelante
+RDP = Atras, abajo, diagonal abajo-atras
+HCF = medio circulo hacia adelante (B,DB,D,DF,F)
+HCB = medio circulo hacia atras (F,DF,D,BD,B)
+#   = mantener dos tiempos...
+=====================================================================
+======================
+| COMANDOS GENERALES |
+======================
+(f_b) + WP+WK        [Rolling Forward_Rollin Backward]
+N + WP+WK            Evasion
+    (p_k)                Dodge ret
+WP+SK                Power Charge
+WK+SP                Start POW MAX Mode
+SP+SK                Nockdown Attack (Tambien funciona en el aire)
+
+===========
+| Agarres |
+===========
+(b_f) + SP                      Gourin Kai
+(b_f) + SK                      Kakaekomi Nage
+=====================
+| Comandos Normales |
+=====================
+df + WP                         Age Men
+f + WK                          Uwa agito
+=======================
+| Tecnicas especiales |
+=======================
+qcb, WP                         Hishou Ken  [99 WP style]
+qcb, SP                         Hishou Ken  [98 SP style]
+qcf, WP+SP                      Geki Hishou Ken [99 SP style]
+#db, f, golpe                   Zan Ei Ken
+    f + SP                          Ga Dan Kou  **SP Only**
+dp, golpe                       Shoryudan
+dp, patada                      EX Shoryudan
+hcf, patada                     Kuhadan
+hcf, SP                         Dam Breaker  **junto al rival**
+qcf, patada                     Genei Shiranui
+    WP                              98 Genei Shiranui Uwa Agito
+    WK                              98 Genei Shiranui Shimo Agito
+    SP                              99 Genei Shiranui Shimo Agito
+    SK                              99 Genei Shiranui Uwa Agito
+
+===============
+| UDM Attacks |
+===============
+rdp, WP+SP			Shiranui Tenshi Hahoken [doble hit]
+
+Nota: Debes tener 30% de vida o menos, y la barra TIME activada.
+
+==================
+| DM/SDM Attacks |
+==================
+qcb, db, f, patada              Chou Reppa Dan
+qcb, db, f, golpe               Zan'ei Ryuusei Ken
+
+Nota: Para ejecutar los DM como SDM, la barra TIME debe estar activa.
+
+---------------------------------------------------------------------
+=====================================================================
+---------------------------------------------------------------------
+                              CREDITS
+
+SNK NeoGeo (Hoy: SNK Playmore), Por haber creado a este personaje.
+Ses (http://ses.mgbr.net), por crear el MCM (MUGEN Character Maker)
+DCelso, por crear el Paletero
+Ironmugen (AKA: David Demianoff), ya que su CCI Andy me sirvio de
+ base (y pensar que en un principio no queria usarlo por las
+ diversas variables que contiene...) y tambien por ser un creador de
+ chars OpenSouce. (VIVA EL OPEN!!!)
+Sekundes.Kyo, (como siempre) por ser el beta tester.
+Mi jefe (aunque no viene al caso), por dejarme hacer la practica en
+ su oficina de abogados (Este año debo sacar el titulo)
+
+Y a tí... Por usarlo.
+---------------------------------------------------------------------
+ Este char fue actualizado el 4/04/2009.
+ Me convence el resultado...
+---------------------------------------------------------------------
+                                 F I N   D E L   D O C U M E N T O .
+---------------------------------------------------------------------
+=====================================================================

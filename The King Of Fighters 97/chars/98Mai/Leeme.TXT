@@ -1,0 +1,158 @@
+---------------------------------------------------------------------
+Nombre:                     Mai Shiranui
+Juego de Origen:            The King of Fighters '98: The slugfest
+Autor                       Ehnyd
+Web                         http://kofmugenchile.co.cc
+---------------------------------------------------------------------
+Archivos contenidos:
+98Mai.air       ; Animaciones
+98Mai.cmd       ; Comandos
+01_Main.cns     ; Principal
+02_Attacks.cns  ; Golpes y patadas varios
+03_Specials.cns ; Tecnicas varias
+04_DMs.cns      ; DMs
+05_Others.cns   ; Cosas varias
+06_Winner.cns   ; Winpos y similares
+98Mai.def       ; Archivos de definicion
+98Mai.sff       ; Sprites
+98Mai.snd       ; Sonido
+Leeme.txt       ; Lo que estas leyendo
+
+Paleta de colores:
+Pal/01.act      ; KOF '98UM Color 1
+Pal/02.act      ; KOF '98UM Color 2
+Pal/03.act      ; KOF '98UM Color 3
+Pal/04.act      ; KOF '98UM Color 4
+Pal/05.act      ; KOF '98UM Color 5
+Pal/06.act      ; KOF '98UM Color 7
+
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Beta 0.7, Que tiene?
+-Posee casi todos los movimientos utilizados en KOF'98 tanto en la
+ version normal como en la UM.
+-Pantalla de Winner estilo KOF 98.
+-Modos ADVANCE y EXTRA mezclados entre si.
+-Barra TIME propia.
+-6 paletas de colores.
+-Y algunas otras sorpresas.  Prueben...
+
+Que es lo que aun falta?
+-AI.
+-corregir cosas con los efectos de ataques que queman.
+-Más paletas
+-Depuracion de algunos movimientos.
+
+=====================================================================
+---------------------------------------------------------------------
+                           Lista de Comandos
+Simbologia
+WP  = Golpe Debil
+WK  = Patada Debil
+SP  = Golpe Fuerte
+SK  = Patada Fuerte
+
+f   = adelante
+b   = atras
+d   = abajo
+u   = arriba
+N   = Neutral (palanca quieta)
+df  = Diagonal abajo adelante
+db  = Diagonal abajo atras
+qcf = Cuarto de circulo hacia adelante (D,DF,F)
+qcb = Cuarto de circulo hacia atras (D,DB,B)
+dp  = Adelante, Abajo, diagonal Abajo-adelante
+hcf = medio circulo hacia adelante (B,DB,D,DF,F)
+hcb = medio circulo hacia atras (F,DF,D,BD,B)
+#   = Mantener durante 2 segundos
+x2  = Debe hacerse dos veces
+[Close] = junto al rival
+[Air] = Solo en el aire
+[wall] = Junto al muro
+=====================================================================
+
+--- Basic Comands ---
+(f_b) + WP+WK        [Rolling Forward_Rollin Backward]
+N + WP+WK            Dodge
+    <Dodge> AnyButton     Dodge Ret
+WP+SK                Power Charge
+WK+SP                Start POW MAX Mode
+SP+SK                Nockdown Attack (Tambien funciona en el aire)
+
+--- Grapple Attacks ---
+(B_F) + SP                      Shiranui Gourin
+(B_F) + SK                      Kaze Kurumaboshi
+[Air](B_F)+SP                   Yume Sakura
+
+--- Normal Attacks ---
+[Wall] UF                       Wall Jump
+F, WK                           Benitsuru No Mai
+DF, WK                          Black Spaarow Dance
+[Air] D, WP                     Flying Cartwheel Drop
+
+--- Special Attacks ---
+QCF, Golpe                      Kachousen
+QCB, Golpe                      Ryuu En Bu
+QCB, Patada                     Night Bird
+HCF, Patada [U_UF]              Hissatsu Shinobi Bachi  (1)
+DP, Golpe                       Hakuru No Mai
+#D, N, [WP+SP_WK+SK]            Kagerou No Mai  (2)
+DP, Patada                      Hisho Ryuu En Jin
+[Air], QCB, Golpe               Tenku Musasabi No Mai
+
+--- Chain Attacks ---
+#B, F, Golpe                    Midare Kachou Ougi 1
+    B, F, Golpe                     Midare Kachou Ougi 2
+        DP, Golpe                       Midare Kachou Ougi 3
+[Air], QCF, patada		Gen'ei Shiranui
+    Golpe                           Gen'ei Shiranui: Shimo Agito
+    Patada                          Gen'ei Shiranui: Uwa Agito
+
+--- DM/SDM Attacks ---
+QCF x2, Golpe                   Mizudori no Mai
+QCB x2, Golpe                   Hou No Mai
+QCF, HCF, Golpe                 Hanaarashi
+QCB, HCF, Patada                Chou Hissatsu Shinobibachi  (3)
+
+Notas:
+        1.- Si al inicio del ataque, pulsas y mantienes hacia la
+            diagonal arriba-adelante, cambiarás la direccion del
+            mismo.
+        2.- Dependiendo del tipo de boton usado, el ataque puede
+            variar al usado en KOF'98 UM (pulsando Golpe) o a la
+            vista en KOF XI (usando patada)
+        3.- En cuanto a la version normal del ataque, en DM, si
+            pulsas el direccional hacia arriba o diagonal
+            adelante-arriba, cambiarás la direccion del ataque, 
+            imitando el mismo en su version del RBS.
+            La version SDM del mismo, hace vaiaciones aleatorias del
+            ataque, ya sea, puede ser el visual clasico, o puede
+            ejecutar la version Real Bout 1 del mismo ataque. Sin
+            importar cual version se haga, el daño sigue siendo el
+            mismo.
+
+---------------------------------------------------------------------
+                              CREDITS
+Elecbyte, motivos Obvios.
+SNK NeoGeo (Now SNKK Playmore), por haberla creado.
+Ses, por crear el MCM.
+DCelso, por crear el Paletero.
+Ironmugen, codigos varios y por ser autor de tipo Open.
+mugenchina.org, por los sets de sprites de los KOFs 98UM y 02UM.
+M.M.R., por la alineacion de los sprites en el grupo 5000 en su char.
+        Copypaste descarado, pero necesario para lograr esto.
+Koopakoot, por su SFF para hacer la alineacion de los ataques de la
+           version 02UM de Mai.
+
+
+Y a todos aquellos que me van a agarrar sentimientos cochinos por no
+ mencionarlos en esta guia.
+
+Y a tí... Por usarlo/bajarlo.
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+                                Este char fue lanzado el 21/10/2012.
+---------------------------------------------------------------------
+                                 F I N   D E L   D O C U M E N T O .
+---------------------------------------------------------------------
+=====================================================================

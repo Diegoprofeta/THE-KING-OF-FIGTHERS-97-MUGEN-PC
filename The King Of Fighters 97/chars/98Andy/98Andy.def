@@ -1,0 +1,29 @@
+; Player information
+[Info]
+name = "Andy Bogard"
+displayname = "ANDY"
+author = "David Demianoff"
+pal.defaults = 1,2,3,4,5,6
+
+; Files for the player
+[Files]
+cmd      = andy.cmd
+cns      = 01_Main.cns
+st       = 01_Main.cns
+st1      = 02_attacks.cns
+st2      = 03_specials.cns
+st3      = 04_DMs.cns
+st4      = 05_others.cns
+st5      = 06_winner.cns
+st6      = AI.txt
+stcommon = common1.cns
+sprite   = andy.sff
+anim     = andy.air
+sound    = andy.snd
+pal1     = pal/andy_01.act
+pal2     = pal/andy_01.act
+pal3     = pal/andy_01.act
+pal4     = pal/andy_01.act
+pal5     = pal/andy_01.act
+pal6     = pal/andy_01.act
+

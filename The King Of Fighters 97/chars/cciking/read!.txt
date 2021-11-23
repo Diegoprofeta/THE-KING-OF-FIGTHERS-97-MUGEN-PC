@@ -1,0 +1,164 @@
+CCI King
+By Chloe (http://cutemugen.free.fr) and Ironmugen - http://deltapark.i-xcell.com
+From The King Of Fighters 2001 - SNK & Eolith
+
+
+2nd Release: 23.04.2005
+
+
+Updated the 16/06/2005
+
+
+
+In case of random bugs, please contact me.
+
+
+What's "new":
+============
+
+* Turn team mode intro bug fixed, thanks to Psicoso for reporting.
+* Guardpausetime added on Trap Shot.
+* 2 Venom strikes on a row fixed, thank to Orochi Kof97 for reporting.
+* Vels fixed on Tornado kick, another thnx to Orochi Kof97.
+* Surprise rose is now a special move.
+* Added the Charge Power.
+* Sexy KO added.
+* Cheese KO added.
+* Also added the Trip fall missing sprite.
+* Removed useless sprites of the SFF (such as unedited Kof98 sprites or DM FX).
+* New HSDM added.
+
+
+Move list:
+=========
+
+X = weak punch (wp)
+Y = strong punch (sp)
+A = weak kick (wk)
+B = strong kick (sk)
+
+Y+B (or Z) = Knock-down attack
+A+X (or C) = Roll
+X+Y+A = Charge
+
+
+Forward + wk
+- Not "overhead" if it comes from a combo, but faster.
+
+Down+Forward + sk
+- Must be blocked low.
+
+
+| \  -O  + Kick
+O  O
+
+Venom Strike/Double Strike
+- Doble strike uses the Kof95 anim style.
+
+
+-O | \  + Kick
+   O  O
+
+Trap Shot
+
+
+-O | \  + Both Punch
+   O  O
+
+Surprise Rose
+- 2nd attack is an overhead.
+
+
+-O \  |  / O-  + Punch
+    O O O
+
+Mirage Kicks
+
+
+O- / | \ -O  + Punch
+  O  O  O
+
+Mirage Dance
+(Close distance)
+- Unguardable
+
+
+-O \  |  / O-  + Kick
+    O O O
+
+Tornado Kick
+(wk version = Tornado kick AOF2 ; sk version = KOF96)
+
+
+| \ -O \  |  / O-  + Kick
+O  O    O O O
+
+Illusion Dance
+(requires 1 Power Bar)
+
+
+|  / O- |  / O-  + Kick
+O O     O O
+
+Silent Flash
+(requires 1 Power Bar)
+- Super cancel from Mirage kick (requires 1 more power bar)
+
+
+| \ -O \  |  / O-  + Both Kicks
+O  O    O O O
+
+Illusion Dance
+(requires 2 Power Bars)
+
+
+| + Strong punch  -O + Strong kick  |  / O- -O + Weak Kick+Strong Punch
+O                                   O O
+
+Tornado Dance
+(requires 3 Power Bars)
+- Requires good timings to input the last command.
+
+
+
+Profile of King:
+---------------
+
+Fighting style: Muay Thai kickboxing
+Birthdate: 8th of April
+Nationality: France
+Blood type: A
+Height: 175 cm
+Weight: 58 kg
+Fav food: Vegetable, wine
+Fav sport: Billiards
+Imp thing: Her little brother
+Hate thing: Dirty peoples (like Jack Turner)
+
+
+
+
+I wanna thank:
+-------------
+
+Chloe for making the SFF (and another one with CLSN included)
+Dark Saviour for fixing the SFF and making the extra palettes.
+Shin Dio for the portraits from Kof2002 (DC).
+
+Neogouki, his Joe was the best example to me years ago.
+Sander for the Counter system coding.
+Orochi KOf97 for helping out on timings years ago.
+Rumiko for the Andy review which was helpfull.
+Big Eli King, Dreamslayer, @ndroide for hostings.
+Smogon for unknown reasons.
+
+SNK for creating the AOF and KOF sagas and King herself. RIP.
+SNK Playmore for continuing the KOF saga...
+Eolith for Kof2001.
+Elecbyte for Mugen.
+
+I wanna fuck:
+------------
+
+MGBR 's PacificAngra.
+AznMyztik.

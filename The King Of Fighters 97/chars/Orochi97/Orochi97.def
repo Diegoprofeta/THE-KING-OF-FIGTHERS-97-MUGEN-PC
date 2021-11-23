@@ -1,0 +1,20 @@
+[Info]
+Name = "Orochi"       
+DisplayName = "Orochi" 
+MugenVersion 
+Author = "TightRiam"        
+Pal.Defaults = 1      
+
+[Files]
+Cmd = Orochi97.cmd   
+Cns = Orochi97.cns  
+St = Orochi97.cns   
+St0 = Orochi97_Helper.cns
+St1 = Orochi97_-2.cns  
+St2 = Orochi97_AI.txt
+StCommon = Orochi97_common.cns
+Sprite = Orochi97.sff   
+Anim = Orochi97.air  
+Sound = Orochi97.snd
+Pal1 = Orochi97_01.act
+Pal2 = Orochi97_01.act

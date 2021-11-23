@@ -1,0 +1,24 @@
+[Info]
+name ="Blue Mary Ryan"
+displayname ="BLUE MARY"
+author ="Ehnyd"
+pal.defaults =4,1
+
+[Files]
+cmd	= Mary.cmd
+cns     = 01_Main.cns
+st      = 01_main.cns
+st1	= 02_Attacks.cns
+st2	= 03_Specials.cns
+st3	= 04_DMs.cns
+st4	= 05_Others.cns
+stcommon =common1.cns
+sprite  = Mary.sff
+anim    = Mary.air
+sound   = Mary.snd
+pal1	= Pal/Mary04.act
+pal2	= Pal/Mary05.act
+pal3	= Pal/Mary06.act
+pal4	= Pal/Mary01.act
+pal5	= Pal/Mary02.act
+pal6	= Pal/Mary03.act

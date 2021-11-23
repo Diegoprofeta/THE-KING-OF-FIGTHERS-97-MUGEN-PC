@@ -1,0 +1,26 @@
+[Info]
+name = "Joe Higashi"
+displayname = "Joe"
+author = "Ehnyd"	; Buena parte del contenido pertenece al Joe de Juanxoc
+pal.defaults = 4,1
+
+[Files]
+cmd     = 98Joe.cmd
+cns      = 01_Main.cns
+st       = 01_Main.cns
+st1      = 02_Attacks.cns
+st2      = 03_Specials.cns
+st3      = 04_DMs.cns
+st4      = 05_Others.cns
+stcommon = common1.cns
+sprite  = 98Joe.sff
+anim    = 98Joe.air
+sound   = 98Joe.snd
+
+pal1    = Pals/01.act
+pal2    = Pals/01.act
+pal3    = Pals/01.act
+pal4    = Pals/01.act
+pal5    = Pals/01.act
+pal6    = Pals/01.act
+

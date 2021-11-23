@@ -1,0 +1,151 @@
+---------------------------------------------------------------------
+Nombre:                     "Blue" Mary Ryan
+Juego de Origen:            The King of Fighters '98: The Slugfest
+Autor Original              Testp
+Modificaciones...           Ehnyd
+Web                         http://kofmugenchile.co.cc
+---------------------------------------------------------------------
+Archivos contenidos:
+
+Mary.air	; Animacion
+Mary.cmd	; Comandos
+01_Main.cns	; Constantes (Poses varias, saltos, states -2 y -3)
+02_Attacks.cns	; Constantes (Golpes y patadas comunes)
+03_Specials.cns	; Constantes (tecnicas)
+04_DMs.cns	; Constantes (Supers)
+05_Others.cns	; Constantes (Agarres)
+Mary.def	; Definicion 
+Mary.sff	; Sprites
+Mary.snd	; Audios
+Leeme.txt       ; Lo que estas leyendo... 
+
+Paleta de colores:
+pal/Mary01.act  ; KOF 98 Color 1
+pal/Mary02.act  ; KOF 98 Color 2
+pal/Mary03.act  ; KOF 98 Color 4
+pal/Mary04.act  ; KOF 98 Color 6
+pal/Mary05.act  ; KOF 98 Color 1 Edit
+pal/Mary06.act  ; RBS Color 1
+
+---------------------------------------------------------------------
+=====================================================================
+Version 2.1 (28.02.2012)
+-Se han agregado paletas nuevas
+-Corregido el CMD (Chain combos)
+-Nivelados los niveles de daño (CNS)
+
+Version 2.0 (31.05.2011)
+-Se ha rediseñado por completo el personaje (SFF, AIR, CNS), tratando
+ de alejarse lo mayor posible de su base original.
+-Se han traido sprites nuevos, usados tanto en KOF XI como en 2002.
+-Como el SFF usa sprites nuevos (personaje, no explods), se han
+ rediseñado las paletas.
+-Añadida burla al final de M.surpreise Rose.
+-Rediseñado el sistema de combos.
+-2 Winpos nuevas
+-1 intro nuevas
+-1 taunt nueva
+-KO por defensa
+-Codigo de barra TIME, retocado. Ahora asimila algunos (ALGUNOS)
+ detalles del estilo ADVANCE de KOF'98.
+-¿Alguna cosa que haya omitido? Quien sabe.
+
+=====================================================================
+---------------------------------------------------------------------
+                           Lista de Comandos
+Simbologia
+WP  = Golpe Debil
+WK  = Patada Debil
+SP  = Golpe Fuerte
+SK  = Patada Fuerte
+
+f       = adelante
+b       = atras
+d       = abajo
+u       = arriba
+#	= mantener por 2 tiempos
+df      = Diagonal abajo adelante
+db      = Diagonal abajo atras
+qcf     = Cuarto de circulo hacia adelante (D,DF,F)
+qcb     = Cuarto de circulo hacia atras (D,DB,B)
+dp      = Adelante, Abajo, diagonal Abajo-adelante (F,D,DF)
+hcf     = medio circulo hacia adelante (B,DB,D,DF,F)
+hcb     = medio circulo hacia atras (F,DF,D,BD,B)
+[close] = junto al rival
+[Down]  = Oponente debe estar en el piso, a tús pies.
+=====================================================================
+======================
+| COMANDOS GENERALES |
+======================
+(f_b) + WP+WK        [Rolling Forward_Rollin Backward]
+N + WP+WK            Dodge
+  <Dodge>AnyButton     Dodge Ret
+WP+SK                Power Charge
+WK+SP                Start POW MAX Mode
+SP+SK                Nockdown Attack (Tambien funciona en el aire)
+
+===========
+| Agarres |
+===========
+(B_F) + SP			Victor Nage
+(B_F) + SK			Head Throw
+
+=====================
+| Comandos Normales |
+=====================
+F, WP				Hammer Arch
+F, WK				Climbing Arrow
+DF, WK				Double Ring
+
+=======================
+| Tecnicas especiales |
+=======================
+QCF, Golpe			Spin Fall
+    <Spin Fall> QCF, Golpe	    Spider
+#B, F, Patada			Straight Slicer
+    <Slicer> B, F, Patada	    Electroshock
+DP, Patada			Vertical Arrow
+    DP, Patada			    M.Snatch
+QCB, WK 			M.Head Buster
+QCB, SK 			M.Counter
+HCB, F, WP			German Suplex
+HCB, F, SP			Double suplex
+
+====================
+| DM / SDM Attacks |
+====================
+QCF, HCB, Golpe 		M.surpreise Rose
+QCF x2, Patada  		M.Dynamite Swing
+[Close] HCB x2, Patada		M.Typhoon
+
+---------------------------------------------------------------------
+                              CREDITS
+
+SNK NeoGeo (Ahora SNK Playmore), Por haber creado a este personaje.
+Ses (http://ses.mgbr.net), por crear el MCM (MUGEN Character Maker)
+DCelso, por crear el Paletero.
+Testp, Por haber hecho originalmente a Blue Mary. Yo tan solo le hice
+       unas cuantas modificaciones.
+Mis cumpas de la pobla, ya que ellos me incitaron a modificar -y
+                        corregir, originalmente- este char, además
+                        de ser los Beta Testers.
+mugenchina.org, por los sets de sprites de KOF'98UM, el cual me
+		sirvio bastante.
+Juanxoc, por ayudarme con unas cosas en el CNS.
+
+				...
+
+A todos aquellos que me van a agarrar sentimientos cochinos por no
+ haberles mencionado en este documento.
+
+				...
+
+		    Y a tí... Por bajar el char.
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+                        Este char ha sido actualizado el 28/02/2012.
+                                                  Version 2.0, Here.
+---------------------------------------------------------------------
+                                 F I N   D E L   D O C U M E N T O .
+---------------------------------------------------------------------
+=====================================================================

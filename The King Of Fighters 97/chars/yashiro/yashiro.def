@@ -1,0 +1,29 @@
+[Info]
+name = "Yashiro Nanakase"
+displayname = "Yashiro"
+versiondate = 09,01,2001;Fangke's update
+mugenversion = 06,27,2000
+author = "Angel Myst"
+pal.defaults = 1,2,3,4,5,6
+ 
+[Files]
+cmd      = yashiro.cmd
+cns      = yashiro.cns
+st       = yashiro.cns
+st1       = yashiro1.cns
+st2       = AI.txt
+stcommon = common1.cns
+sprite   = yashiroF.sff
+anim     = yashiro.air
+sound    = yashiro.snd
+pal1     = yashiro1.act
+pal2     = yashiro1.act
+pal3     = yashiro1.act
+pal4     = yashiro1.act
+pal5     = yashiro1.act;97 Orochi 3
+pal6     = yashiro1.act;97 Orochi 3
+pal7     = yashiro1.act;97 Orochi 3
+pal8     = yashiro1.act;97 Orochi 3
+pal9     = yashiro1.act;97 Orochi 3
+pal10     = yashiro1.act;97 Orochi 3
+pal11     = yashiro1.act;97 Orochi 3

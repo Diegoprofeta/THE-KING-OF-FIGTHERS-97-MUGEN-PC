@@ -1,0 +1,31 @@
+; Descripcion
+[Info]
+name = "Leona"
+displayname = "Leona"
+versiondate = 12,25,2008
+mugenversion = 04,14,2001
+author = "hero"
+Edition = "Ehnyd"
+pal.defaults = 1,2,3,4,5,6
+
+; Archivos contenidos...
+[Files]
+cmd	= 98Leona.cmd   ;Comandos
+cns	= 98Leona.cns   ;Cosas basicas
+st	= 98Leona.cns   ;Cosas basicas
+st1	= 98Leona-N.cns ;Ataques normales
+st2	= 98Leona-S.cns ;Tecnicas
+st3	= 98Leona-H.cns	;DM y SDM
+st4	= 98Miscellaneous.cns
+st5	= Ai.txt
+stcommon = common1.cns 
+sprite	= Leona98.sff
+anim	= 98Leona.air
+sound	= 98Leona.snd
+
+Pal1 = Pal/Leona1.act
+Pal2 = Pal/Leona1.act
+Pal3 = Pal/Leona1.act
+Pal4 = Pal/Leona1.act
+Pal5 = Pal/Leona1.act
+Pal6 = Pal/Leona1.act

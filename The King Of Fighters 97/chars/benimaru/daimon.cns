@@ -1,0 +1,188 @@
+[Statedef 4200]
+type = S
+movetype = I
+physics = S
+velset = 0,0
+anim = 4200
+sprpriority = -4
+
+[State 6001, 1]
+type = AssertSpecial
+trigger1 = Time >= 0
+flag = noautoturn
+
+[State 6000, 1]
+type = AssertSpecial
+trigger1 = Time >= 0
+flag = noshadow
+
+[State 6000, 2]
+type = screenbound
+trigger1 = time  >= 0
+value = 0
+movecamera = 0,0
+
+[State 6000, 3]
+type = changestate
+trigger1 = p2movetype = H
+value    = 4201
+
+[State 6000, 3]
+type = changestate
+trigger1 = parent,movetype = H
+value    = 4202
+
+[State 6000, 3]
+type = changestate
+trigger1 = win
+value    = 4203
+
+[State 6000, 3]
+type = changestate
+trigger1 = lose
+trigger2 = drawgame
+value    = 4204
+
+[State 6000, 4]
+type = destroyself
+trigger1 = roundstate = 4
+
+;=======================================
+
+;p2gethit
+[Statedef 4201]
+type = S
+movetype = I
+physics = S
+velset = 0,0
+anim = 4201
+sprpriority = -4
+
+[State 6002, 1]
+type = AssertSpecial
+trigger1 = Time >= 0
+flag = noshadow
+
+[State 6002, 1]
+type = AssertSpecial
+trigger1 = Time >= 0
+flag = noautoturn
+
+[State 6002, 2]
+type = screenbound
+trigger1 = time  >= 0
+value = 0
+movecamera = 0,0
+
+[State 6000, 3]
+type = changestate
+trigger1 = win
+value    = 4203
+
+[State 6000, 3]
+type = changestate
+trigger1 = lose
+trigger2 = drawgame
+value    = 4204
+
+[State 6002, 3]
+type = changestate
+trigger1 = p2movetype != H
+value    = 4200
+
+;================================
+
+;gethit
+[Statedef 4202]
+type = S
+movetype = I
+physics = S
+velset = 0,0
+anim = 4202
+sprpriority = -4
+
+[State 6004, 1]
+type = AssertSpecial
+trigger1 = Time >= 0
+flag = noshadow
+
+[State 6004, 1]
+type = AssertSpecial
+trigger1 = Time >= 0
+flag = noautoturn
+
+[State 6004, 2]
+type = screenbound
+trigger1 = time  >= 0
+value = 0
+movecamera = 0,0
+
+[State 6000, 3]
+type = changestate
+trigger1 = win
+value    = 4203
+
+[State 6000, 3]
+type = changestate
+trigger1 = lose
+trigger2 = drawgame
+value    = 4204
+
+[State 6004, 3]
+type = changestate
+trigger1 = parent,movetype != H
+value    = 4200
+
+;====================================================================
+
+;Win
+[Statedef 4203]
+type = S
+movetype = I
+physics = S
+velset = 0,0
+anim = 4203
+sprpriority = -4
+
+[State 6004, 1]
+type = AssertSpecial
+trigger1 = Time >= 0
+flag = noshadow
+
+[State 6004, 1]
+type = AssertSpecial
+trigger1 = Time >= 0
+flag = noautoturn
+
+[State 6004, 2]
+type = screenbound
+trigger1 = time  >= 0
+value = 0
+movecamera = 0,0
+
+;=====================================================
+
+;Lose
+[Statedef 4204]
+type = S
+movetype = I
+physics = S
+velset = 0,0
+anim = 4204
+sprpriority = -4
+
+[State 6004, 1]
+type = AssertSpecial
+trigger1 = Time >= 0
+flag = noshadow
+
+[State 6004, 1]
+type = AssertSpecial
+trigger1 = Time >= 0
+flag = noautoturn
+
+[State 6004, 2]
+type = screenbound
+trigger1 = time  >= 0
+value = 0
+movecamera = 0,0
