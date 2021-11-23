@@ -2,7 +2,7 @@
 ```
 * UPDATE 23/11/2021
 ```
-![logo](https://juegosdemugen.com/wp-content/uploads/2021/06/The-King-Of-Fighters-97-HD-Edition-Mugen.jpg)
+![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/blob/main/Imagenes/kof97-2.png)
 
 ```
 THE KING OF FIGTHERS 97 Edition Mugen para PC este juego. Que fue hecho para la plataforma Mugen con muchos personajes, 
@@ -13,6 +13,7 @@ En el menu del juego tienes opciones para jugar a varios modos como VS que puede
 una batalla de uno contra uno como también tienes el modo TEAM para que juegos con equipos ya sea contra la 
 computadora o contra tus amigos. Aprovecha de descargar The King Of Fighters 97 Edition Mugen gratis aquí.
 ```
+![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/blob/main/Imagenes/kof97-3.png)
 
 **Mugen Game**
 
