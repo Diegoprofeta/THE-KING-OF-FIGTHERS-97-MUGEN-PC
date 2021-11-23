@@ -17,7 +17,7 @@ juegos con equipos ya sea contra la computadora o contra tus amigos.
 Illuminati Dev Team a recopilado starges, sound y chars de diferentes foros con las 
 caracteriscas mas similares al orgiginal para que pudes difrutarlo al maximo.
 
-Cada archivo contiene sus respectivos creditos de sus respectivos autores.
+Cada archivo contiene sus respectivos creditos de sus autores.
 ```
 ![logo](https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/blob/main/Imagenes/kof97-3.png)
 
