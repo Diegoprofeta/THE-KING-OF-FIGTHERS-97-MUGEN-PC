@@ -27,7 +27,7 @@ computadora o contra tus amigos. Aprovecha de descargar The King Of Fighters 97 
 
 ## :book: Download and Installation
 
-https://codeload.github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/zip/refs/heads/main
+https://github.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97-MUGEN-PC/archive/refs/heads/main.zip
 
 Personalización:
 
