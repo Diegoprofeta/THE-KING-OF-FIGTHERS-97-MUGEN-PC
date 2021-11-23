@@ -1,0 +1,28 @@
+Screenpack Kof97
+Origen: The King Of Fighters 97
+
+Realizado por MadkaT
+----------------------
+Programado por MadkaT (madkat@r2e.cjb.net)
+Lanzado: 29/07/10
+-------------------------
+Instalación:
+
+Descomprime el contenido del archivo en la carpeta stages de tu mugen ejecutalo con el comando -r kof97 y listo!.
+
+Personalización:
+
+Este screenpack es una version custom, para disfrutarlo al 100% debes hacer las siguientes modificaciones:
+
+-Cambiar el sprite del select (22px x 27px) 9000,0
+-Agregar sprite luchador (46px x 29px) 9000,699 (silueta en shape.bmp)
+-Agregar sprite turnos (14px x 14px) 9000,700
+
+Contacto
+--------
+Cualquier duda observación o comentario, enviar un correo a MadkaT (madkat@r2e.cjb.net)
+o dejarlo en los foros de MadkaT MediA:
+(http://winmugen.b1.jcink.com/)
+Recuerda visitar nuestro site: (www.madkatmedia.tk).
+
+Gracias

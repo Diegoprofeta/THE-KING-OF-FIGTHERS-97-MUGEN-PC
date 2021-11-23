@@ -1,0 +1,513 @@
+; Orochi Chris Stage, King of Fighters '97 made by Zwoop
+; http://homepages.go.com/~zwoop/index_e.html
+
+;--------------------------------------------------------
+[Info]
+ ;Name of the stage.
+name = "KOF'97 - Flames of Destiny"
+
+;--------------------------------------------------------
+[Camera]
+ ;Camera starting position: Usually 0 for both
+ ;***
+startx = 0
+starty = 0
+
+ ;Left and right bound of camera
+ ;You may want to fiddle a bit with these values to make sure the
+ ;background doesn't move too far or too little
+ ;***
+boundleft = -216
+boundright = 216
+
+ ;High and low bound of camera
+ ;High is a negative number. Make is more negative if you want to
+ ;camera to be able to move higher.
+ ;Low should usually be 0.
+ ;If omitted, defaults to -25 and 0 respectively
+ ;***
+boundhigh = -60
+boundlow = 0
+
+ ;This is how much the camera will move vertically towards the
+ ;highest player. Valid values are from 0 to 1. A value of 0 will mean
+ ;the camera does not move up at all. A value of 1 will makes the camera
+ ;follow the highest player.
+ ;Typically .2 for normal-sized backgrounds. You may need to pull this
+ ;value up for taller backgrounds.
+verticalfollow = .3
+
+ ;Distance player is from edge before camera starts to move. Typically 50
+tension = 50
+
+
+;--------------------------------------------------------
+[PlayerInfo]
+;--- Player 1 ---
+ ;Player 1 starting coordinates.
+ ;p1startx is typically -70 and p2startx is 70.
+ ;p1starty and p1startz should be 0.
+p1startx = -70          ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1startz = 0            ;Starting z coordinates
+p1facing = 1            ;Direction player faces: 1=right, -1=left
+
+;--- Player 2 ---
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+;--- Common ---
+ ;Don't change these values.
+leftbound  = -1000 ;Left bound (x-movement)
+rightbound =  1000 ;Right bound
+topbound  =  0     ;Top bound (z-movement)
+botbound  =  0     ;Bottom bound
+
+;--------------------------------------------------------
+[Scaling]
+ ;No need to change these values
+topz     = 0       ;Top z-coordinate for scaling
+botz     = 50      ;Bottom z-coordinate for scaling
+topscale = 1       ;Scale to use at top
+botscale = 1.2     ;Scale to use at bottom
+
+;--------------------------------------------------------
+[Bound]
+ ;Distance from left/right edge of screen that player can move to
+ ;Typically 15
+screenleft = 15    ;Dist from left of screen that player can move to
+screenright = 15   ;Right edge
+
+;--------------------------------------------------------
+[StageInfo]
+ ;Z offset for drawing
+ ;Adjust this value to move the ground level up/down in the screen.
+ ;It's the position where the players stand at.
+ ;Up - smaller, Down - larger
+ ;***
+zoffset = 215
+
+ ;Leave this at 1. It makes the players face each other
+autoturn = 1
+
+ ;Set the following to 1 to have the background be reset between
+ ;rounds.
+resetBG = 1
+
+;--------------------------------------------------------
+[Shadow]
+ ;This is the shadow color given in r,g,b. Valid values for each
+ ;range from 0 (lightest) to 255 (darkest).
+ ;Defaults to 92,92,92 if omitted.
+color = 32,32,32
+
+ ;This is the scale factor of the shadow. Use a big scale factor
+ ;to make the shadow longer. You can use a NEGATIVE scale factor
+ ;to make the shadow fall INTO the screen.
+ ;Defaults to 0.4 if omitted.
+yscale = -.1
+
+ ;Set to 1 to draw "reflection" shadows. Defaults to 0.
+reflect = 0
+
+;--------------------------------------------------------
+[Music]
+ ;You should put Rythmic Hallucination, from the '97 AST if possible.
+bgmusic =sound/otm.mp3
+bgvolume = 255
+
+; Main background definition
+[BGdef]
+spr=stages/kof97chris.sff
+debugbg=0
+debug=0
+
+[BG black]
+type  = normal
+spriteno = 4, 0
+layerno = 0
+start = 0, 181
+delta = 0, 0
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Sky]
+type  = anim             ;Normal background layer
+spriteno = 3, 0            ;Sprite group and number
+actionno = 3
+layerno = 0                ;0 for background, 1 for foreground
+start = 0, 193;187             ;Start location
+delta = 0, 0             ;Far
+trans = none               ;No transparency
+mask  = 1              
+tile  = 0, 0               ;No tiling
+
+;far
+[BG Hills]
+type  = normal
+spriteno = 2, 1
+layerno = 0
+start = 0, 187
+delta = .3, .6
+trans = none
+mask  = 1
+tile  = 1, 0
+
+;near
+[BG Hills2]
+type  = normal             ;Normal background layer
+spriteno = 2, 0            ;Sprite group and number
+layerno = 0                ;0 for background, 1 for foreground
+start = 0, 187            ;Start location
+delta = .6, .7             ;Change per unit
+trans = none               ;No transparency
+mask  = 1                  ;No masking
+tile  = 1, 0               ;No tiling
+
+[BG Floor] ; Animated Background
+type  = anim
+spriteno = 0, 0
+actionno = 0
+layerno = 0                
+start = 0, 187
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG Pilar1]
+type  = normal
+spriteno = 6, 0
+layerno = 0
+start = 0, 187
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Pilar2]
+type  = normal
+spriteno = 6, 1
+layerno = 0
+start = 0, 187
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Pilar3]
+type  = normal
+spriteno = 6, 2
+layerno = 0
+start = 0, 187
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Pilar4]
+type  = normal
+spriteno = 6, 3
+layerno = 0
+start = 0, 187
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Pilar5]
+type  = normal
+spriteno = 6, 4
+layerno = 0
+start = 0, 187
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Pilar6]
+type  = normal
+spriteno = 6, 5
+layerno = 0
+start = 0, 187
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Fire] ; Animated Background
+type  = anim
+spriteno = 1, 0
+actionno = 1
+layerno = 0                
+start = 0, 187
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Fire2] ; Animated Background
+type  = anim
+spriteno = 5, 0
+actionno = 5
+layerno = 0                
+start = 0, 187
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Small flame 1a] ; Animated Background
+type  = anim
+spriteno = 8, 0
+actionno = 8
+layerno = 0                
+start = 100, 182
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Small flame 2b] ; Animated Background
+type  = anim
+spriteno = 9, 0
+actionno = 9
+layerno = 0                
+start = 50, 187
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Small flame 1b]
+type  = anim
+spriteno = 8, 0
+actionno = 10
+layerno = 0                
+start = -100, 202
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Small flame 2b]
+type  = anim
+spriteno = 9, 0
+actionno = 11
+layerno = 0                
+start = -70, 197
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Small flame 1c]
+type  = anim
+spriteno = 8, 0
+actionno = 12
+layerno = 0                
+start = -200, 206
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Small flame 2c]
+type  = anim
+spriteno = 9, 0
+actionno = 13
+layerno = 0                
+start = 150, 180
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[Begin action 0]
+0,0, 0,0, 9
+0,1, 0,0, 9
+0,2, 0,0, 9
+0,3, 0,0, 9
+0,4, 0,0, 9
+0,5, 0,0, 9
+0,6, 0,0, 9
+0,7, 0,0, 9
+
+[Begin action 1]
+1,0, 0,0, 9
+1,1, 0,0, 9
+1,2, 0,0, 9
+1,3, 0,0, 9
+1,4, 0,0, 9
+1,5, 0,0, 9
+1,6, 0,0, 9
+1,7, 0,0, 9
+1,8, 0,0, 9
+1,9, 0,0, 9
+
+[Begin action 3]
+3,0, 0,0, 9
+3,1, 0,0, 10
+3,2, 0,0, 8
+3,3, 0,0, 30
+3,1, 0,0, 6
+3,2, 0,0, 7
+3,0, 0,0, 8
+3,3, 0,0, 15
+3,2, 0,0, 2
+3,3, 0,0, 80
+3,1, 0,0, 3
+3,0, 0,0, 10
+3,1, 0,0, 8
+3,3, 0,0, 200
+3,2, 0,0, 6
+
+[Begin action 5]
+7,0, 0,0, 30
+5,0, 0,0, 11,,A
+5,1, 0,0, 11,,A
+5,2, 0,0, 11,,A
+5,3, 0,0, 11,,A
+5,4, 0,0, 11,,A
+5,5, 0,0, 11,,A
+5,6, 0,0, 11,,A
+5,7, 0,0, 11,,A
+5,8, 0,0, 11,,A
+5,9, 0,0, 11,,A
+7,0, 0,0, 1492
+
+[Begin action 8]
+8,0, 0,0, 7
+8,1, 0,0, 7
+8,2, 0,0, 7
+8,3, 0,0, 7
+8,4, 0,0, 7
+8,5, 0,0, 7
+8,6, 0,0, 7
+8,7, 0,0, 7
+8,8, 0,0, 7
+7,0, 0,0, 920
+9,0, 0,0, 7
+9,1, 0,0, 7
+9,2, 0,0, 7
+9,3, 0,0, 7
+9,4, 0,0, 7
+9,5, 0,0, 7
+9,6, 0,0, 7
+9,7, 0,0, 7
+9,8, 0,0, 7
+7,0, 0,0, 870
+
+[Begin action 9]
+9,0, 0,0, 7
+9,1, 0,0, 7
+9,2, 0,0, 7
+9,3, 0,0, 7
+9,4, 0,0, 7
+9,5, 0,0, 7
+9,6, 0,0, 7
+9,7, 0,0, 7
+9,8, 0,0, 7
+7,0, 0,0, 903
+8,0, 0,0, 7
+8,1, 0,0, 7
+8,2, 0,0, 7
+8,3, 0,0, 7
+8,4, 0,0, 7
+8,5, 0,0, 7
+8,6, 0,0, 7
+8,7, 0,0, 7
+8,8, 0,0, 7
+7,0, 0,0, 930
+
+[Begin action 10]
+8,0, 0,0, 7
+8,1, 0,0, 7
+8,2, 0,0, 7
+8,3, 0,0, 7
+8,4, 0,0, 7
+8,5, 0,0, 7
+8,6, 0,0, 7
+8,7, 0,0, 7
+8,8, 0,0, 7
+7,0, 0,0, 910
+9,0, 0,0, 7
+9,1, 0,0, 7
+9,2, 0,0, 7
+9,3, 0,0, 7
+9,4, 0,0, 7
+9,5, 0,0, 7
+9,6, 0,0, 7
+9,7, 0,0, 7
+9,8, 0,0, 7
+7,0, 0,0, 830
+
+[Begin action 11]
+9,0, 0,0, 7
+9,1, 0,0, 7
+9,2, 0,0, 7
+9,3, 0,0, 7
+9,4, 0,0, 7
+9,5, 0,0, 7
+9,6, 0,0, 7
+9,7, 0,0, 7
+9,8, 0,0, 7
+7,0, 0,0, 800
+8,0, 0,0, 7
+8,1, 0,0, 7
+8,2, 0,0, 7
+8,3, 0,0, 7
+8,4, 0,0, 7
+8,5, 0,0, 7
+8,6, 0,0, 7
+8,7, 0,0, 7
+8,8, 0,0, 7
+7,0, 0,0, 900
+
+[Begin action 12]
+7,0, 0,0, 810
+8,0, 0,0, 7
+8,1, 0,0, 7
+8,2, 0,0, 7
+8,3, 0,0, 7
+8,4, 0,0, 7
+8,5, 0,0, 7
+8,6, 0,0, 7
+8,7, 0,0, 7
+8,8, 0,0, 7
+7,0, 0,0, 945
+9,0, 0,0, 7
+9,1, 0,0, 7
+9,2, 0,0, 7
+9,3, 0,0, 7
+9,4, 0,0, 7
+9,5, 0,0, 7
+9,6, 0,0, 7
+9,7, 0,0, 7
+9,8, 0,0, 7
+
+[Begin action 13]
+7,0, 0,0, 1300
+9,0, 0,0, 7
+9,1, 0,0, 7
+9,2, 0,0, 7
+9,3, 0,0, 7
+9,4, 0,0, 7
+9,5, 0,0, 7
+9,6, 0,0, 7
+9,7, 0,0, 7
+9,8, 0,0, 7
+7,0, 0,0, 300
+8,0, 0,0, 7
+8,1, 0,0, 7
+8,2, 0,0, 7
+8,3, 0,0, 7
+8,4, 0,0, 7
+8,5, 0,0, 7
+8,6, 0,0, 7
+8,7, 0,0, 7
+8,8, 0,0, 7

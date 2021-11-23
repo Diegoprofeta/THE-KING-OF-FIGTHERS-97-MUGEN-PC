@@ -1,0 +1,103 @@
+[SceneDef]
+spr = credits.sff
+startscene = 0
+
+[Scene 0]
+bgm = 11 - Arashi No Allegory (Yagami Iori CD Original).mp3
+bgm.loop = 0
+fadeout.time = 90
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+bg.name = BG0
+end.time = 600
+
+[BG0Def]
+
+[BG0 Credits]
+type = normal
+spriteno = 8,0
+start = 0,240
+
+[Scene 1]
+fadeout.time = 90
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+bg.name = BG1
+end.time = 600
+
+[BG1Def]
+
+[BG1 Credits]
+type = normal
+spriteno = 8,6
+start = 0,240
+
+[Scene 2]
+fadeout.time = 90
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+bg.name = BG2
+end.time = 600
+
+[BG2Def]
+
+[BG2 Credits]
+type = normal
+spriteno = 8,1
+start = 0,240
+
+[Scene 3]
+fadeout.time = 90
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+bg.name = BG3
+end.time = 600
+
+[BG3Def]
+
+[BG3 Credits]
+type = normal
+spriteno = 8,2
+start = 0,240
+
+[Scene 4]
+fadeout.time = 90
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+bg.name = BG4
+end.time = 600
+
+[BG4Def]
+
+[BG4 Credits]
+type = normal
+spriteno = 8,3
+start = 0,240
+
+[Scene 5]
+fadeout.time = 90
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+bg.name = BG5
+end.time = 600
+
+[BG5Def]
+
+[BG5 Credits]
+type = normal
+spriteno = 8,4
+start = 0,240
+
+[Scene 6]
+fadeout.time = 90
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+bg.name = BG6
+end.time = 600
+
+[BG6Def]
+
+[BG6 Credits]
+type = normal
+spriteno = 8,5
+start = 0,240

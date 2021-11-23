@@ -1,0 +1,1094 @@
+; Orochi Shermie Stage, King of Fighters '97 made by Zwoop
+; http://homepages.go.com/~zwoop/index_e.html
+
+;--------------------------------------------------------
+[Info]
+ ;Name of the stage.
+name = "KOF'97 - Divine Lightning"
+
+;--------------------------------------------------------
+[Camera]
+ ;Camera starting position: Usually 0 for both
+ ;***
+startx = 0
+starty = 0
+
+ ;Left and right bound of camera
+ ;You may want to fiddle a bit with these values to make sure the
+ ;background doesn't move too far or too little
+ ;***
+boundleft = -216
+boundright = 216
+
+ ;High and low bound of camera
+ ;High is a negative number. Make is more negative if you want to
+ ;camera to be able to move higher.
+ ;Low should usually be 0.
+ ;If omitted, defaults to -25 and 0 respectively
+ ;***
+boundhigh = -25
+boundlow = 0
+
+ ;This is how much the camera will move vertically towards the
+ ;highest player. Valid values are from 0 to 1. A value of 0 will mean
+ ;the camera does not move up at all. A value of 1 will makes the camera
+ ;follow the highest player.
+ ;Typically .2 for normal-sized backgrounds. You may need to pull this
+ ;value up for taller backgrounds.
+verticalfollow = .3
+
+ ;Distance player is from edge before camera starts to move. Typically 50
+tension = 50
+
+
+;--------------------------------------------------------
+[PlayerInfo]
+;--- Player 1 ---
+ ;Player 1 starting coordinates.
+ ;p1startx is typically -70 and p2startx is 70.
+ ;p1starty and p1startz should be 0.
+p1startx = -70          ;Starting x coordinates
+p1starty = 0            ;Starting y coordinates
+p1startz = 0            ;Starting z coordinates
+p1facing = 1            ;Direction player faces: 1=right, -1=left
+
+;--- Player 2 ---
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+;--- Common ---
+ ;Don't change these values.
+leftbound  = -1000 ;Left bound (x-movement)
+rightbound =  1000 ;Right bound
+topbound  =  0     ;Top bound (z-movement)
+botbound  =  0     ;Bottom bound
+
+;--------------------------------------------------------
+[Scaling]
+ ;No need to change these values
+topz     = 0       ;Top z-coordinate for scaling
+botz     = 50      ;Bottom z-coordinate for scaling
+topscale = 1       ;Scale to use at top
+botscale = 1.2     ;Scale to use at bottom
+
+;--------------------------------------------------------
+[Bound]
+ ;Distance from left/right edge of screen that player can move to
+ ;Typically 15
+screenleft = 15    ;Dist from left of screen that player can move to
+screenright = 15   ;Right edge
+
+;--------------------------------------------------------
+[StageInfo]
+ ;Z offset for drawing
+ ;Adjust this value to move the ground level up/down in the screen.
+ ;It's the position where the players stand at.
+ ;Up - smaller, Down - larger
+ ;***
+zoffset = 215
+
+ ;Leave this at 1. It makes the players face each other
+autoturn = 1
+
+ ;Set the following to 1 to have the background be reset between
+ ;rounds.
+resetBG = 0
+
+;--------------------------------------------------------
+[Shadow]
+ ;This is the shadow color given in r,g,b. Valid values for each
+ ;range from 0 (lightest) to 255 (darkest).
+ ;Defaults to 92,92,92 if omitted.
+color = 32,32,32
+
+ ;This is the scale factor of the shadow. Use a big scale factor
+ ;to make the shadow longer. You can use a NEGATIVE scale factor
+ ;to make the shadow fall INTO the screen.
+ ;Defaults to 0.4 if omitted.
+yscale = -.1
+
+ ;Set to 1 to draw "reflection" shadows. Defaults to 0.
+reflect = 0
+
+;--------------------------------------------------------
+[Music]
+ ;You should put Rythmic Hallucination, from the '97 AST if possible.
+bgmusic = sound/otm.mp3
+bgvolume = 255
+[BGdef]
+spr = stages/Anger.sff
+debugbg = 0
+
+[BG black]
+type  = normal
+spriteno = 4, 0
+layerno = 0
+start = 0, 0
+delta = 0, 0
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Sky]
+type  = anim             ;Normal background layer
+spriteno = 3, 0            ;Sprite group and number
+actionno = 3
+layerno = 0                ;0 for background, 1 for foreground
+start = 0, 5             ;Start location
+delta = 0, 0             ;Far
+trans = none               ;No transparency
+mask  = 1              
+tile  = 0, 0               ;No tiling
+
+;far
+[BG Hills]
+type  = anim
+spriteno = 6, 0
+actionno = 6
+layerno = 0
+start = 0, 0
+delta = .3, .6
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+;near
+[BG Hills2]
+type  = anim
+spriteno = 7, 0            ;Sprite group and number
+actionno = 7
+layerno = 0                ;0 for background, 1 for foreground
+start = 0, 0            ;Start location
+delta = .6, .7             ;Change per unit
+trans = none               ;No transparency
+mask  = 1                  ;No masking
+tile  = 0, 0
+tilespacing = 0,0
+
+;8, 160
+[BG BGL1]
+type  = anim
+spriteno = 2, 0
+actionno = 11
+layerno = 0
+start = -140, 178
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG BGL2]
+type  = anim
+spriteno = 2, 0
+actionno = 12
+layerno = 0
+start = 124, 178
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG BGL3]
+type  = anim
+spriteno = 2, 0
+actionno = 13
+layerno = 0
+start = -40, 178
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG Floor]
+type  = normal
+spriteno = 0, 0
+layerno = 0
+start = 0, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG Center]
+type  = anim
+spriteno = 1, 0
+actionno = 1
+layerno = 0
+start = 0, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Ruins]
+type  = anim
+spriteno = 5, 0
+actionno = 5
+layerno = 0
+start = 0, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG BRuins]
+type  = anim
+spriteno = 9, 0
+actionno = 9
+layerno = 0
+start = 0, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+;If you wish to remove the pilars (it won't look bad)
+
+; Delete from here 
+
+;Pilar 1 destroyed
+
+[BG Pilar2]
+type  = normal
+spriteno = 10, 1
+layerno = 0
+start = 0, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Pilar3]
+type  = normal
+spriteno = 10, 2
+layerno = 0
+start = 0, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Pilar4]
+type  = normal
+spriteno = 10, 3
+layerno = 0
+start = 0, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+;Pilar 5 destroyed
+
+[BG Pilar6]
+type  = normal
+spriteno = 10, 5
+layerno = 0
+start = 0, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+; Stop erasing stuff
+
+[BG Center]
+type  = anim
+spriteno = 1, 0
+actionno = 1
+layerno = 0
+start = 0, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Elek]
+type  = anim
+spriteno = 2, 0
+actionno = 8
+layerno = 0
+start = 5, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG Floor]
+type  = anim
+spriteno = 30, 0
+actionno = 30
+layerno = 0
+start = 0, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG L1]
+type  = anim
+spriteno = 2, 0
+actionno = 40
+layerno = 0
+start = 0, -5
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+
+[BG ST1]
+type  = anim
+spriteno = 2, 0
+actionno = 16
+layerno = 0
+start = -329, 205
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG ST2]
+type  = anim
+spriteno = 2, 0
+actionno = 22
+layerno = 0
+start = -100, 206
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG ST3]
+type  = anim
+spriteno = 2, 0
+actionno = 23
+layerno = 227
+start = 227, 203
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG ST4]
+type  = anim
+spriteno = 2, 0
+actionno = 24
+layerno = 144
+start = 160, 234
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG FGL1]
+type  = anim
+spriteno = 2, 0
+actionno = 14
+layerno = 0
+start = 136, 180
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG FGL2]
+type  = anim
+spriteno = 2, 0
+actionno = 15
+layerno = 0
+start = -156, 176
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG BFGL1]
+type  = anim
+spriteno = 2, 0
+actionno = 17
+layerno = 0
+start = -200, -4
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG BFGL2]
+type  = anim
+spriteno = 2, 0
+actionno = 18
+layerno = 0
+start = -56, -1
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG BFGL3]
+type  = anim
+spriteno = 2, 0
+actionno = 19
+layerno = 0
+start = 336, 31
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG BFGL4]
+type  = anim
+spriteno = 2, 0
+actionno = 20
+layerno = 0
+start = 212, 3
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG BFGL5]
+type  = anim
+spriteno = 2, 0
+actionno = 21
+layerno = 0
+start = -76, 0
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[BG BFGL6]
+type  = anim
+spriteno = 2, 0
+actionno = 19
+layerno = 0
+start = -330, 22
+delta = 1
+trans = none
+mask  = 1
+tile  = 0, 0
+tilespacing = 0,0
+
+[Begin action 1]
+1,0, 0,0, 10
+1,1, 0,0, 9
+1,2, 0,0, 10
+1,1, 0,0, 9
+
+;Sky
+[Begin action 3]
+3,0, 0,0, 6 ; Dark
+3,1, 0,0, 6 ; Bright
+3,2, 0,0, 6 ; Med
+3,3, 0,0, 6
+3,4, 0,0, 6
+3,1, 0,0, 6
+3,5, 0,0, 6
+3,6, 0,0, 6
+3,7, 0,0, 6
+3,8, 0,0, 6
+3,9, 0,0, 6
+3,10, 0,0, 6
+3,11, 0,0, 6
+3,12, 0,0, 6
+3,13, 0,0, 6
+3,14, 0,0, 6
+3,15, 0,0, 6
+3,16, 0,0, 6
+3,17, 0,0, 6
+3,18, 0,0, 6
+3,19, 0,0, 6
+3,20, 0,0, 6
+3,21, 0,0, 6
+3,22, 0,0, 6 ; Very dark
+3,0, 0,0, 6 ; Dark
+3,1, 0,0, 6 ; Bright
+3,2, 0,0, 6 ; Med
+3,3, 0,0, 6
+3,4, 0,0, 6
+3,16, 0,0, 6
+3,17, 0,0, 6
+3,18, 0,0, 6
+3,19, 0,0, 6
+3,20, 0,0, 6
+3,5, 0,0, 6
+3,6, 0,0, 6
+3,7, 0,0, 6
+3,8, 0,0, 6
+3,9, 0,0, 6
+3,10, 0,0, 6
+3,11, 0,0, 6
+3,12, 0,0, 6
+3,13, 0,0, 6
+3,14, 0,0, 6
+3,15, 0,0, 6
+3,21, 0,0, 6
+3,22, 0,0, 6 ; Very dark
+
+[Begin action 5] ; Ruined Pilars
+5,0, 0,0, 15
+5,1, 0,0, 14
+5,2, 0,0, 15
+5,1, 0,0, 14
+
+[Begin action 6]
+6,0, 0,0, 7
+6,1, 0,0, 7
+6,2, 0,0, 7
+6,3, 0,0, 7
+6,4, 0,0, 7
+6,5, 0,0, 7
+6,6, 0,0, 7
+6,7, 0,0, 7
+
+[Begin action 7]
+7,0, 0,0, 7
+7,1, 0,0, 7
+7,2, 0,0, 7
+7,3, 0,0, 7
+7,4, 0,0, 7
+7,5, 0,0, 7
+7,6, 0,0, 7
+7,7, 0,0, 7
+
+[Begin action 8]
+2,0, 0,0, 170
+Loopstart
+8,0, 0,0, 3
+8,1, 0,0, 3
+8,2, 0,0, 3
+8,3, 0,0, 3
+8,4, 0,0, 3
+8,5, 0,0, 3
+8,6, 0,0, 3
+8,7, 0,0, 3
+
+8,8, 0,0, 3
+8,9, 0,0, 3
+8,10, 0,0, 3
+8,11, 0,0, 3
+8,12, 0,0, 3
+8,13, 0,0, 3
+8,14, 0,0, 3
+8,15, 0,0, 3
+
+8,16, 0,0, 3
+8,17, 0,0, 3
+8,18, 0,0, 3
+8,19, 0,0, 3
+8,20, 0,0, 3
+8,21, 0,0, 3
+8,22, 0,0, 3
+8,23, 0,0, 3
+8,24, 0,0, 3
+8,25, 0,0, 3
+8,26, 0,0, 3
+8,27, 0,0, 3
+
+8,28, 0,0, 3
+8,29, 0,0, 3
+8,30, 0,0, 3
+8,31, 0,0, 3
+8,0, 0,0, 3
+8,1, 0,0, 3
+8,2, 0,0, 3
+8,3, 0,0, 3
+8,4, 0,0, 3
+8,5, 0,0, 3
+8,6, 0,0, 3
+8,7, 0,0, 3
+
+8,8, 0,0, 3
+8,9, 0,0, 3
+8,10, 0,0, 3
+8,11, 0,0, 3
+8,12, 0,0, 3
+8,13, 0,0, 3
+8,14, 0,0, 3
+8,15, 0,0, 3
+2,0, 0,0, 3
+8,16, 0,0, 3
+8,17, 0,0, 3
+8,18, 0,0, 3
+8,19, 0,0, 3
+8,20, 0,0, 3
+8,21, 0,0, 3
+8,22, 0,0, 3
+8,23, 0,0, 3
+8,24, 0,0, 3
+8,25, 0,0, 3
+8,26, 0,0, 3
+8,27, 0,0, 3
+
+8,28, 0,0, 3
+8,29, 0,0, 3
+8,30, 0,0, 3
+8,31, 0,0, 3
+8,0, 0,0, 3
+8,1, 0,0, 3
+8,2, 0,0, 3
+8,3, 0,0, 3
+8,4, 0,0, 3
+8,5, 0,0, 3
+8,6, 0,0, 3
+8,7, 0,0, 3
+
+8,8, 0,0, 3
+8,9, 0,0, 3
+8,10, 0,0, 3
+8,11, 0,0, 3
+8,12, 0,0, 3
+8,13, 0,0, 3
+8,14, 0,0, 3
+8,15, 0,0, 3
+
+8,16, 0,0, 3
+8,17, 0,0, 3
+8,18, 0,0, 3
+8,19, 0,0, 3
+8,20, 0,0, 3
+8,21, 0,0, 3
+8,22, 0,0, 3
+8,23, 0,0, 3
+8,24, 0,0, 3
+8,25, 0,0, 3
+8,26, 0,0, 3
+8,27, 0,0, 3
+
+8,28, 0,0, 3
+8,29, 0,0, 3
+8,30, 0,0, 3
+8,31, 0,0, 3
+2,0, 0,0, 73
+
+[Begin action 9]
+9,0, 0,0, 3
+9,1, 0,0, 3
+9,2, 0,0, 3
+9,3, 0,0, 3
+9,4, 0,0, 3
+9,3, 0,0, 3
+9,2, 0,0, 3
+9,1, 0,0, 3
+9,0, 0,0, 3
+9,1, 0,0, 3
+9,0, 0,0, 3
+9,1, 0,0, 3
+9,2, 0,0, 3
+9,3, 0,0, 3
+9,2, 0,0, 3
+9,1, 0,0, 3
+9,0, 0,0, 3
+9,1, 0,0, 3
+9,2, 0,0, 3
+9,1, 0,0, 3
+9,0, 0,0, 2
+9,1, 0,0, 1
+9,2, 0,0, 2
+9,3, 0,0, 1
+9,4, 0,0, 2
+9,3, 0,0, 1
+9,2, 0,0, 2
+9,1, 0,0, 1
+9,0, 0,0, 2
+9,1, 0,0, 3
+9,2, 0,0, 3
+9,3, 0,0, 3
+9,4, 0,0, 3
+9,3, 0,0, 3
+9,2, 0,0, 3
+9,3, 0,0, 3
+9,4, 0,0, 3
+9,3, 0,0, 3
+9,2, 0,0, 3
+9,1, 0,0, 3
+9,2, 0,0, 3
+9,1, 0,0, 3
+9,0, 0,0, 3
+9,1, 0,0, 3
+9,2, 0,0, 3
+9,3, 0,0, 3
+9,4, 0,0, 3
+9,3, 0,0, 3
+9,2, 0,0, 3
+9,1, 0,0, 2
+9,0, 0,0, 1
+9,1, 0,0, 1
+9,2, 0,0, 1
+9,3, 0,0, 1
+9,4, 0,0, 1
+9,3, 0,0, 1
+9,2, 0,0, 1
+9,1, 0,0, 1
+9,0, 0,0, 1
+
+[Begin action 11]
+2,0, 0,0, 2330
+11,0, 0,0, 2
+11,1, 0,0, 2
+11,2, 0,0, 2
+11,3, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,3, 0,0, 2
+11,2, 0,0, 2
+11,1, 0,0, 2
+11,0, 0,0, 2
+2,0, 0,0, 112
+
+[Begin action 12]
+11,0, 0,0, 2
+11,1, 0,0, 2
+11,2, 0,0, 2
+11,3, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,3, 0,0, 2
+11,2, 0,0, 2
+11,1, 0,0, 2
+11,0, 0,0, 2
+2,0, 0,0, 3615
+
+[Begin action 13]
+2,0, 0,0, 903
+11,0, 0,0, 2
+11,1, 0,0, 2
+11,2, 0,0, 2
+11,3, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,3, 0,0, 2
+11,2, 0,0, 2
+11,1, 0,0, 2
+11,0, 0,0, 2
+2,0, 0,0, 2942
+
+[Begin action 14]
+2,0, 0,0, 1433
+11,0, 0,0, 3
+11,1, 0,0, 3
+11,2, 0,0, 3
+11,3, 0,0, 3
+11,4, 0,0, 3
+11,5, 0,0, 3
+11,4, 0,0, 3
+11,5, 0,0, 3
+11,4, 0,0, 3
+11,5, 0,0, 3
+11,4, 0,0, 3
+11,3, 0,0, 3
+11,2, 0,0, 3
+11,1, 0,0, 3
+11,0, 0,0, 3
+2,0, 0,0, 1278
+
+[Begin action 15]
+2,0, 0,0, 932
+11,0, 0,0, 2
+11,1, 0,0, 2
+11,2, 0,0, 2
+11,3, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,5, 0,0, 2
+11,4, 0,0, 2
+11,3, 0,0, 2
+11,2, 0,0, 2
+11,1, 0,0, 2
+11,0, 0,0, 2
+2,0, 0,0, 2611
+
+[Begin action 17]
+2,0, 0,0, 1201
+17,0, 0,0, 2
+2,0, 0,0, 4
+17,1, 0,0, 2
+17,2, 0,0, 2
+17,3, 0,0, 2
+17,4, 0,0, 2
+17,5, 0,0, 2
+17,6, 0,0, 2
+17,7, 0,0, 2
+17,8, 0,0, 2
+17,9, 0,0, 2
+17,10, 0,0, 2
+17,11, 0,0, 2
+17,12, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,11, 0,0, 2
+17,10, 0,0, 2
+17,9, 0,0, 2
+2,0, 0,0, 1332
+
+[Begin action 18]
+2,0, 0,0, 1999
+17,0, 0,0, 2
+2,0, 0,0, 5
+17,1, 0,0, 2
+17,2, 0,0, 2
+17,3, 0,0, 2
+17,4, 0,0, 2
+17,5, 0,0, 2
+17,6, 0,0, 2
+17,7, 0,0, 2
+17,8, 0,0, 2
+17,9, 0,0, 2
+17,10, 0,0, 2
+17,11, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,11, 0,0, 2
+17,10, 0,0, 2
+17,9, 0,0, 2
+2,0, 0,0, 999
+
+[Begin action 19]
+2,0, 0,0, 569
+17,0, 0,0, 2
+2,0, 0,0, 3
+17,1, 0,0, 2
+17,2, 0,0, 2
+17,3, 0,0, 2
+17,4, 0,0, 2
+17,5, 0,0, 2
+17,6, 0,0, 2
+17,7, 0,0, 2
+17,8, 0,0, 2
+17,9, 0,0, 2
+17,10, 0,0, 2
+17,11, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,11, 0,0, 2
+17,10, 0,0, 2
+17,9, 0,0, 2
+2,0, 0,0, 1717
+
+[Begin action 20]
+2,0, 0,0, 1444
+17,0, 0,0, 2
+2,0, 0,0, 4
+17,1, 0,0, 2
+17,2, 0,0, 2
+17,3, 0,0, 2
+17,4, 0,0, 2
+17,5, 0,0, 2
+17,6, 0,0, 2
+17,7, 0,0, 2
+17,8, 0,0, 2
+17,9, 0,0, 2
+17,10, 0,0, 2
+17,11, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,13, 0,0, 2
+17,12, 0,0, 2
+17,11, 0,0, 2
+17,10, 0,0, 2
+17,9, 0,0, 2
+2,0, 0,0, 966
+
+[Begin action 21]
+2,0, 0,0, 799
+17,0, 0,0, 3
+2,0, 0,0, 5
+17,1, 0,0, 3
+17,2, 0,0, 3
+17,3, 0,0, 3
+17,4, 0,0, 3
+17,5, 0,0, 3
+17,6, 0,0, 3
+17,7, 0,0, 3
+17,8, 0,0, 3
+17,9, 0,0, 3
+17,10, 0,0, 3
+17,11, 0,0, 3
+17,12, 0,0, 3
+17,13, 0,0, 3
+17,12, 0,0, 3
+17,12, 0,0, 3
+17,13, 0,0, 3
+17,13, 0,0, 3
+17,12, 0,0, 3
+17,11, 0,0, 3
+17,10, 0,0, 3
+17,9, 0,0, 3
+2,0, 0,0, 2312
+
+[Begin action 16]
+2,0, 0,0, 3521
+16,0, 0,0, 2
+16,1, 0,0, 2
+16,2, 0,0, 2
+16,3, 0,0, 2
+16,4, 0,0, 2
+16,5, 0,0, 2
+16,6, 0,0, 2
+16,7, 0,0, 2
+16,8, 0,0, 2
+16,9, 0,0, 2
+16,10, 0,0, 2
+16,11, 0,0, 2
+16,12, 0,0, 2
+16,13, 0,0, 2
+
+[Begin action 22]
+2,0, 0,0, 31
+16,0, 0,0, 2
+16,1, 0,0, 2
+16,2, 0,0, 2
+16,3, 0,0, 2
+16,4, 0,0, 2
+16,5, 0,0, 2
+16,6, 0,0, 2
+16,7, 0,0, 2
+16,8, 0,0, 2
+16,9, 0,0, 2
+16,10, 0,0, 2
+16,11, 0,0, 2
+16,12, 0,0, 2
+16,13, 0,0, 2
+2,0, 0,0, 2722
+
+[Begin action 23]
+2,0, 0,0, 2121
+16,0, 0,0, 2
+16,1, 0,0, 2
+16,2, 0,0, 2
+16,3, 0,0, 2
+16,4, 0,0, 2
+16,5, 0,0, 2
+16,6, 0,0, 2
+16,7, 0,0, 2
+16,8, 0,0, 2
+16,9, 0,0, 2
+16,10, 0,0, 2
+16,11, 0,0, 2
+16,12, 0,0, 2
+16,13, 0,0, 2
+2,0, 0,0, 22
+
+[Begin action 24]
+2,0, 0,0, 821
+16,0, 0,0, 3
+16,1, 0,0, 3
+16,2, 0,0, 3
+16,3, 0,0, 3
+16,4, 0,0, 3
+16,5, 0,0, 3
+16,6, 0,0, 3
+16,7, 0,0, 3
+16,8, 0,0, 3
+16,9, 0,0, 3
+16,10, 0,0, 3
+16,11, 0,0, 3
+16,12, 0,0, 3
+16,13, 0,0, 3
+2,0, 0,0, 1322
+
+[Begin action 30]
+30,0, 0,0, 90
+30,1, 0,0, 4
+30,2, 0,0, 4
+30,3, 0,0, 4
+30,4, 0,0, 4
+30,5, 0,0, 4
+30,6, 0,0, 4
+30,7, 0,0, 4
+30,8, 0,0, 4
+30,9, 0,0, 4
+30,10, 0,0, 4
+2,0, 0,0, -1
+
+[Begin action 40]
+2,0, 0,0, 60
+40,0, 0,0, 3
+40,1, 0,0, 3
+40,2, 0,0, 3
+40,3, 0,0, 3
+40,4, 0,0, 3
+40,3, 0,0, 3
+40,4, 0,0, 3
+40,3, 0,0, 3
+40,4, 0,0, 3
+40,3, 0,0, 3
+
+40,5, 0,0, 3
+40,6, 0,0, 3
+40,7, 0,0, 3
+40,8, 0,0, 3
+40,9, 0,0, 3
+40,8, 0,0, 3
+40,9, 0,0, 3
+40,8, 0,0, 3
+40,9, 0,0, 3
+40,8, 0,0, 3
+40,7, 0,0, 3
+40,6, 0,0, 3
+40,5, 0,0, 3
+2,0, 0,0, -1

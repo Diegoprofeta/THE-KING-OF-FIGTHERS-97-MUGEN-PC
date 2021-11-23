@@ -1,0 +1,3086 @@
+---------------------------------------------------
+M.U.G.E.N ver 1.1.0 Beta 1 P1 (2013.08.11) status log
+---------------------------------------------------
+Parsing command line...
+Command line: C:\Users\ar851\Documents\Ordenador\_Video Juegos Arcade\KOF Mugen\MUGEN SAGA KOF 94 - 11\KOF 97\The King of Fighters '97 by MadkaT UPDATED\The King of Fighters '97 by MadkaT by JONY Edited MOD\mugen.exe
+Parse command line OK
+Initializing...
+Allocating game variables
+Reading configuration file...Setting language "en".
+OK
+Initializing timer...performance timer enabled...frequency 10000000...OK
+Initializing keyboard...configuring...OK
+Initializing input engine...OK
+Initializing sound...OK
+Initializing BGM...  OK
+Initializing graphics...gameCoord 640x480...render mode 2_20...trying 640x480x32 mode 0x0...success...OK
+Setting callbacks...OK
+Initializing font...OK
+Initializing game variables...OK
+Session RNG seed is 1637677829
+Loading system fonts...OK
+Loading options...
+Initializing pads...failed
+Reinitializing input engine...OK
+Remapping keys...OK
+Reinitializing input engine...OK
+Options loaded OK
+Loading system...
+  Load system file system.def...OK
+  Load system spr...OK
+  Load system snd...OK
+  Load system fonts...OK
+  Load system anim...OK
+  Load [Title Info]...OK
+  Load [Option Info]...OK
+  Load [Select Info]...OK
+  Load [VS Screen]...OK
+  Load [Victory Screen]...Couldn't load
+  Load [Demo Mode]...OK
+  Load [Continue Screen]...OK
+  Load [Game Over Screen]...OK
+  Load [Win Screen]...OK
+  Load [Survival Results Screen]...OK
+  Load [Default Ending]...OK
+  Load [End Credits]...OK
+  Load TitleBG...VersusBG...VictoryBG...Error loading VictoryBG
+SelectBG...OptionBG...OK
+  Loading fight data
+    Opening fight data file data/kof97/fight.def...OK
+    Reading [Files]...OK
+    Loading fonts...OK
+    Load fight anim...OK
+    Reading [Lifebar]...[Turns Lifebar]...[Simul Lifebar]...[Powerbar]...
+    [Face]...[Simul Face]...[Turns Face]...
+    [Name]...[Simul Name]...[Turns Name]...
+    [Time]...[Combo]...[Round]...[WinIcon]...OK
+    Allocating explods...OK
+  Fight data loaded OK
+Lua initing
+Lua init complete
+System loaded OK
+Initialize OK
+Set up graphics...timer...OK
+
+Entering gameflow loop
+Gameflow 0
+Gameflow 1
+Playing storyboard NEOGEO.def: scene
+Unloading match assets
+Freeing players
+Game loop init
+Game loop deinit
+Finished playing storyboard NEOGEO.def: scene
+Gameflow 2
+Initializing character info...OK
+Initializing select screen...finding characters...
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/X/X.def
+
+  Error reading character file: chars/X/X.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/H/H.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/X/X.def
+
+  Error reading character file: chars/X/X.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/H/H.def
+
+  Error reading character file: chars/h/h.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+
+  Error reading character file: chars/x/x.def
+OK
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char Chin_Gentsai.def (14) request pal 4 3F (3F) -> reserved 4 (2F)
+Char benimaru.def (1) request pal 6 FFF (FFF) -> reserved 6 (FBF)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1944317701
+Reset persist vars team 0
+Reset persist vars team 1
+Loading character chars/Chin_Gentsai/Chin_Gentsai.def...
+  Loading info...Info: Chin loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Chin_Gentsai.cmd...OK
+  Loading cns cns/Chin_Gentsai.cns...OK
+  Loading cns cns/Chin_Gentsai.cns...OK
+  Loading cns cns/Chin_Gentsai_N.cns...OK
+  Loading cns cns/Chin_Gentsai_S.cns...OK
+  Loading cns cns/Chin_Gentsai_H.cns...OK
+  Loading cns cns/Chin_Helpers.cns...OK
+  Loading cmd state entry Chin_Gentsai.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff file/Chin_Gentsai.sff...OK
+  Loading anim file/Chin_Gentsai.air...OK
+  Loading snd file/Chin_Gentsai.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  10843 expressions (3015 on trigger lines)
+Character Chin_Gentsai.def loaded OK
+New char Chin Gentsai loaded into cache: (1/4 cached) Load time: 2170.000ms
+Loading character chars/benimaru/benimaru.def...
+  Loading info...Info: BENIMARU loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set benimaru.cmd...OK
+  Loading cns benimaru.cns...OK
+  Loading cns benimarua.cns...OK
+  Loading cns benimarub.cns...OK
+  Loading cns 2001-04.txt...OK
+  Loading cns kyo.cns...OK
+  Loading cns daimon.cns...OK
+  Loading cmd state entry benimaru.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff benimaru.sff...OK
+  Loading anim benimaru.air...OK
+  Loading snd benimaru.snd...SND file loaded with errors: benimaru.snd
+OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  7941 expressions (2774 on trigger lines)
+Character benimaru.def loaded OK
+New char Benimaru Nikaido loaded into cache: (2/4 cached) Load time: 6810.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 30.13s
+Total frames: 1786 	Skipped frames: 80
+Avg game rate: 59.28
+Avg frame rate: 56.62
+
+Finishing match
+Freeing players
+Save persist vars P56 Chin Gentsai
+Player Chin Gentsai cache count reduced: 0
+Save persist vars P57 Benimaru Nikaido
+Player Benimaru Nikaido cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char chris.def (23) request pal 5 FFF (FFF) -> reserved 5 (FDF)
+Char 98-Robert.def (6) request pal 5 1F (1F) -> reserved 0 (1E)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1192506414
+Reset persist vars team 0
+Reset persist vars team 1
+Loading character chars/chris/chris.def...
+  Loading info...Info: Chris loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set chris.cmd...OK
+  Loading cns chris.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry chris.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff chris.sff...OK
+  Loading anim chris.air...OK
+  Loading snd chris.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  9538 expressions (3063 on trigger lines)
+Character chris.def loaded OK
+New char Chris loaded into cache: (3/4 cached) Load time: 3400.000ms
+Loading character chars/98-Robert/98-Robert.def...
+  Loading info...Info: Robert loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Robert.cmd...OK
+  Loading cns Robert.cns...OK
+  Loading cns Robert-N.cns...OK
+  Loading cns Robert-S.cns...OK
+  Loading cns Robert-H.cns...OK
+  Loading cns Robert-2-3.cns...OK
+  Loading cmd state entry Robert.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Robert.sff...OK
+  Loading anim Robert.air...OK
+  Loading snd Robert.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)OK
+  SFF v1.01 palette hack engaged.
+  6111 expressions (2048 on trigger lines)
+Character 98-Robert.def loaded OK
+New char 98-Robert loaded into cache: (4/4 cached) Load time: 1960.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.31s
+Total frames: 1742 	Skipped frames: 80
+Avg game rate: 59.43
+Avg frame rate: 56.70
+
+Finishing match
+Freeing players
+Save persist vars P56 Chris
+Player Chris cache count reduced: 0
+Save persist vars P57 98-Robert
+Player 98-Robert cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char Iori-98.def (27) request pal 0 3F (3F) -> reserved 0 (3E)
+Char Kyo-98.def (0) request pal 5 FFF (FFF) -> reserved 5 (FDF)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1893027586
+Reset persist vars team 0
+Reset persist vars team 1
+Player Chin Gentsai purged from cache: 0
+Freeing player RC Chin Gentsai...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Iori-98/Iori-98.def...
+  Loading info...Info: Iori loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Iori-98.cmd...OK
+  Loading cns Iori-98.cns...OK
+  Loading cns Iori-98-N.cns...OK
+  Loading cns Iori-98-S.cns...OK
+  Loading cns Iori-98-H.cns...OK
+  Loading cns Iori-98-2-3.cns...OK
+  Loading cmd state entry Iori-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Iori-98.sff...OK
+  Loading anim Iori-98.air...OK
+  Loading snd Iori-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  7292 expressions (2868 on trigger lines)
+Character Iori-98.def loaded OK
+New char Iori-98 loaded into cache: (4/4 cached) Load time: 1640.000ms
+Player Benimaru Nikaido purged from cache: 1
+Freeing player RC Benimaru Nikaido...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Kyo-98/Kyo-98.def...
+  Loading info...Info: Kyo loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Kyo-98.cmd...OK
+  Loading cns Kyo-98.cns...OK
+  Loading cns Kyo-98-N.cns...OK
+  Loading cns Kyo-98-S.cns...OK
+  Loading cns Kyo-98-H.cns...OK
+  Loading cns Kyo-98-2-3.cns...OK
+  Loading cmd state entry Kyo-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Kyo-98.sff...OK
+  Loading anim Kyo-98.air...OK
+  Loading snd Kyo-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  8341 expressions (2892 on trigger lines)
+Character Kyo-98.def loaded OK
+New char Kyo-98 loaded into cache: (4/4 cached) Load time: 1290.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 34.61s
+Total frames: 1971 	Skipped frames: 74
+Avg game rate: 56.95
+Avg frame rate: 54.81
+
+Finishing match
+Freeing players
+Save persist vars P56 Iori-98
+Player Iori-98 cache count reduced: 0
+Save persist vars P57 Kyo-98
+Player Kyo-98 cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char 98Mary.def (25) request pal 10 3F (3F) -> reserved 4 (2F)
+Char Orochi_Leona.def (34) request pal 5 3F (3F) -> reserved 5 (1F)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1520912108
+Reset persist vars team 0
+Reset persist vars team 1
+Player Chris purged from cache: 2
+Freeing player RC Chris...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98Mary/98Mary.def...
+  Loading info...Info: BLUE MARY loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Mary.cmd...OK
+  Loading cns 01_Main.cns...OK
+  Loading cns 02_Attacks.cns...OK
+  Loading cns 03_Specials.cns...OK
+  Loading cns 04_DMs.cns...OK
+  Loading cns 05_Others.cns...OK
+  Loading cmd state entry Mary.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Mary.sff...OK
+  Loading anim Mary.air...OK
+  Loading snd Mary.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  8622 expressions (3031 on trigger lines)
+Character 98Mary.def loaded OK
+New char Blue Mary Ryan loaded into cache: (4/4 cached) Load time: 6460.000ms
+Player 98-Robert purged from cache: 3
+Freeing player RC 98-Robert...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Orochi_Leona/Orochi_Leona.def...
+  Loading info...Info: Leona loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Orochi_Leona.cmd...OK
+  Loading cns Orochi_Leona.cns...OK
+  Loading cns Orochi_Leona2.cns...OK
+  Loading cns helper.cns...OK
+  Loading cns ai.txt...OK
+  Loading cmd state entry Orochi_Leona.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Orochi_Leona.sff...OK
+  Loading anim Orochi_Leona.air...OK
+  Loading snd Orochi_Leona.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  8492 expressions (3276 on trigger lines)
+Character Orochi_Leona.def loaded OK
+New char Orochi Leona loaded into cache: (4/4 cached) Load time: 3950.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 30.78s
+Total frames: 1816 	Skipped frames: 58
+Avg game rate: 59.00
+Avg frame rate: 57.12
+
+Finishing match
+Freeing players
+Save persist vars P56 Blue Mary Ryan
+Player Blue Mary Ryan cache count reduced: 0
+Save persist vars P57 Orochi Leona
+Player Orochi Leona cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char 98-Kim.def (18) request pal 5 1F (1F) -> reserved 0 (1E)
+Char Athena_98.def (12) request pal 4 3F (3F) -> reserved 4 (2F)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 913242086
+Reset persist vars team 0
+Reset persist vars team 1
+Player Iori-98 purged from cache: 4
+Freeing player RC Iori-98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98-Kim/98-Kim.def...
+  Loading info...Info: Kim loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Kim.cmd...OK
+  Loading cns Kim.cns...OK
+  Loading cns Kim-N.cns...OK
+  Loading cns Kim-S.cns...OK
+  Loading cns Kim-H.cns...OK
+  Loading cns Kim-2-3.cns...OK
+  Loading cmd state entry Kim.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Kim.sff...OK
+  Loading anim Kim.air...OK
+  Loading snd Kim.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)OK
+  SFF v1.01 palette hack engaged.
+  6959 expressions (2296 on trigger lines)
+Character 98-Kim.def loaded OK
+New char 98-Kim loaded into cache: (4/4 cached) Load time: 1410.000ms
+Player Kyo-98 purged from cache: 5
+Freeing player RC Kyo-98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Athena_98/Athena_98.def...
+  Loading info...Info: Athena loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Athena-98.cmd...OK
+  Loading cns Athena-98.cns...OK
+  Loading cns Athena-98-N.cns...OK
+  Loading cns Athena-98-S.cns...OK
+  Loading cns Athena-98-H.cns...OK
+  Loading cns Athena-98-2-3.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry Athena-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Athena-98.sff...OK
+  Loading anim Athena-98.air...OK
+  Loading snd Athena-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  8543 expressions (3341 on trigger lines)
+Character Athena_98.def loaded OK
+New char Athena 98 loaded into cache: (4/4 cached) Load time: 1750.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 28.69s
+Total frames: 1722 	Skipped frames: 55
+Avg game rate: 60.02
+Avg frame rate: 58.10
+
+Finishing match
+Freeing players
+Save persist vars P56 98-Kim
+Player 98-Kim cache count reduced: 0
+Save persist vars P57 Athena 98
+Player Athena 98 cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char yashiro.def (21) request pal 8 7FF (7FF) -> reserved 8 (6FF)
+Char Iori-98.def (27) request pal 8 3F (3E) -> reserved 2 (3A)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1830018400
+Reset persist vars team 0
+Reset persist vars team 1
+Player Blue Mary Ryan purged from cache: 6
+Freeing player RC Blue Mary Ryan...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/yashiro/yashiro.def...
+  Loading info...Info: Yashiro loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set yashiro.cmd...OK
+  Loading cns yashiro.cns...OK
+  Loading cns yashiro1.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry yashiro.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff yashiroF.sff...OK
+  Loading anim yashiro.air...OK
+  Loading snd yashiro.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)OK
+  SFF v1.01 palette hack engaged.
+  10286 expressions (4018 on trigger lines)
+Character yashiro.def loaded OK
+New char Yashiro Nanakase loaded into cache: (4/4 cached) Load time: 1810.000ms
+Player Orochi Leona purged from cache: 7
+Freeing player RC Orochi Leona...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Iori-98/Iori-98.def...
+  Loading info...Info: Iori loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Iori-98.cmd...OK
+  Loading cns Iori-98.cns...OK
+  Loading cns Iori-98-N.cns...OK
+  Loading cns Iori-98-S.cns...OK
+  Loading cns Iori-98-H.cns...OK
+  Loading cns Iori-98-2-3.cns...OK
+  Loading cmd state entry Iori-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Iori-98.sff...OK
+  Loading anim Iori-98.air...OK
+  Loading snd Iori-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  7292 expressions (2868 on trigger lines)
+Character Iori-98.def loaded OK
+New char Iori-98 loaded into cache: (4/4 cached) Load time: 1080.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.54s
+Total frames: 1765 	Skipped frames: 55
+Avg game rate: 59.75
+Avg frame rate: 57.89
+
+Finishing match
+Freeing players
+Save persist vars P56 Yashiro Nanakase
+Player Yashiro Nanakase cache count reduced: 0
+Save persist vars P57 Iori-98
+Player Iori-98 cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char Chin_Gentsai.def (14) request pal 11 3F (2F) -> reserved 5 (F)
+Char 98Choi.def (20) request pal 2 3F (3F) -> reserved 2 (3B)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1310984196
+Reset persist vars team 0
+Reset persist vars team 1
+Player 98-Kim purged from cache: 8
+Freeing player RC 98-Kim...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Chin_Gentsai/Chin_Gentsai.def...
+  Loading info...Info: Chin loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Chin_Gentsai.cmd...OK
+  Loading cns cns/Chin_Gentsai.cns...OK
+  Loading cns cns/Chin_Gentsai.cns...OK
+  Loading cns cns/Chin_Gentsai_N.cns...OK
+  Loading cns cns/Chin_Gentsai_S.cns...OK
+  Loading cns cns/Chin_Gentsai_H.cns...OK
+  Loading cns cns/Chin_Helpers.cns...OK
+  Loading cmd state entry Chin_Gentsai.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff file/Chin_Gentsai.sff...OK
+  Loading anim file/Chin_Gentsai.air...OK
+  Loading snd file/Chin_Gentsai.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  10843 expressions (3015 on trigger lines)
+Character Chin_Gentsai.def loaded OK
+New char Chin Gentsai loaded into cache: (4/4 cached) Load time: 2630.000ms
+Player Athena 98 purged from cache: 9
+Freeing player RC Athena 98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98Choi/98Choi.def...
+  Loading info...Info: CHOI loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set choi.cmd...OK
+  Loading cns choi.cns...OK
+  Loading cmd state entry choi.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff choi.sff...OK
+  Loading anim choi.air...OK
+  Loading snd choi.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  7131 expressions (2333 on trigger lines)
+Character 98Choi.def loaded OK
+New char Choi Bounge loaded into cache: (4/4 cached) Load time: 1780.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 32.53s
+Total frames: 1945 	Skipped frames: 77
+Avg game rate: 59.79
+Avg frame rate: 57.42
+
+Finishing match
+Freeing players
+Save persist vars P56 Chin Gentsai
+Player Chin Gentsai cache count reduced: 0
+Save persist vars P57 Choi Bounge
+Player Choi Bounge cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char Orochi-Iori-97.def (30) request pal 4 3F (3F) -> reserved 4 (2F)
+Char ralf98.def (10) request pal 7 FFF (FFF) -> reserved 7 (F7F)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1344725337
+Reset persist vars team 0
+Reset persist vars team 1
+Player Yashiro Nanakase purged from cache: 10
+Freeing player RC Yashiro Nanakase...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Orochi-Iori-97/Orochi-Iori-97.def...
+  Loading info...OK
+  Loading cmd command set Cmd-Air\Orochi-Iori-97.cmd...OK
+  Loading cns Cns\Orochi-Iori-97.cns...OK
+  Loading cns Cns\Orochi-Iori-97-N.cns...OK
+  Loading cns Cns\Orochi-Iori-97-S.cns...OK
+  Loading cns Cns\Orochi-Iori-97-H.cns...OK
+  Loading cns Cns\Orochi-Iori-97-2.cns...OK
+  Loading cns Cns\Orochi-Iori-97-3_AI.cns...OK
+  Loading cmd state entry Cmd-Air\Orochi-Iori-97.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Sff-Snd\Orochi-Iori-97.sff...OK
+  Loading anim Cmd-Air\Orochi-Iori-97.air...OK
+  Loading snd Sff-Snd\Orochi-Iori-97.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  15089 expressions (6952 on trigger lines)
+Character Orochi-Iori-97.def loaded OK
+New char Iori Orochi loaded into cache: (4/4 cached) Load time: 3190.000ms
+Player Iori-98 purged from cache: 11
+Freeing player RC Iori-98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/ralf98/ralf98.def...
+  Loading info...Info: Ralf Jones loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set ralf98.cmd...OK
+  Loading cns ralf98.cns...OK
+  Loading cns ralf98_02.cns...OK
+  Loading cmd state entry ralf98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff ralf98.sff...OK
+  Loading anim ralf98.air...OK
+  Loading snd ralf98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  5153 expressions (1655 on trigger lines)
+Character ralf98.def loaded OK
+New char Ralf Jones loaded into cache: (4/4 cached) Load time: 2340.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.35s
+Total frames: 1762 	Skipped frames: 58
+Avg game rate: 60.03
+Avg frame rate: 58.06
+
+Finishing match
+Freeing players
+Save persist vars P56 Iori Orochi
+Player Iori Orochi cache count reduced: 0
+Save persist vars P57 Ralf Jones
+Player Ralf Jones cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char 98Andy.def (4) request pal 8 3F (3F) -> reserved 2 (3B)
+Char chris2.def (33) request pal 8 FFF (FFF) -> reserved 8 (EFF)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 870435038
+Reset persist vars team 0
+Reset persist vars team 1
+Player Chin Gentsai purged from cache: 12
+Freeing player RC Chin Gentsai...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98Andy/98Andy.def...
+  Loading info...Info: ANDY loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set andy.cmd...OK
+  Loading cns 01_Main.cns...OK
+  Loading cns 02_attacks.cns...OK
+  Loading cns 03_specials.cns...OK
+  Loading cns 04_DMs.cns...OK
+  Loading cns 05_others.cns...OK
+  Loading cns 06_winner.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry andy.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff andy.sff...OK
+  Loading anim andy.air...OK
+  Loading snd andy.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  7977 expressions (2769 on trigger lines)
+Character 98Andy.def loaded OK
+New char Andy Bogard loaded into cache: (4/4 cached) Load time: 2380.000ms
+Player Choi Bounge purged from cache: 13
+Freeing player RC Choi Bounge...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/chris2/chris2.def...
+  Loading info...Info: Chris loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set chris.cmd...OK
+  Loading cns chris.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry chris.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff chris.sff...OK
+  Loading anim chris.air...OK
+  Loading snd chris.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  9822 expressions (3260 on trigger lines)
+Character chris2.def loaded OK
+New char Chris loaded into cache: (4/4 cached) Load time: 1940.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.15s
+Total frames: 1750 	Skipped frames: 39
+Avg game rate: 60.03
+Avg frame rate: 58.70
+
+Finishing match
+Freeing players
+Save persist vars P56 Andy Bogard
+Player Andy Bogard cache count reduced: 0
+Save persist vars P57 Chris
+Player Chris cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char 98Choi.def (20) request pal 4 3F (3B) -> reserved 4 (2B)
+Char Leona98.def (9) request pal 2 3F (3F) -> reserved 2 (3B)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 972769756
+Reset persist vars team 0
+Reset persist vars team 1
+Player Iori Orochi purged from cache: 14
+Freeing player RC Iori Orochi...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98Choi/98Choi.def...
+  Loading info...Info: CHOI loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set choi.cmd...OK
+  Loading cns choi.cns...OK
+  Loading cmd state entry choi.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff choi.sff...OK
+  Loading anim choi.air...OK
+  Loading snd choi.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  7131 expressions (2333 on trigger lines)
+Character 98Choi.def loaded OK
+New char Choi Bounge loaded into cache: (4/4 cached) Load time: 890.000ms
+Player Ralf Jones purged from cache: 15
+Freeing player RC Ralf Jones...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Leona98/Leona98.def...
+  Loading info...Info: Leona loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set 98Leona.cmd...OK
+  Loading cns 98Leona.cns...OK
+  Loading cns 98Leona-N.cns...OK
+  Loading cns 98Leona-S.cns...OK
+  Loading cns 98Leona-H.cns...OK
+  Loading cns 98Miscellaneous.cns...OK
+  Loading cns Ai.txt...OK
+  Loading cmd state entry 98Leona.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Leona98.sff...OK
+  Loading anim 98Leona.air...OK
+  Loading snd 98Leona.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  6061 expressions (2367 on trigger lines)
+Character Leona98.def loaded OK
+New char Leona loaded into cache: (4/4 cached) Load time: 2820.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 32.68s
+Total frames: 1945 	Skipped frames: 74
+Avg game rate: 59.52
+Avg frame rate: 57.25
+
+Finishing match
+Freeing players
+Save persist vars P56 Choi Bounge
+Player Choi Bounge cache count reduced: 0
+Save persist vars P57 Leona
+Player Leona cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char ryuji98.def (24) request pal 4 FF (FF) -> reserved 4 (EF)
+Char cciking.def (17) request pal 2 3F (3F) -> reserved 2 (3B)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 84558883
+Reset persist vars team 0
+Reset persist vars team 1
+Player Andy Bogard purged from cache: 16
+Freeing player RC Andy Bogard...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/ryuji98/ryuji98.def...
+  Loading info...Info: Yamazaki 71113 loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set ryuji.cmd...OK
+  Loading cns ryuji.cns...OK
+  Loading cns rspecials.cns...OK
+  Loading cns rdustknife.cns...OK
+  Loading cns reversal.cns...OK
+  Loading cns rdm1.cns...OK
+  Loading cns rdm2.cns...OK
+  Loading cns rhits.cns...OK
+  Loading cns rSDM2.cns...OK
+  Loading cmd state entry ryuji.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff ryuji.sff...OK
+  Loading anim ryuji.air...OK
+  Loading snd yamazaki.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)OK
+  SFF v1.01 palette hack engaged.
+  12338 expressions (4198 on trigger lines)
+Character ryuji98.def loaded OK
+New char Ryuji Yamazaki loaded into cache: (4/4 cached) Load time: 2720.000ms
+Player Chris purged from cache: 17
+Freeing player RC Chris...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/cciking/cciking.def...
+  Loading info...Info: King loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set coding/king.cmd...OK
+  Loading cns coding/king.cns...OK
+  Loading cns coding/attacks.cns...OK
+  Loading cns coding/specials.cns...OK
+  Loading cns coding/hypers.cns...OK
+  Loading cns coding/misc.cns...OK
+  Loading cmd state entry coding/king.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff files/king.sff...OK
+  Loading anim coding/king.air...OK
+  Loading snd files/king.snd...OK
+  Loading pals...(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  6049 expressions (2125 on trigger lines)
+Character cciking.def loaded OK
+New char King loaded into cache: (4/4 cached) Load time: 1510.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 31.78s
+Total frames: 1902 	Skipped frames: 50
+Avg game rate: 59.85
+Avg frame rate: 58.28
+
+Finishing match
+Freeing players
+Save persist vars P56 Ryuji Yamazaki
+Player Ryuji Yamazaki cache count reduced: 0
+Save persist vars P57 King
+Player King cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char shermie2.def (32) request pal 10 FFF (FFF) -> reserved 10 (BFF)
+Char Chin_Gentsai.def (14) request pal 2 3F (F) -> reserved 2 (B)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 2146480784
+Reset persist vars team 0
+Reset persist vars team 1
+Player Choi Bounge purged from cache: 18
+Freeing player RC Choi Bounge...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/shermie2/shermie2.def...
+  Loading info...Info: Shermie loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set shermie.cmd...OK
+  Loading cns shermie.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry shermie.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff shermie.sff...OK
+  Loading anim shermie.air...OK
+  Loading snd shermie.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  7060 expressions (2689 on trigger lines)
+Character shermie2.def loaded OK
+New char Shermie loaded into cache: (4/4 cached) Load time: 1880.000ms
+Player Leona purged from cache: 19
+Freeing player RC Leona...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Chin_Gentsai/Chin_Gentsai.def...
+  Loading info...Info: Chin loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Chin_Gentsai.cmd...OK
+  Loading cns cns/Chin_Gentsai.cns...OK
+  Loading cns cns/Chin_Gentsai.cns...OK
+  Loading cns cns/Chin_Gentsai_N.cns...OK
+  Loading cns cns/Chin_Gentsai_S.cns...OK
+  Loading cns cns/Chin_Gentsai_H.cns...OK
+  Loading cns cns/Chin_Helpers.cns...OK
+  Loading cmd state entry Chin_Gentsai.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff file/Chin_Gentsai.sff...OK
+  Loading anim file/Chin_Gentsai.air...OK
+  Loading snd file/Chin_Gentsai.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  10843 expressions (3015 on trigger lines)
+Character Chin_Gentsai.def loaded OK
+New char Chin Gentsai loaded into cache: (4/4 cached) Load time: 1690.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 31.69s
+Total frames: 1900 	Skipped frames: 58
+Avg game rate: 59.96
+Avg frame rate: 58.13
+
+Finishing match
+Freeing players
+Save persist vars P56 Shermie
+Player Shermie cache count reduced: 0
+Save persist vars P57 Chin Gentsai
+Player Chin Gentsai cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char Yuri2.def (8) request pal 5 3F (3F) -> reserved 5 (1F)
+Char chris.def (23) request pal 4 FFF (FDF) -> reserved 4 (FCF)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1534510782
+Reset persist vars team 0
+Reset persist vars team 1
+Player Ryuji Yamazaki purged from cache: 20
+Freeing player RC Ryuji Yamazaki...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Yuri2/Yuri2.def...
+  Loading info...Info: Yuri loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set yuri.cmd...OK
+  Loading cns yuri.cns...OK
+  Loading cns st/2.st...OK
+  Loading cns st/3.st...OK
+  Loading cns st/4.st...OK
+  Loading cns st/5.st...OK
+  Loading cns st/6.st...OK
+  Loading cmd state entry yuri.cmd...OK
+  Loading common states st/0.st...OK
+  Loading sff media/yuri.sff...OK
+  Loading anim media/yuri.air...OK
+  Loading snd media/yuri.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  6938 expressions (2107 on trigger lines)
+Character Yuri2.def loaded OK
+New char Yuri Sakazaki loaded into cache: (4/4 cached) Load time: 2930.000ms
+Player King purged from cache: 21
+Freeing player RC King...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/chris/chris.def...
+  Loading info...Info: Chris loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set chris.cmd...OK
+  Loading cns chris.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry chris.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff chris.sff...OK
+  Loading anim chris.air...OK
+  Loading snd chris.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  9538 expressions (3063 on trigger lines)
+Character chris.def loaded OK
+New char Chris loaded into cache: (4/4 cached) Load time: 2000.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.05s
+Total frames: 1742 	Skipped frames: 68
+Avg game rate: 59.97
+Avg frame rate: 57.62
+
+Finishing match
+Freeing players
+Save persist vars P56 Yuri Sakazaki
+Player Yuri Sakazaki cache count reduced: 0
+Save persist vars P57 Chris
+Player Chris cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char ryuji98.def (24) request pal 7 FF (EF) -> reserved 7 (6F)
+Char 98Ryo.def (7) request pal 2 3F (3F) -> reserved 2 (3B)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 41752329
+Reset persist vars team 0
+Reset persist vars team 1
+Player Shermie purged from cache: 22
+Freeing player RC Shermie...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/ryuji98/ryuji98.def...
+  Loading info...Info: Yamazaki 71113 loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set ryuji.cmd...OK
+  Loading cns ryuji.cns...OK
+  Loading cns rspecials.cns...OK
+  Loading cns rdustknife.cns...OK
+  Loading cns reversal.cns...OK
+  Loading cns rdm1.cns...OK
+  Loading cns rdm2.cns...OK
+  Loading cns rhits.cns...OK
+  Loading cns rSDM2.cns...OK
+  Loading cmd state entry ryuji.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff ryuji.sff...OK
+  Loading anim ryuji.air...OK
+  Loading snd yamazaki.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)OK
+  SFF v1.01 palette hack engaged.
+  12338 expressions (4198 on trigger lines)
+Character ryuji98.def loaded OK
+New char Ryuji Yamazaki loaded into cache: (4/4 cached) Load time: 1560.000ms
+Player Chin Gentsai purged from cache: 23
+Freeing player RC Chin Gentsai...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98Ryo/98Ryo.def...
+  Loading info...Info: Ryo loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set 98Ryo.cmd...OK
+  Loading cns 01_Main.cns...OK
+  Loading cns 02_Attacks.cns...OK
+  Loading cns 03_Specials.cns...OK
+  Loading cns 04_DMs.cns...OK
+  Loading cns 05_Others.cns...OK
+  Loading cmd state entry 98Ryo.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff 98Ryo.sff...OK
+  Loading anim 98Ryo.air...OK
+  Loading snd 98Ryo.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  6397 expressions (2321 on trigger lines)
+Character 98Ryo.def loaded OK
+New char Ryo Sakazaki loaded into cache: (4/4 cached) Load time: 3040.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.45s
+Total frames: 1745 	Skipped frames: 62
+Avg game rate: 59.25
+Avg frame rate: 57.15
+
+Finishing match
+Freeing players
+Save persist vars P56 Ryuji Yamazaki
+Player Ryuji Yamazaki cache count reduced: 0
+Save persist vars P57 Ryo Sakazaki
+Player Ryo Sakazaki cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char ryuji98.def (24) request pal 4 FF (6F) -> reserved 5 (4F)
+Char Daimon.def (2) request pal 2 1FF (1FF) -> reserved 2 (1FB)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1645366632
+Reset persist vars team 0
+Reset persist vars team 1
+Player Ryuji Yamazaki cache count increased: 1
+Player Yuri Sakazaki purged from cache: 24
+Freeing player RC Yuri Sakazaki...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Daimon/Daimon.def...
+  Loading info...Info: DAIMON loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set daimon.cmd...OK
+  Loading cns daimon.cns...OK
+  Loading cns daimona.cns...OK
+  Loading cns daimonb.cns...OK
+  Loading cns daimonc.cns...OK
+  Loading cns kyo.cns...OK
+  Loading cns benimaru.cns...OK
+  Loading cmd state entry daimon.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff daimon.sff...OK
+  Loading anim daimon.air...OK
+  Loading snd daimon.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)OK
+  10136 expressions (3708 on trigger lines)
+Character Daimon.def loaded OK
+New char Goro Daimon loaded into cache: (4/4 cached) Load time: 34850.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.68s
+Total frames: 1782 	Skipped frames: 3
+Avg game rate: 60.04
+Avg frame rate: 59.94
+
+Finishing match
+Freeing players
+Save persist vars P56 Ryuji Yamazaki
+Player Ryuji Yamazaki cache count reduced: 0
+Save persist vars P57 Goro Daimon
+Player Goro Daimon cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char Terry-98.def (3) request pal 2 FFF (FFF) -> reserved 2 (FFB)
+Char shermie2.def (32) request pal 0 FFF (BFF) -> reserved 0 (BFE)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1578725347
+Reset persist vars team 0
+Reset persist vars team 1
+Player Chris purged from cache: 25
+Freeing player RC Chris...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Terry-98/Terry-98.def...
+  Loading info...Info: Terry Bogard loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Terry-98.cmd...OK
+  Loading cns Terry-98.cns...OK
+  Loading cns Terry-98-N.cns...OK
+  Loading cns Terry-98-S.cns...OK
+  Loading cns Terry-98-H.cns...OK
+  Loading cns Terry-98-2-3.cns...OK
+  Loading cmd state entry Terry-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Terry-98.sff...OK
+  Loading anim Terry-98.air...OK
+  Loading snd Terry-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  5710 expressions (1917 on trigger lines)
+Character Terry-98.def loaded OK
+New char Terry-98 loaded into cache: (4/4 cached) Load time: 1480.000ms
+Player Ryo Sakazaki purged from cache: 27
+Freeing player RC Ryo Sakazaki...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/shermie2/shermie2.def...
+  Loading info...Info: Shermie loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set shermie.cmd...OK
+  Loading cns shermie.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry shermie.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff shermie.sff...OK
+  Loading anim shermie.air...OK
+  Loading snd shermie.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  7060 expressions (2689 on trigger lines)
+Character shermie2.def loaded OK
+New char Shermie loaded into cache: (4/4 cached) Load time: 1150.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 28.91s
+Total frames: 1736 	Skipped frames: 0
+Avg game rate: 60.05
+Avg frame rate: 60.05
+
+Finishing match
+Freeing players
+Save persist vars P56 Terry-98
+Player Terry-98 cache count reduced: 0
+Save persist vars P57 Shermie
+Player Shermie cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char 98Ryo.def (7) request pal 6 3F (3B) -> reserved 0 (3A)
+Char Iori-98.def (27) request pal 4 3F (3A) -> reserved 4 (2A)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 420247314
+Reset persist vars team 0
+Reset persist vars team 1
+Player Ryuji Yamazaki purged from cache: 28
+Freeing player RC Ryuji Yamazaki...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98Ryo/98Ryo.def...
+  Loading info...Info: Ryo loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set 98Ryo.cmd...OK
+  Loading cns 01_Main.cns...OK
+  Loading cns 02_Attacks.cns...OK
+  Loading cns 03_Specials.cns...OK
+  Loading cns 04_DMs.cns...OK
+  Loading cns 05_Others.cns...OK
+  Loading cmd state entry 98Ryo.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff 98Ryo.sff...OK
+  Loading anim 98Ryo.air...OK
+  Loading snd 98Ryo.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  6397 expressions (2321 on trigger lines)
+Character 98Ryo.def loaded OK
+New char Ryo Sakazaki loaded into cache: (4/4 cached) Load time: 1340.000ms
+Player Goro Daimon purged from cache: 29
+Freeing player RC Goro Daimon...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Iori-98/Iori-98.def...
+  Loading info...Info: Iori loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Iori-98.cmd...OK
+  Loading cns Iori-98.cns...OK
+  Loading cns Iori-98-N.cns...OK
+  Loading cns Iori-98-S.cns...OK
+  Loading cns Iori-98-H.cns...OK
+  Loading cns Iori-98-2-3.cns...OK
+  Loading cmd state entry Iori-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Iori-98.sff...OK
+  Loading anim Iori-98.air...OK
+  Loading snd Iori-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  7292 expressions (2868 on trigger lines)
+Character Iori-98.def loaded OK
+New char Iori-98 loaded into cache: (4/4 cached) Load time: 920.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.06s
+Total frames: 1745 	Skipped frames: 0
+Avg game rate: 60.05
+Avg frame rate: 60.05
+
+Finishing match
+Freeing players
+Save persist vars P56 Ryo Sakazaki
+Player Ryo Sakazaki cache count reduced: 0
+Save persist vars P57 Iori-98
+Player Iori-98 cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char Yuri2.def (8) request pal 11 3F (1F) -> reserved 0 (1E)
+Char Athena_98.def (12) request pal 3 3F (2F) -> reserved 3 (27)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1526960314
+Reset persist vars team 0
+Reset persist vars team 1
+Player Terry-98 purged from cache: 30
+Freeing player RC Terry-98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Yuri2/Yuri2.def...
+  Loading info...Info: Yuri loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set yuri.cmd...OK
+  Loading cns yuri.cns...OK
+  Loading cns st/2.st...OK
+  Loading cns st/3.st...OK
+  Loading cns st/4.st...OK
+  Loading cns st/5.st...OK
+  Loading cns st/6.st...OK
+  Loading cmd state entry yuri.cmd...OK
+  Loading common states st/0.st...OK
+  Loading sff media/yuri.sff...OK
+  Loading anim media/yuri.air...OK
+  Loading snd media/yuri.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  6938 expressions (2107 on trigger lines)
+Character Yuri2.def loaded OK
+New char Yuri Sakazaki loaded into cache: (4/4 cached) Load time: 1440.000ms
+Player Shermie purged from cache: 31
+Freeing player RC Shermie...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Athena_98/Athena_98.def...
+  Loading info...Info: Athena loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Athena-98.cmd...OK
+  Loading cns Athena-98.cns...OK
+  Loading cns Athena-98-N.cns...OK
+  Loading cns Athena-98-S.cns...OK
+  Loading cns Athena-98-H.cns...OK
+  Loading cns Athena-98-2-3.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry Athena-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Athena-98.sff...OK
+  Loading anim Athena-98.air...OK
+  Loading snd Athena-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  8543 expressions (3341 on trigger lines)
+Character Athena_98.def loaded OK
+New char Athena 98 loaded into cache: (4/4 cached) Load time: 800.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.52s
+Total frames: 1772 	Skipped frames: 0
+Avg game rate: 60.03
+Avg frame rate: 60.03
+
+Finishing match
+Freeing players
+Save persist vars P56 Yuri Sakazaki
+Player Yuri Sakazaki cache count reduced: 0
+Save persist vars P57 Athena 98
+Player Athena 98 cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char 98-Robert.def (6) request pal 3 1F (1E) -> reserved 3 (16)
+Char 98Mai.def (16) request pal 2 3F (3F) -> reserved 2 (3B)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1481261548
+Reset persist vars team 0
+Reset persist vars team 1
+Player Ryo Sakazaki purged from cache: 32
+Freeing player RC Ryo Sakazaki...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98-Robert/98-Robert.def...
+  Loading info...Info: Robert loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Robert.cmd...OK
+  Loading cns Robert.cns...OK
+  Loading cns Robert-N.cns...OK
+  Loading cns Robert-S.cns...OK
+  Loading cns Robert-H.cns...OK
+  Loading cns Robert-2-3.cns...OK
+  Loading cmd state entry Robert.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Robert.sff...OK
+  Loading anim Robert.air...OK
+  Loading snd Robert.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)OK
+  SFF v1.01 palette hack engaged.
+  6111 expressions (2048 on trigger lines)
+Character 98-Robert.def loaded OK
+New char 98-Robert loaded into cache: (4/4 cached) Load time: 810.000ms
+Player Iori-98 purged from cache: 33
+Freeing player RC Iori-98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98Mai/98Mai.def...
+  Loading info...Info: MAI loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set 98Mai.cmd...OK
+  Loading cns 01_Main.cns...OK
+  Loading cns 02_Attacks.cns...OK
+  Loading cns 03_Specials.cns...OK
+  Loading cns 04_DMs.cns...OK
+  Loading cns 05_Others.cns...OK
+  Loading cmd state entry 98Mai.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff 98Mai.sff...OK
+  Loading anim 98Mai.air...OK
+  Loading snd 98Mai.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  7616 expressions (2277 on trigger lines)
+Character 98Mai.def loaded OK
+New char Mai Shiranui loaded into cache: (4/4 cached) Load time: 2070.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 28.89s
+Total frames: 1734 	Skipped frames: 0
+Avg game rate: 60.02
+Avg frame rate: 60.02
+
+Finishing match
+Freeing players
+Save persist vars P56 98-Robert
+Player 98-Robert cache count reduced: 0
+Save persist vars P57 Mai Shiranui
+Player Mai Shiranui cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char Kyo-98.def (0) request pal 6 FFF (FDF) -> reserved 6 (F9F)
+Char chizuru98.def (15) request pal 1 7F (7F) -> reserved 1 (7D)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 150771304
+Reset persist vars team 0
+Reset persist vars team 1
+Player Yuri Sakazaki purged from cache: 34
+Freeing player RC Yuri Sakazaki...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Kyo-98/Kyo-98.def...
+  Loading info...Info: Kyo loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Kyo-98.cmd...OK
+  Loading cns Kyo-98.cns...OK
+  Loading cns Kyo-98-N.cns...OK
+  Loading cns Kyo-98-S.cns...OK
+  Loading cns Kyo-98-H.cns...OK
+  Loading cns Kyo-98-2-3.cns...OK
+  Loading cmd state entry Kyo-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Kyo-98.sff...OK
+  Loading anim Kyo-98.air...OK
+  Loading snd Kyo-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  8341 expressions (2892 on trigger lines)
+Character Kyo-98.def loaded OK
+New char Kyo-98 loaded into cache: (4/4 cached) Load time: 880.000ms
+Player Athena 98 purged from cache: 35
+Freeing player RC Athena 98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/chizuru98/chizuru98.def...
+  Loading info...Info: Chizuru loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set kagura.cmd...OK
+  Loading cns kagura.cns...OK
+  Loading cns specials1.cns...OK
+  Loading cns specials2.cns...OK
+  Loading cns supers1.cns...OK
+  Loading cns supers2.cns...OK
+  Loading cns mai.cns...OK
+  Loading cns king.cns...OK
+  Loading cmd state entry kagura.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff kagura.sff...OK
+  Loading anim kagura.air...OK
+  Loading snd kagura.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)OK
+  SFF v1.01 palette hack engaged.
+  7618 expressions (3083 on trigger lines)
+Character chizuru98.def loaded OK
+New char Chizuru Kagura loaded into cache: (4/4 cached) Load time: 960.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.30s
+Total frames: 1759 	Skipped frames: 0
+Avg game rate: 60.03
+Avg frame rate: 60.03
+
+Finishing match
+Freeing players
+Save persist vars P56 Kyo-98
+Player Kyo-98 cache count reduced: 0
+Save persist vars P57 Chizuru Kagura
+Player Chizuru Kagura cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char 98-Kim.def (18) request pal 10 1F (1E) -> reserved 4 (E)
+Char Terry-98.def (3) request pal 0 FFF (FFB) -> reserved 0 (FFA)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1774908050
+Reset persist vars team 0
+Reset persist vars team 1
+Player 98-Robert purged from cache: 36
+Freeing player RC 98-Robert...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98-Kim/98-Kim.def...
+  Loading info...Info: Kim loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Kim.cmd...OK
+  Loading cns Kim.cns...OK
+  Loading cns Kim-N.cns...OK
+  Loading cns Kim-S.cns...OK
+  Loading cns Kim-H.cns...OK
+  Loading cns Kim-2-3.cns...OK
+  Loading cmd state entry Kim.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Kim.sff...OK
+  Loading anim Kim.air...OK
+  Loading snd Kim.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)OK
+  SFF v1.01 palette hack engaged.
+  6959 expressions (2296 on trigger lines)
+Character 98-Kim.def loaded OK
+New char 98-Kim loaded into cache: (4/4 cached) Load time: 1830.000ms
+Player Mai Shiranui purged from cache: 37
+Freeing player RC Mai Shiranui...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Terry-98/Terry-98.def...
+  Loading info...Info: Terry Bogard loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Terry-98.cmd...OK
+  Loading cns Terry-98.cns...OK
+  Loading cns Terry-98-N.cns...OK
+  Loading cns Terry-98-S.cns...OK
+  Loading cns Terry-98-H.cns...OK
+  Loading cns Terry-98-2-3.cns...OK
+  Loading cmd state entry Terry-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Terry-98.sff...OK
+  Loading anim Terry-98.air...OK
+  Loading snd Terry-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  5710 expressions (1917 on trigger lines)
+Character Terry-98.def loaded OK
+New char Terry-98 loaded into cache: (4/4 cached) Load time: 700.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.01s
+Total frames: 1736 	Skipped frames: 4
+Avg game rate: 59.84
+Avg frame rate: 59.70
+
+Finishing match
+Freeing players
+Save persist vars P56 98-Kim
+Player 98-Kim cache count reduced: 0
+Save persist vars P57 Terry-98
+Player Terry-98 cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char clark98.def (11) request pal 11 FFF (FFF) -> reserved 11 (7FF)
+Char yashiro.def (21) request pal 0 7FF (6FF) -> reserved 0 (6FE)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 464325295
+Reset persist vars team 0
+Reset persist vars team 1
+Player Kyo-98 purged from cache: 38
+Freeing player RC Kyo-98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/clark98/clark98.def...
+  Loading info...Info: Clark Steel loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set clark98.cmd...OK
+  Loading cns clark98.cns...OK
+  Loading cns clark98_M.st...OK
+  Loading cns clark98_N.st...OK
+  Loading cns clark98_S.st...OK
+  Loading cns clark98_D.st...OK
+  Loading cns config.txt...OK
+  Loading cmd state entry clark98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff clark98.sff...OK
+  Loading anim clark98.air...OK
+  Loading snd clark98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  11318 expressions (3946 on trigger lines)
+Character clark98.def loaded OK
+New char Clark Steel loaded into cache: (4/4 cached) Load time: 1760.000ms
+Player Chizuru Kagura purged from cache: 39
+Freeing player RC Chizuru Kagura...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/yashiro/yashiro.def...
+  Loading info...Info: Yashiro loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set yashiro.cmd...OK
+  Loading cns yashiro.cns...OK
+  Loading cns yashiro1.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry yashiro.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff yashiroF.sff...OK
+  Loading anim yashiro.air...OK
+  Loading snd yashiro.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)OK
+  SFF v1.01 palette hack engaged.
+  10286 expressions (4018 on trigger lines)
+Character yashiro.def loaded OK
+New char Yashiro Nanakase loaded into cache: (4/4 cached) Load time: 1100.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 29.40s
+Total frames: 1765 	Skipped frames: 0
+Avg game rate: 60.03
+Avg frame rate: 60.03
+
+Finishing match
+Freeing players
+Save persist vars P56 Clark Steel
+Player Clark Steel cache count reduced: 0
+Save persist vars P57 Yashiro Nanakase
+Player Yashiro Nanakase cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char 98Ryo.def (7) request pal 0 3F (3A) -> reserved 1 (38)
+Char 98-Robert.def (6) request pal 9 1F (16) -> reserved 4 (6)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1215027633
+Reset persist vars team 0
+Reset persist vars team 1
+Player 98-Kim purged from cache: 40
+Freeing player RC 98-Kim...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98Ryo/98Ryo.def...
+  Loading info...Info: Ryo loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set 98Ryo.cmd...OK
+  Loading cns 01_Main.cns...OK
+  Loading cns 02_Attacks.cns...OK
+  Loading cns 03_Specials.cns...OK
+  Loading cns 04_DMs.cns...OK
+  Loading cns 05_Others.cns...OK
+  Loading cmd state entry 98Ryo.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff 98Ryo.sff...OK
+  Loading anim 98Ryo.air...OK
+  Loading snd 98Ryo.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  6397 expressions (2321 on trigger lines)
+Character 98Ryo.def loaded OK
+New char Ryo Sakazaki loaded into cache: (4/4 cached) Load time: 990.000ms
+Player Terry-98 purged from cache: 41
+Freeing player RC Terry-98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/98-Robert/98-Robert.def...
+  Loading info...Info: Robert loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Robert.cmd...OK
+  Loading cns Robert.cns...OK
+  Loading cns Robert-N.cns...OK
+  Loading cns Robert-S.cns...OK
+  Loading cns Robert-H.cns...OK
+  Loading cns Robert-2-3.cns...OK
+  Loading cmd state entry Robert.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Robert.sff...OK
+  Loading anim Robert.air...OK
+  Loading snd Robert.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)OK
+  SFF v1.01 palette hack engaged.
+  6111 expressions (2048 on trigger lines)
+Character 98-Robert.def loaded OK
+New char 98-Robert loaded into cache: (4/4 cached) Load time: 480.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 28.88s
+Total frames: 1734 	Skipped frames: 18
+Avg game rate: 60.04
+Avg frame rate: 59.42
+
+Finishing match
+Freeing players
+Save persist vars P56 Ryo Sakazaki
+Player Ryo Sakazaki cache count reduced: 0
+Save persist vars P57 98-Robert
+Player 98-Robert cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char clark98.def (11) request pal 3 FFF (7FF) -> reserved 3 (7F7)
+Char benimaru.def (1) request pal 11 FFF (FBF) -> reserved 11 (7BF)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1436379638
+Reset persist vars team 0
+Reset persist vars team 1
+Player Clark Steel cache count increased: 1
+Player Yashiro Nanakase purged from cache: 43
+Freeing player RC Yashiro Nanakase...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/benimaru/benimaru.def...
+  Loading info...Info: BENIMARU loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set benimaru.cmd...OK
+  Loading cns benimaru.cns...OK
+  Loading cns benimarua.cns...OK
+  Loading cns benimarub.cns...OK
+  Loading cns 2001-04.txt...OK
+  Loading cns kyo.cns...OK
+  Loading cns daimon.cns...OK
+  Loading cmd state entry benimaru.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff benimaru.sff...OK
+  Loading anim benimaru.air...OK
+  Loading snd benimaru.snd...SND file loaded with errors: benimaru.snd
+OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  7941 expressions (2774 on trigger lines)
+Character benimaru.def loaded OK
+New char Benimaru Nikaido loaded into cache: (4/4 cached) Load time: 1740.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 28.28s
+Total frames: 1690 	Skipped frames: 1
+Avg game rate: 59.76
+Avg frame rate: 59.72
+
+Finishing match
+Freeing players
+Save persist vars P56 Clark Steel
+Player Clark Steel cache count reduced: 0
+Save persist vars P57 Benimaru Nikaido
+Player Benimaru Nikaido cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Playing storyboard kof97intro.def: scene
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Game loop deinit
+Finished playing storyboard kof97intro.def: scene
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char shermie.def (22) request pal 1 FFF (FFF) -> reserved 1 (FFD)
+Char Kyo-98.def (0) request pal 8 FFF (F9F) -> reserved 8 (E9F)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 1236430413
+Reset persist vars team 0
+Reset persist vars team 1
+Player Ryo Sakazaki purged from cache: 44
+Freeing player RC Ryo Sakazaki...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/shermie/shermie.def...
+  Loading info...Info: Shermie loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set shermie.cmd...OK
+  Loading cns shermie.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry shermie.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff shermie.sff...OK
+  Loading anim shermie.air...OK
+  Loading snd shermie.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  7036 expressions (2677 on trigger lines)
+Character shermie.def loaded OK
+New char Shermie loaded into cache: (4/4 cached) Load time: 1450.000ms
+Player 98-Robert purged from cache: 45
+Freeing player RC 98-Robert...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Kyo-98/Kyo-98.def...
+  Loading info...Info: Kyo loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Kyo-98.cmd...OK
+  Loading cns Kyo-98.cns...OK
+  Loading cns Kyo-98-N.cns...OK
+  Loading cns Kyo-98-S.cns...OK
+  Loading cns Kyo-98-H.cns...OK
+  Loading cns Kyo-98-2-3.cns...OK
+  Loading cmd state entry Kyo-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Kyo-98.sff...OK
+  Loading anim Kyo-98.air...OK
+  Loading snd Kyo-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  8341 expressions (2892 on trigger lines)
+Character Kyo-98.def loaded OK
+New char Kyo-98 loaded into cache: (4/4 cached) Load time: 550.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 28.72s
+Total frames: 1688 	Skipped frames: 16
+Avg game rate: 58.77
+Avg frame rate: 58.22
+
+Finishing match
+Freeing players
+Save persist vars P56 Shermie
+Player Shermie cache count reduced: 0
+Save persist vars P57 Kyo-98
+Player Kyo-98 cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Char Athena_98.def (12) request pal 1 3F (27) -> reserved 1 (25)
+Char chris2.def (33) request pal 7 FFF (EFF) -> reserved 7 (E7F)
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 2067652053
+Reset persist vars team 0
+Reset persist vars team 1
+Player Clark Steel purged from cache: 46
+Freeing player RC Clark Steel...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Athena_98/Athena_98.def...
+  Loading info...Info: Athena loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set Athena-98.cmd...OK
+  Loading cns Athena-98.cns...OK
+  Loading cns Athena-98-N.cns...OK
+  Loading cns Athena-98-S.cns...OK
+  Loading cns Athena-98-H.cns...OK
+  Loading cns Athena-98-2-3.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry Athena-98.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff Athena-98.sff...OK
+  Loading anim Athena-98.air...OK
+  Loading snd Athena-98.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  8543 expressions (3341 on trigger lines)
+Character Athena_98.def loaded OK
+New char Athena 98 loaded into cache: (4/4 cached) Load time: 1200.000ms
+Player Benimaru Nikaido purged from cache: 47
+Freeing player RC Benimaru Nikaido...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/chris2/chris2.def...
+  Loading info...Info: Chris loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set chris.cmd...OK
+  Loading cns chris.cns...OK
+  Loading cns AI.txt...OK
+  Loading cmd state entry chris.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff chris.sff...OK
+  Loading anim chris.air...OK
+  Loading snd chris.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)(1,9)(1,10)(1,11)(1,12)OK
+  SFF v1.01 palette hack engaged.
+  9822 expressions (3260 on trigger lines)
+Character chris2.def loaded OK
+New char Chris loaded into cache: (4/4 cached) Load time: 2710.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 27.58s
+Total frames: 1649 	Skipped frames: 3
+Avg game rate: 59.79
+Avg frame rate: 59.68
+
+Finishing match
+Freeing players
+Save persist vars P56 Athena 98
+Player Athena 98 cache count reduced: 0
+Save persist vars P57 Chris
+Player Chris cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 3
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Gameflow 7
+Entering character select.
+Unloading match assets
+Freeing players
+Game loop init
+Unreserved all palettes
+Charsel init
+Selected char 0 on teamslot 0.0
+Char Kyo-98.def (0) request pal 3 FFF (FFF) -> reserved 3 (FF7)
+End of charsel loop
+Game loop deinit
+Gameflow 8
+Char ryuji98.def (24) request pal 4 FF (FF) -> reserved 4 (EF)
+Gameflow 9
+Gameflow 10
+Entering versus screen.
+Unloading match assets
+Freeing players
+Game loop init
+Versus screen init
+End of versus screen loop
+Game loop deinit
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 86838282
+Reset persist vars team 1
+Player Kyo-98 cache count increased: 1
+Player Shermie purged from cache: 48
+Freeing player RC Shermie...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/ryuji98/ryuji98.def...
+  Loading info...Info: Yamazaki 71113 loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set ryuji.cmd...OK
+  Loading cns ryuji.cns...OK
+  Loading cns rspecials.cns...OK
+  Loading cns rdustknife.cns...OK
+  Loading cns reversal.cns...OK
+  Loading cns rdm1.cns...OK
+  Loading cns rdm2.cns...OK
+  Loading cns rhits.cns...OK
+  Loading cns rSDM2.cns...OK
+  Loading cmd state entry ryuji.cmd...OK
+  Loading common states common1.cns...OK
+  Loading sff ryuji.sff...OK
+  Loading anim ryuji.air...OK
+  Loading snd yamazaki.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)(1,7)(1,8)OK
+  SFF v1.01 palette hack engaged.
+  12338 expressions (4198 on trigger lines)
+Character ryuji98.def loaded OK
+New char Ryuji Yamazaki loaded into cache: (4/4 cached) Load time: 1190.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+End of match loop
+Total time: 45.11s
+Total frames: 2707 	Skipped frames: 0
+Avg game rate: 60.01
+Avg frame rate: 60.01
+
+Finishing match
+Freeing players
+Save persist vars P56 Kyo-98
+Player Kyo-98 cache count reduced: 0
+Save persist vars P57 Ryuji Yamazaki
+Player Ryuji Yamazaki cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Gameflow 7
+Entering character select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Unreserved all palettes
+Charsel init
+Game loop deinit
+Canceled character select.
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Gameflow 7
+Entering character select.
+Unloading match assets
+Freeing players
+Game loop init
+Unreserved all palettes
+Charsel init
+Game loop deinit
+Canceled character select.
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Gameflow 7
+Entering character select.
+Unloading match assets
+Freeing players
+Game loop init
+Unreserved all palettes
+Charsel init
+Selected char 0 on teamslot 0.0
+Char Kyo-98.def (0) request pal 5 FFF (FFF) -> reserved 5 (FDF)
+Game loop deinit
+Canceled character select.
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Gameflow 7
+Entering character select.
+Unloading match assets
+Freeing players
+Game loop init
+Unreserved all palettes
+Charsel init
+Game loop deinit
+Canceled character select.
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Gameflow 7
+Entering character select.
+Unloading match assets
+Freeing players
+Game loop init
+Unreserved all palettes
+Charsel init
+Selected char 0 on teamslot 0.0
+Char Kyo-98.def (0) request pal 2 FFF (FFF) -> reserved 2 (FFB)
+Selected char 0 on teamslot 0.0
+Char Kyo-98.def (0) request pal 2 FFF (FFB) -> reserved 3 (FF3)
+Selected char 8 on teamslot 1.0
+Char Yuri2.def (8) request pal 1 3F (3F) -> reserved 1 (3D)
+End of charsel loop
+Game loop deinit
+Gameflow 8
+Gameflow 9
+Gameflow 10
+Entering versus screen.
+Unloading match assets
+Freeing players
+Game loop init
+Versus screen init
+End of versus screen loop
+Game loop deinit
+Gameflow 11
+Loading match assets...
+Loading stage...
+  Loading BG...OK
+Stage loaded OK
+  Allocating helpers...OK
+Match RNG seed: 878094765
+Reset persist vars team 0
+Reset persist vars team 1
+Player Kyo-98 cache count increased: 1
+Player Athena 98 purged from cache: 50
+Freeing player RC Athena 98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Loading character chars/Yuri2/Yuri2.def...
+  Loading info...Info: Yuri loading in pre-1.0 compatible mode
+OK
+  Loading cmd command set yuri.cmd...OK
+  Loading cns yuri.cns...OK
+  Loading cns st/2.st...OK
+  Loading cns st/3.st...OK
+  Loading cns st/4.st...OK
+  Loading cns st/5.st...OK
+  Loading cns st/6.st...OK
+  Loading cmd state entry yuri.cmd...OK
+  Loading common states st/0.st...OK
+  Loading sff media/yuri.sff...OK
+  Loading anim media/yuri.air...OK
+  Loading snd media/yuri.snd...OK
+  Loading pals...(1,1)(1,2)(1,3)(1,4)(1,5)(1,6)OK
+  SFF v1.01 palette hack engaged.
+  6938 expressions (2107 on trigger lines)
+Character Yuri2.def loaded OK
+New char Yuri Sakazaki loaded into cache: (4/4 cached) Load time: 1030.000ms
+Resetting round
+Match assets initialized OK
+Game loop init
+Match loop init
+CloseWindow event forced common loop quit.
+End of match loop
+Total time: 13.93s
+Total frames: 830 	Skipped frames: 0
+Avg game rate: 59.58
+Avg frame rate: 59.58
+
+Finishing match
+Freeing players
+Save persist vars P56 Kyo-98
+Player Kyo-98 cache count reduced: 0
+Save persist vars P57 Yuri Sakazaki
+Player Yuri Sakazaki cache count reduced: 0
+Match RNG closed
+Game loop deinit
+Gameflow 6
+Reset persist vars team 0
+Reset persist vars team 1
+Gameflow 7
+Entering character select.
+Unloading match assets
+Freeing players
+Unloading stage...OK
+Game loop init
+Unreserved all palettes
+Charsel init
+Game loop deinit
+Canceled character select.
+Gameflow 4
+Entering mode select.
+Unloading match assets
+Freeing players
+Game loop init
+Mode select init
+End of mode select loop
+Game loop deinit
+Returned from gameflow loop
+Deinitializing...
+Frames      : 112705
+Time elapsed: 2254.920 sec
+ticks: 225492, tps: 100, start 1058, end 226550
+
+Unloading match assets
+Freeing players
+Clearing player cache...Freeing player RC Kyo-98...CMD...CNS...SFF...AIR...SND...Misc...OK
+Freeing player RC Yuri Sakazaki...CMD...CNS...SFF...AIR...SND...Misc...OK
+Freeing player RC Ryuji Yamazaki...CMD...CNS...SFF...AIR...SND...Misc...OK
+Freeing player RC Chris...CMD...CNS...SFF...AIR...SND...Misc...OK
+OK
+Freeing character info...OK
+Freeing select screen...OK
+Freeing fight data...OK
+Freeing system data...OK
+Freeing game variables...Unloading match assets
+Freeing players
+OK
+Deinitializing input...pad...keyboard...OK
+Removing callbacks...OK
+Deintializing timer...OK
+Deinitializing graphics...OK
+Deinitializing BGM...OK
+Deinitializing sound...OK
+Successful program termination.
+
+Log file successfully closed.

@@ -1,0 +1,22 @@
+[SceneDef]
+spr = gameover.sff
+
+[Scene 0]
+fadein.time = 120
+fadein.col = 255,255,255
+fadeout.time = 120
+fadeout.col = 0,0,0
+clearcolor = 0,0,0
+layerall.pos = 160,240
+layer0.anim = 0
+layer0.starttime = 30
+end.time = 740
+
+[Scene 1]
+fadein.time = 30
+fadein.col = 0,0,0
+clearcolor = 0,0,0
+end.time = 30
+
+[Begin Action 0]
+97,0, 0,-17, 740

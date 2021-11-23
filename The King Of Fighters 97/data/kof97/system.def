@@ -1,0 +1,291 @@
+[Info]
+name = "KOF '97"
+author = "MadkaT"
+editor = "gui0007"
+
+[Files]
+spr = system.sff
+snd = system.snd
+logo.storyboard = NEOGEO.def
+intro.storyboard = kof97intro.def
+select = select.def
+fight = fight.def
+font1 = font/97SN1.fnt
+font2 = font/97SN2.fnt
+font3 = font/97Menu.fnt
+font4 = font/97Hide.fnt
+
+[Music]
+title.bgm = 
+title.bgm.loop = 1
+select.bgm = data/kof97/03 - ORDER (Player Select).mp3
+select.bgm.loop = 1
+vs.bgm = data/kof97/versus.mp3
+vs.bgm.loop = 0
+
+[Title Info]
+fadein.time = 15
+fadeout.time = 39
+menu.pos = 160,240
+menu.item.font = 4,0,0
+menu.item.active.font = 3,0,0
+menu.item.spacing = 0, 0
+menu.itemname.arcade = "0"
+menu.itemname.versus = "1"
+menu.itemname.teamarcade = "2"
+menu.itemname.teamversus = "3"
+menu.itemname.teamcoop = "4"
+menu.itemname.survival = "5"
+menu.itemname.survivalcoop = "6"
+menu.itemname.training = "7"
+menu.itemname.watch = "8"
+menu.itemname.options = "9"
+menu.itemname.exit = "A"
+menu.window.margins.y = 320, 2400
+menu.window.visibleitems = 1
+menu.boxcursor.visible = 0
+menu.boxcursor.coords = 0,0,0,0
+cursor.move.snd = 100,0
+cursor.done.snd = 100,1
+cancel.snd = 100,2
+
+[TitleBGdef]
+bgclearcolor = 0,0,0
+
+[TitleBG 0]
+type  = normal
+spriteno = 7, 1
+start = 0, 240
+
+[Select Info]
+fadein.time = 15
+fadeout.time = 39
+rows = 11
+columns = 23
+wrapping = 1
+pos = 17,26
+showemptyboxes = 0
+moveoveremptyboxes = 0
+cell.size = 22,27
+cell.spacing = -10,120
+cell.bg.spr = 3,2
+cell.random.spr = 3,0
+cell.random.switchtime = 4
+p1.cursor.startcell = 0,0
+p1.cursor.active.anim = 0
+p1.cursor.done.spr = 3,6
+p1.cursor.move.snd = 100,0
+p1.cursor.done.snd = 100,1
+p1.random.move.snd = 100,0
+p2.cursor.startcell = 0,22
+p2.cursor.active.anim = 1
+p2.cursor.done.spr = 3,8
+p2.cursor.blink = 0
+p2.cursor.move.snd = 100,0
+p2.cursor.done.snd = 100,1
+p2.random.move.snd = 100,0
+random.move.snd.cancel = 0
+stage.move.snd = 100,0
+stage.done.snd = 100,1
+cancel.snd = 100,2
+portrait.offset = 0,0
+portrait.scale = 0.88,1.09
+title.offset = 159,13
+title.font = -1,0,0
+p1.face.offset = 0,0
+p1.face.scale = 0,0
+p2.face.offset = 0,0
+p2.face.scale = 0,0
+p1.name.offset = 10,215
+p1.name.font = 1,0,1
+p2.name.offset = 309,215
+p2.name.font = 2,0,-1
+stage.pos = 160,237
+stage.active.font = 1,0,0
+stage.active2.font = 2,0,0
+stage.done.font = 1,0
+teammenu.move.wrapping = 1
+p1.teammenu.pos = 11, 172
+p1.teammenu.selftitle.font = 1,0, 1
+p1.teammenu.selftitle.text = Mode Select
+p1.teammenu.enemytitle.font = 1,0, 1
+p1.teammenu.enemytitle.text = Mode Select
+p1.teammenu.move.snd = 100,0
+p1.teammenu.value.snd = 100,0
+p1.teammenu.done.snd = 100,1
+p1.teammenu.item.offset = 0,15
+p1.teammenu.item.spacing = 0,16
+p1.teammenu.item.font = 1,0, 1
+p1.teammenu.item.active.font = 2,0, 1
+p1.teammenu.item.active2.font = 1,0, 1
+p1.teammenu.item.cursor.offset = -10, 0
+p1.teammenu.item.cursor.anim = 99
+p1.teammenu.value.icon.offset = 60,1
+p1.teammenu.value.icon.spr = 3,14
+p1.teammenu.value.empty.icon.offset = 60,1
+p1.teammenu.value.empty.icon.spr = 3,15
+p1.teammenu.value.spacing = 8,0
+p2.teammenu.pos = 309, 172
+p2.teammenu.selftitle.font = 1,0, -1
+p2.teammenu.selftitle.text = Mode Select
+p2.teammenu.enemytitle.font = 1,0, -1
+p2.teammenu.enemytitle.text = Mode Select
+p2.teammenu.move.snd = 100,0
+p2.teammenu.value.snd = 100,0
+p2.teammenu.done.snd = 100,1
+p2.teammenu.item.offset = 0,15
+p2.teammenu.item.spacing = 0,16
+p2.teammenu.item.font = 2,0, -1
+p2.teammenu.item.active.font = 1,0, -1
+p2.teammenu.item.active2.font = 2,0, -1
+p2.teammenu.item.cursor.offset = 10, 0
+p2.teammenu.item.cursor.anim = 99
+p2.teammenu.value.icon.offset = -60,1
+p2.teammenu.value.icon.spr = 3,14
+p2.teammenu.value.empty.icon.offset = -60,1
+p2.teammenu.value.empty.icon.spr = 3,15
+p2.teammenu.value.spacing = -8,0
+
+[SelectBGdef]
+
+[SelectBG 00]
+type  = normal
+spriteno = 7,1
+start = 0, 240
+
+[VS Screen]
+fadein.time = 10
+fadeout.time = 39
+time = 210
+fadein.time = 15
+fadeout.time = 15
+p1.pos =  20,82
+p1.facing = 1
+p1.scale = 1,1
+p2.pos = 299,82
+p2.facing = -1
+p2.scale = 1,1
+p1.name.pos  =  0,0
+p1.name.font =   -1,0,0
+p2.name.pos  = 0,0
+p2.name.font =   -1,0,0
+
+[VersusBGdef] 
+
+[VersusBG 00]
+type  = normal
+spriteno = 7,0
+start = 0,240
+
+[VersusBG 00]
+type  = anim
+actionno = 8
+start = 0,240
+layerno = 1
+
+[Begin Action 8]
+8,0, 0,0, 3
+8,1, 0,0, 3
+8,2, 0,0, 3
+8,3, 0,0, 3
+8,4, 0,0, 3
+8,5, 0,0, 3
+8,6, 0,0, 3
+8,7, 0,0, 3
+8,8, 0,0, 3
+8,9, 0,0, 3
+8,10, 0,0, 3
+8,11, 0,0, 3
+8,12, 0,0, 3
+8,13, 0,0, 3
+8,14, 0,0, 3
+8,15, 0,0, 3
+8,17, 0,0, 3
+8,18, 0,0, 3
+8,19, 0,0, 3
+8,20, 0,0, 3
+8,21, 0,0, 3
+8,22, 0,0, 144
+
+[Demo Mode]
+enabled = 1
+select.enabled = 0
+vsscreen.enabled = 0
+title.waittime = 600
+fight.endtime = 1500
+fight.playbgm = 0
+fight.bars.display = 0
+intro.waitcycles = 1
+debuginfo = 0
+
+[Continue Screen]
+enabled = 1
+
+[Game Over Screen]
+enabled = 1
+storyboard = gameover.def
+
+[Win Screen]
+enabled = 1
+wintext.text = Congratulations!
+wintext.font = 2,0,0
+wintext.offset = 159,70
+wintext.displaytime = -1
+wintext.layerno = 2
+fadein.time = 32
+pose.time = 300
+fadeout.time = 64
+
+[Default Ending]
+enabled = 0
+storyboard =
+
+[End Credits]
+enabled = 1
+storyboard = kof95-sb-ending.def
+
+[Survival Results Screen]
+enabled = 1
+winstext.text = Rounds survived: %i
+winstext.font = 1,0,0
+winstext.offset = 159,70
+winstext.displaytime = -1
+winstext.layerno = 2
+fadein.time = 32
+show.time = 300
+fadeout.time = 64
+roundstowin = 5
+
+[Option Info]
+cursor.move.snd = 100,0
+cursor.done.snd = 100,1
+cancel.snd = 100,2
+
+[OptionBGdef] 
+
+[OptionBG 0]
+type  = normal
+spriteno = 7,1
+start = 0,240
+
+[Begin Action 0]
+3,6, 0,0, 10
+3,7, 0,0, 10
+
+[Begin Action 1]
+3,8, 0,0, 10
+3,9, 0,0, 10
+
+[Begin Action 2]
+3,16, 0,0, 5
+3,17, 0,0, 5
+3,18, 0,0, 6
+3,19, 0,0, 8
+3,21, 0,0, 111
+3,22, 0,0, 3
+3,23, 0,0, 3
+3,28, 0,0, 3
+-1,-1,0,0,-1
+
+[Begin Action 99]
+-1,-1,0,0,0

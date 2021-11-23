@@ -1,0 +1,30 @@
+[SceneDef]
+spr = intro.sff
+
+[Scene 0]
+fadein.time = 120
+fadeout.time = 30
+bg.name = BG0
+end.time = 6000
+
+[BG0Def]
+
+[BG0 Title]
+type = normal
+spriteno = 767,0
+start = 0,240
+
+[BG0 Title1]
+type = normal
+spriteno = 767,1
+start = 0,240
+mask = 1
+
+[BG0 Flash]
+type = anim
+actionno = 0
+start = 0,240
+
+[Begin Action 0]
+-1,-1, 0,0, 25
+888,1, 0,0, 25
