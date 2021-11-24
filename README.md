@@ -54,7 +54,7 @@ https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/THE-KING-OF-FIGTHERS-97
 
 ## :octocat: Credits
 
-1. [MadkaT - Screenpack Kof97](madkat@r2e.cjb.net) 
+1. [MadkaT - Screenpack Kof97](https://network.mugenguild.com/madkat/addon.html)
 2. Illuminati Dev Team - Update Screenpack Kof97
 
 ```
